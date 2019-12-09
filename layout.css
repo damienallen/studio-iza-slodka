@@ -80,16 +80,6 @@ nav a:hover, nav a:active {
     margin: 0 auto 0 auto;
 }
 
-.cover {
-    /* background: #fff000; */
-    min-height: 100vh;
-    text-align: center;
-}
-
-.cover img {
-    margin-top: 80px;
-}
-
 .spacer {
     flex: 1;
 }

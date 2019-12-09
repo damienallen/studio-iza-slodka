@@ -38,7 +38,6 @@ nav {
     font-family: 'Lusitana', serif;
     font-size: 1.4em;
     background: #fff;
-    color: #202d62;
     position: fixed;
     width: 55vw;
     height: 40px;
@@ -54,6 +53,7 @@ nav {
 
 nav a {
     line-height: 40px;
+    color: #000;
 }
 
 nav a:link, nav a:visited {

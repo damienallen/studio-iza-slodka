@@ -1,3 +1,4 @@
+/*--[ BODY ]--*/
 body {
     color: #000;
     font-family: 'Lato', sans-serif;
@@ -7,14 +8,10 @@ body {
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/*--[ LOGO / BRANDING ]--*/
-#brand {
+/*--[ NAME / LOGO ]--*/
+#name {
     font-family: 'Lusitana', serif;
+    font-size: 2.4em;
     color: #202d62;
     position: fixed;
     top: 14px;
@@ -22,16 +19,7 @@ img {
     z-index: 100;
 }
 
-.abbr-title {
-    font-size: 3em;
-}
-
-.full-title {
-    margin-top: 10px;
-    font-size: 1.6em;
-}
-
-.full-title span {
+#name span {
     display: block;
 }
 
@@ -42,6 +30,7 @@ nav {
     background: #fff;
     position: fixed;
     width: 55vw;
+    min-width: 860px;
     height: 40px;
     padding: 10px 10px 0 10px;
     top: 0;
@@ -91,6 +80,7 @@ nav a:hover, nav a:active {
 
 .margins {
     width: 55vw;
+    min-width: 860px;
     margin: 0 auto 0 auto;
 }
 

@@ -1,3 +1,9 @@
+@import "breakpoints";
+
+/*--[ VARIABLES ]--*/
+
+$min-side-margin: 24px;
+
 /*--[ BODY ]--*/
 body {
     color: #000;
@@ -10,16 +16,28 @@ body {
 
 /*--[ NAME / LOGO ]--*/
 #sidebar {
+    background-color: #fff;
     position: fixed;
-    top: 14px;
-    left: 24px;
-    z-index: 100;
+    top: 0;
+    left: 0;
+    z-index: 200;
+
+    @include breakpoint(md) {
+        padding: 14px $min-side-margin;
+	}
 }
 
 .logo {
-    width: 120px;
     height: auto;
-    margin-bottom: 10px;
+
+    @include breakpoint(md) {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+    
+    @include breakpoint(sm) {
+		width: 60px;
+	}
 }
 
 .name {
@@ -30,21 +48,32 @@ body {
     span {
         display: block;
     }
+
+    @include breakpoint(sm) {
+		display: inline-block;
+        font-size: 1.4em;
+	}
 }
 
 /*--[ NAVIGATION ]--*/
+.nav-container {
+    width: 100%;
+    background: #fff;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
 nav {
     font-family: 'Lusitana', serif;
     font-size: 1.4em;
-    background: #fff;
-    position: fixed;
     width: 55vw;
     min-width: 860px;
     height: 40px;
-    padding: 10px 10px 0 10px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    // left: 50%;
+    // transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     z-index: 50;
@@ -90,7 +119,12 @@ nav {
 .margins {
     width: 55vw;
     min-width: 860px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto ;
+}
+
+.small-margins {
+    margin: 0 auto;
+    padding: 0 $min-side-margin;
 }
 
 .spacer {

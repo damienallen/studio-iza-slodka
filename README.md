@@ -1,4 +1,6 @@
-# isa
+![logo](https://github.com/damienallen/isa/raw/master/src/images/logo.png)
+
+# Studio Iza Słodka
 
 ### Requirements
 

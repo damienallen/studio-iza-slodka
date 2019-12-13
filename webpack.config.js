@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -12,7 +13,13 @@ module.exports = {
             hash: true,
             filename: 'index.html',
             template: './src/index.html',
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+                from:'src/images',
+                to:'img'
+            } 
+        ]), 
    ],
 
    module:{

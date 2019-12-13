@@ -51,29 +51,42 @@ body {
 
     span {
         display: block;
+    
+        @include breakpoint(sm) {
+            display: inline;
+            font-size: 1em;
+            line-height: 40px;
+        }
     }
 
     @include breakpoint(lg) {
         display: block;
         font-size: 2.4em;
-	}
+    }
+
+    @include breakpoint(sm) {
+        margin-left: 14px;
+    }
 }
 
 /*--[ NAVIGATION ]--*/
 .nav-container {
     width: 100%;
     background: #fff;
-    padding-top: 10px;
     position: fixed;
     top: 0;
     z-index: 100;
+
+    @include breakpoint(md) {
+        padding-top: 10px;
+    }
 }
 
 nav {
     font-family: 'Lusitana', serif;
     font-size: 1.4em;
     width: 55vw;
-    min-width: $lg-breakpoint;
+    min-width: $sm-breakpoint;
     height: 40px;
     margin: 0 auto;
     display: flex;

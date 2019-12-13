@@ -16,19 +16,19 @@
     margin: 0 auto 0 auto;
     text-align: center;
     position: relative;
-}
 
-.cover img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 /*--[ SECTION ]--*/
@@ -74,11 +74,12 @@
     display: flex;
     justify-content: center;
     /* position: relative; */
-}
-.maze-img-1 img {
-    height: 660px;
-    /* height: auto; */
-    /* max-height: 100%; */
+
+    img {
+        height: 660px;
+        /* height: auto; */
+        /* max-height: 100%; */
+    }
 }
 
 .maze-img-2 {
@@ -88,28 +89,28 @@
     padding-left: 40px;
     text-align: right;
     z-index: 30;
-}
 
-.maze-img-2 img {
-    height: 800px;
+    img {
+        height: 800px;
+    }
 }
 
 .maze-img-3 {
     text-align: center;
     margin-top: -300px;
     z-index: 20;
-}
 
-.maze-img-3 img {
-    height: 800px;
+    img {
+        height: 800px;
+    }
 }
 
 .maze-img-4 {
     margin-top: -650px;
     text-align: center;
     z-index: 10;
-}
 
-.maze-img-4 img {
-    height: 800px;
+    img {
+        height: 800px;
+    }
 }

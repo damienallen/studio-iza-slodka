@@ -26,10 +26,10 @@ body {
     font-family: 'Lusitana', serif;
     font-size: 2.4em;
     color: #202d62;
-}
 
-.name span {
-    display: block;
+    span {
+        display: block;
+    }
 }
 
 /*--[ NAVIGATION ]--*/
@@ -49,29 +49,29 @@ nav {
     flex-direction: row;
     z-index: 50;
     justify-content: space-between;
-}
 
-nav a {
-    line-height: 40px;
-    color: #000;
-}
+    a {
+        line-height: 40px;
+        color: #000;
+    }
+    
+    a:link, a:visited {
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        text-decoration: underline;
+    }
+    
+    #links {
+        padding: 5px 0;
 
-nav a:link, nav a:visited {
-    text-decoration: none;
-}
-
-nav a:hover, nav a:active {
-    text-decoration: underline;
-}
-
-#links {
-    padding: 5px 0;
-}
-
-#links a img {
-    width: 20px;
-    height: 20px;
-    margin: 5px 0 0 5px;
+        a img {
+            width: 20px;
+            height: 20px;
+            margin: 5px 0 0 5px;
+        }
+    }
 }
 
 /*--[ GRID ]--*/

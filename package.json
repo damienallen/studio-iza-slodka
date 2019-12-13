@@ -2,8 +2,24 @@
   "name": "isa",
   "version": "1.0.0",
   "description": "Studio Iza Slodka",
-  "main": "index.js",
+  "main": ".src/index.js",
   "repository": "git@github.com:damienallen/isa.git",
   "author": "Damien Allen <contact@dallen.co>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.3.2",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }

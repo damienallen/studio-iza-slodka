@@ -1,0 +1,9 @@
+{
+  "name": "isa",
+  "version": "1.0.0",
+  "description": "Studio Iza Slodka",
+  "main": "index.js",
+  "repository": "git@github.com:damienallen/isa.git",
+  "author": "Damien Allen <contact@dallen.co>",
+  "license": "UNLICENSED"
+}

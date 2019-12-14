@@ -49,7 +49,7 @@
         @include breakpoint(sm) {
             display: inline;
             font-size: 1em;
-            line-height: 40px;
+            line-height: $header-height;
         }
     }
 

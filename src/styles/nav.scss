@@ -18,7 +18,7 @@ nav {
     font-size: 1.4em;
     width: 55vw;
     min-width: $sm-breakpoint;
-    height: 40px;
+    height: $header-height;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -26,7 +26,7 @@ nav {
     justify-content: space-between;
 
     a {
-        line-height: 40px;
+        line-height: $header-height;
         color: #000;
     }
     

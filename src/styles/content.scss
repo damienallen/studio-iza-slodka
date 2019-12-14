@@ -1,3 +1,6 @@
+@import "constants";
+
+/*--[ CONTENT CONTAINER ]--*/
 #content {
     margin-bottom: 40px;
 }
@@ -8,27 +11,42 @@
 }
 
 /*--[ COVER ]--*/
-#cover {
-    /* background: #fff000;     */
-    width: 55vw;
-    min-width: 860px;
-    min-height: 100vh;
-    margin: 0 auto 0 auto;
+.cover {
+    // background: #fff000;
     text-align: center;
-    position: relative;
+    width: 55vw;
+    min-width: $sm-breakpoint;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-    img {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+    .cover-img {
+        flex: 1;
+        margin-top: 50px;
+
+        img {
+            height: auto;
+            max-width: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
+
+    // img {
+    //     max-height: 100%;
+    //     max-width: 100%;
+    //     width: auto;
+    //     height: auto;
+    //     position: absolute;
+    //     top: 50px;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     margin: auto;
+    // }
 }
 
 /*--[ SECTION ]--*/
@@ -46,6 +64,12 @@
     text-align: center;
     width: 100%;
     margin-bottom: 60px;
+}
+
+.cover-header {
+    z-index: 300;
+    flex: 0;
+    margin-bottom: 40px;
 }
 
 .title {

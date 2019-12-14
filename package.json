@@ -7,8 +7,8 @@
   "author": "Damien Allen <contact@dallen.co>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack"
+    "start": "webpack --mode=production --watch",
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"

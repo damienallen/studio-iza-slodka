@@ -1,0 +1,50 @@
+@import "constants";
+
+/*--[ NAVIGATION ]--*/
+.nav-container {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    @include breakpoint(md) {
+        padding-top: 10px;
+    }
+}
+
+nav {
+    font-family: 'Lusitana', serif;
+    font-size: 1.4em;
+    width: 55vw;
+    min-width: $sm-breakpoint;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 50;
+    justify-content: space-between;
+
+    a {
+        line-height: 40px;
+        color: #000;
+    }
+    
+    a:link, a:visited {
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        text-decoration: underline;
+    }
+    
+    #links {
+        padding: 5px 0;
+
+        a img {
+            width: 20px;
+            height: 20px;
+            margin: 5px 0 0 5px;
+        }
+    }
+}

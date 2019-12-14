@@ -1,12 +1,17 @@
+/*--[ VARIABLES ]--*/
+
+$top-margin: 24px;
+$side-margin: 24px;
+
+
 /*--[ BREAKPOINTS ]--*/
 
-$lg-breakpoint: 1400px;
-$md-breakpoint: 1200px;
+$lg-breakpoint: 1200px;
 $sm-breakpoint: 860px;
 
 @mixin breakpoint($point) {
     @if $point == lg {
-      @media (min-width: $md-breakpoint) { @content ; }
+      @media (min-width: $lg-breakpoint) { @content ; }
    }
      @else if $point == md {
       @media (min-width: $sm-breakpoint) { @content ; }

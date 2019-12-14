@@ -1,0 +1,64 @@
+@import "constants";
+
+/*--[ NAME / LOGO ]--*/
+#sidebar {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    
+    a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+    }
+
+    @include breakpoint(md) {
+        padding: 14px $side-margin;
+	}
+}
+
+.logo {
+    height: auto;
+    width: 50px;
+    margin-right: 10px;
+
+    @include breakpoint(lg) {
+        width: 120px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    @include breakpoint(sm) {
+        display: none;
+    }
+}
+
+.name {
+    font-family: 'Lusitana', serif;
+    color: #202d62;
+    display: inline-block;
+    font-size: 1.4em;
+
+    .studio {
+        font-size: 0.6em;
+    }
+
+    span {
+        display: block;
+    
+        @include breakpoint(sm) {
+            display: inline;
+            font-size: 1em;
+            line-height: 40px;
+        }
+    }
+
+    @include breakpoint(lg) {
+        display: block;
+        font-size: 2.4em;
+    }
+
+    @include breakpoint(sm) {
+        margin-left: 14px;
+    }
+}

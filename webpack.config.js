@@ -26,9 +26,15 @@ module.exports = {
         rules:[
             {
                 test:/\.(s*)css$/,
-                use:['style-loader','css-loader', 'sass-loader']
+                use:['style-loader','css-loader?url=false', 'sass-loader']
             }
        ]
+    },
+
+    resolve: {
+        alias: {
+          'images': resolve('./img/')
+        }
     },
 
     devtool: 'source-map'

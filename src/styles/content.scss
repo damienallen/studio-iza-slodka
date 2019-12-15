@@ -45,6 +45,7 @@
 /*--[ SECTION ]--*/
 .section {
     margin-top: 40px;
+    z-index: 20;
 }
 
 .subsection {
@@ -123,12 +124,20 @@
     }
 }
 
-.maze-img-4 {
-    margin-top: -650px;
-    text-align: center;
-    z-index: 10;
-
-    img {
-        height: 800px;
-    }
+.participants {
+    // position: relative;
+    background: url(~images/makers_maze_image_4.jpg)
 }
+
+// .maze-img-4 {
+//     display: absolute;
+//     text-align: center;
+//     top: 0;
+//     margin-top: -500px;
+
+//     img {
+//         height: auto;
+//         width: 55vw;
+//         z-index: 10;
+//     }
+// }

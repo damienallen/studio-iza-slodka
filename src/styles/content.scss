@@ -12,25 +12,30 @@
 
 /*--[ COVER ]--*/
 .cover {
-    background: #fff000;
+    // background: #fff000;
     text-align: center;
-    width: 55vw;
-    min-width: $sm-breakpoint;
     height: 100vh;
+    width: 50vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
 
+    @include breakpoint(lg) {
+        width: 55vw;
+        min-width: $sm-breakpoint;
+	}
+
     .cover-img {
-        flex: 0 1;
+        flex: 1;
         margin-top: 50px;
 
         img {
-            height: auto;
+            // height: 400px;
             max-height: 100%;
             max-width: 100%;
             position: relative;
+            object-fit: cover;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -39,11 +44,11 @@
 
 /*--[ SECTION ]--*/
 .section {
-    margin-top: 120px;
+    margin-top: 40px;
 }
 
 .subsection {
-    margin: 120px 0;
+    margin: 40px 0;
 }
 
 /*--[ HEADERS ]--*/
@@ -56,8 +61,9 @@
 
 .cover-header {
     z-index: 300;
-    flex: 0;
-    margin-bottom: 40px;
+    flex: 0 0 110px;
+    padding: 20px 0;
+    margin-bottom: 0;
 }
 
 .title {

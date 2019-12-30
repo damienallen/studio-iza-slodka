@@ -1,5 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
 
@@ -16,24 +17,43 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from:'src/images',
-                to:'img'
-            } 
-        ]), 
-   ],
-
-   module:{
-        rules:[
-            {
-                test:/\.(s*)css$/,
-                use:['style-loader','css-loader?url=false', 'sass-loader']
+                from: 'src/images',
+                to: 'img'
             }
-       ]
+        ]),
+        new CopyWebpackPlugin([
+            {
+                from: 'src/icons',
+                to: 'ico'
+            }
+        ]),
+    ],
+
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.(s*)css$/,
+                use: ['style-loader', 'css-loader?url=false', 'sass-loader']
+            }
+        ]
     },
 
     resolve: {
         alias: {
-          'images': resolve('./img/')
+            'images': path.resolve('./img/')
+        },
+        alias: {
+            'icons': path.resolve('./ico/')
         }
     },
 

@@ -10,10 +10,10 @@ $lg-breakpoint: 1400px;
 $sm-breakpoint: 860px;
 
 @mixin breakpoint($point) {
-    @if $point == lg {
+   @if $point == lg {
       @media (min-width: $lg-breakpoint) { @content ; }
    }
-     @else if $point == md {
+   @else if $point == md {
       @media (min-width: $sm-breakpoint) { @content ; }
    }
    @else if $point == sm {

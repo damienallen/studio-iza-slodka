@@ -10,14 +10,20 @@ import './styles/content.scss'
 console.log('Initializing JS...')
 import $ from 'jquery'
 
-$('#nav-open').click(() => {
+const openNav = () => {
   $('#nav-open').hide()
   $('#nav-close').show()
-  $('#nav-container').show()
-})
+  $('#nav-container').addClass('open')
+}
 
-$('#nav-close').click(() => {
+const closeNav = () => {
   $('#nav-open').show()
   $('#nav-close').hide()
-  $('#nav-container').hide()
-})
+  $('#nav-container').removeClass('open')
+}
+
+// Set up onclicks
+$('#nav-open').click(openNav)
+$('#nav-close').click(closeNav)
+$('nav>a').click(closeNav)
+console.log($('nav>a'))

@@ -31,17 +31,20 @@ nav {
     font-family: 'Lusitana', serif;
     font-size: 1.4em;
     width: 55vw;
-    min-width: $sm-breakpoint;
+    // min-width: $sm-breakpoint;
     height: $header-height;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    // z-index: 50;
     justify-content: space-between;
 
     a {
         line-height: $header-height;
         color: #000;
+
+        &.active {
+            text-decoration: underline !important;
+        }
     }
     
     a:link, a:visited {
@@ -59,6 +62,10 @@ nav {
             width: 20px;
             height: 20px;
             margin: 5px 0 0 5px;
+        }
+
+        a:hover, a:active {
+            text-decoration: none;
         }
     }
 

@@ -15,10 +15,18 @@ body {
 .row {
     display: flex;
     flex-direction: row;
+
+    @include breakpoint(sm) {
+        flex-direction: column;
+	}
 }
 
 .col {
     flex: 1;
+
+    @include breakpoint(sm) {
+        padding: 0 40px;
+	}
 }
 
 /*--[ MISC ]--*/
@@ -26,7 +34,11 @@ body {
 .margins {
     width: 55vw;
     min-width: $sm-breakpoint;
-    margin: 0 auto ;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+        min-width: 100%;
+	}
 }
 
 .small-margins {

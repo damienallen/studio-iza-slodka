@@ -42,8 +42,13 @@ nav {
         line-height: $header-height;
         color: #000;
 
+        -webkit-transition: .2s all ease-out;
+        -moz-transition: .2s all ease-out;
+        transition: .2s all ease-out;
+
         &.active {
             text-decoration: underline !important;
+            color: #f00;
         }
     }
     

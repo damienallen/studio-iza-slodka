@@ -27,14 +27,14 @@ $('#nav-open').click(openNav)
 $('#nav-close').click(closeNav)
 
 // Smooth scrolling
-const navHeight = $("#nav-container").outerHeight() + 10
+const navHeight = $('#nav-container').outerHeight() + 10
 $('nav>a, .to-top').click((e) => {
   e.preventDefault()
   closeNav()
 
   let sectionId = $(e.currentTarget).attr('href')
   let section = $(sectionId)
-  let navOffset = sectionId === "#top" ? 0 : navHeight
+  let navOffset = sectionId === '#top' ? 0 : navHeight
 
   $('html, body').stop().animate({
     scrollTop: section.offset().top - navOffset
@@ -45,7 +45,7 @@ $('nav>a, .to-top').click((e) => {
 let lastId = null
 let menuItems = $('nav>a')
 let scrollItems = menuItems.map((ind, element) => {
-  let item = $($(element).attr("href"))
+  let item = $($(element).attr('href'))
   if (item.length) { return item }
 })
 
@@ -63,9 +63,8 @@ $(window).scroll((e) => {
 
   // Set active class
   if (lastId !== currentId) {
-    console.log(currentId)
     lastId = currentId
-    menuItems.removeClass("active")
-    menuItems.filter(`[href='#${currentId}']`).addClass("active")
+    menuItems.removeClass('active')
+    menuItems.filter(`[href='#${currentId}']`).addClass('active')
   }
 })

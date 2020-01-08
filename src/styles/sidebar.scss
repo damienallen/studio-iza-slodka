@@ -14,11 +14,12 @@
     }
 
     @include breakpoint(md) {
-        padding: 14px $side-margin;
+        padding: 14px 24px;
     }
 
     @include breakpoint(sm) {
         width: 100%;
+        box-shadow: none;
     }
 }
 

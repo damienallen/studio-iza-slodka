@@ -24,25 +24,27 @@ body {
 .col {
     flex: 1;
 
-    @include breakpoint(sm) {
-        padding: 0 40px;
-	}
+    // @include breakpoint(sm) {
+    //     padding: 0 40px;
+    //     margin
+	// }
 }
 
 /*--[ MISC ]--*/
 
 .margins {
-    width: $sm-breakpoint;
+    width: $content-width;
+    min-width: $content-min-width;
+    max-width: $content-max-width;
+    padding: 0 $side-padding;
     margin: 0 auto;
 
     @include breakpoint(sm) {
         width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
 	}
-}
-
-.small-margins {
-    margin: 0 auto;
-    padding: 0 $side-margin;
 }
 
 .spacer {

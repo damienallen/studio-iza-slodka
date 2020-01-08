@@ -3,11 +3,12 @@
 /*--[ NAME / LOGO ]--*/
 #sidebar {
     background-color: #fff;
+    box-shadow: 6px 6px 4px -6px #ddd;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 90;
-    
+
     a:link, a:visited, a:hover, a:active {
         text-decoration: none;
     }
@@ -15,16 +16,21 @@
     @include breakpoint(md) {
         padding: 14px $side-margin;
     }
-    
+
     @include breakpoint(sm) {
         width: 100%;
     }
 }
 
-.logo {
+.logo-container {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#logo {
     height: auto;
     width: 50px;
-    margin-right: 10px;
 
     @include breakpoint(lg) {
         width: 120px;
@@ -37,11 +43,27 @@
     }
 }
 
+#top-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $highlight-color;
+    opacity: 0;
+
+    svg {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 .name {
     font-family: 'Lusitana', serif;
-    color: #202d62;
+    color: $highlight-color;
     display: inline-block;
     font-size: 1.4em;
+    user-select: none;
 
     .studio {
         font-size: 0.6em;
@@ -53,7 +75,7 @@
 
     span {
         display: block;
-    
+
         @include breakpoint(sm) {
             display: inline;
             font-size: 1em;

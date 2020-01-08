@@ -7,6 +7,8 @@
     position: fixed;
     top: 0;
     z-index: 80;
+    display: flex;
+    flex-direction: row;
 
     &.open {
         display: block;
@@ -30,43 +32,43 @@
 nav {
     font-family: 'Lusitana', serif;
     font-size: 1.4em;
-    width: 55vw;
-    // min-width: $sm-breakpoint;
     height: $header-height;
-    margin: 0 auto;
+    padding: 0 $nav-padding;
+    flex: 0 1 $nav-width;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-shadow: 0 4px 4px -4px #ddd;
 
     a {
         line-height: $header-height;
         color: #000;
 
-        -webkit-transition: .2s all ease-out;
-        -moz-transition: .2s all ease-out;
-        transition: .2s all ease-out;
+        -webkit-transition: .2s all;
+        -moz-transition: .2s all;
+        transition: .2s all;
 
         &.active {
             text-decoration: underline !important;
-            color: #f00;
         }
     }
-    
+
     a:link, a:visited {
         text-decoration: none;
     }
-    
+
     a:hover, a:active {
         text-decoration: underline;
+        color: $highlight-color;
     }
-    
+
     #links {
         padding: 5px 0;
 
         a img {
             width: 20px;
             height: 20px;
-            margin: 5px 0 0 5px;
+            margin: 5px 0 0 20px;
         }
 
         a:hover, a:active {
@@ -102,4 +104,12 @@ nav {
     @include breakpoint(sm) {
         display: block;
     }
+}
+
+.right-nav-spacer {
+    flex: 0 1 100px;
+}
+
+.left-nav-spacer {
+    flex: 1 0 100px;
 }

@@ -1,9 +1,3 @@
-/*--[ VARIABLES ]--*/
-
-$header-height: 40px;
-$top-margin: 24px;
-$side-margin: 24px;
-
 /*--[ BREAKPOINTS ]--*/
 
 $lg-breakpoint: 1400px;
@@ -18,6 +12,15 @@ $sm-breakpoint: 860px;
    }
    @else if $point == sm {
       @media (max-width: $sm-breakpoint)  { @content ; }
- 
+
    }
  }
+
+ /*--[ VARIABLES ]--*/
+
+$header-height: 40px;
+$nav-padding: 60px;
+$nav-width: $sm-breakpoint;
+$top-margin: 24px;
+$side-margin: 24px;
+$highlight-color: #202d62;

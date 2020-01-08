@@ -9,7 +9,7 @@
 
 #content p {
     line-height: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 /*--[ COVER ]--*/
@@ -24,17 +24,16 @@
     flex-direction: column;
 
     @include breakpoint(lg) {
-        width: 55vw;
-        min-width: $sm-breakpoint;
+        width: $sm-breakpoint;
     }
-    
+
     @include breakpoint(sm) {
         width: 100%;
 	}
 
     .cover-img {
         flex: 1;
-        margin-top: 50px;
+        margin-top: 48px;
 
         img {
             // height: 400px;
@@ -156,10 +155,10 @@
     }
 }
 
-.participants {
-    // position: relative;
-    background: url(~images/makers_maze_image_4.jpg)
-}
+// .participants {
+//     position: relative;
+//     background: url(~images/makers_maze_image_4.jpg)
+// }
 
 // .maze-img-4 {
 //     display: absolute;

@@ -32,12 +32,11 @@ body {
 /*--[ MISC ]--*/
 
 .margins {
-    width: 55vw;
-    min-width: $sm-breakpoint;
+    width: $sm-breakpoint;
     margin: 0 auto;
 
     @include breakpoint(sm) {
-        min-width: 100%;
+        width: 100%;
 	}
 }
 

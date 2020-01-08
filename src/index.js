@@ -51,7 +51,7 @@ let scrollItems = menuItems.map((ind, element) => {
 
 $(window).scroll((e) => {
   // Get container scroll position
-  let fromTop = $(e.currentTarget).scrollTop() + navHeight + 10
+  const fromTop = $(e.currentTarget).scrollTop() + navHeight + 10
 
   // Get id of current section
   let current = scrollItems.map((ind, element) => {
@@ -59,7 +59,8 @@ $(window).scroll((e) => {
       return element
   })
   current = current[current.length - 1]
-  let currentId = current && current.length ? current[0].id : ''
+
+  const currentId = current && current.length ? current[0].id : ''
 
   // Set active class
   if (lastId !== currentId) {
@@ -67,4 +68,22 @@ $(window).scroll((e) => {
     menuItems.removeClass('active')
     menuItems.filter(`[href='#${currentId}']`).addClass('active')
   }
+})
+
+// Top arrow hover effect
+const duration = 200
+$('.logo-container').click((e) => {
+  $('html, body').stop().animate({
+    scrollTop: 0
+  }, 500)
+})
+
+$('.logo-container').mouseover(() => {
+  $('#top-arrow').stop().animate({ opacity: 1 }, duration)
+  $('#logo').stop().animate({ opacity: 0.5 }, duration)
+})
+
+$('.logo-container').mouseout(() => {
+  $('#top-arrow').stop().animate({ opacity: 0 }, duration)
+  $('#logo').stop().animate({ opacity: 1 }, duration)
 })

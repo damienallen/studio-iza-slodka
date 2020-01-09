@@ -1,0 +1,29 @@
+---
+
+# This compose-file is production only it should not be called directly.
+# This setup is supposed to be used with `docker-swarm`.
+# See `./docs/pages/template/production.rst` docs.
+
+version: "3.6"
+services:
+  caddy:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./docker/caddy/certs:/root/.caddy  # saving certificates
+      # - ./docker/caddy/Caddyfile:/etc/Caddyfile:ro  # configuration
+    ports:
+      - "80:80"
+      - "8888:8888"
+      - "443:443"
+    networks:
+      - proxynet
+
+
+networks:
+  # Connect proxy server and application, do not use elsewhere!
+  proxynet:
+  # Network for internals
+  # webnet:

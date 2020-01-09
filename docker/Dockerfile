@@ -4,19 +4,14 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install curl -y
 
-RUN curl -sSfL https://caddyserver.com/download/linux/amd64 \
+RUN curl -sSfL https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz \
     | tar --no-same-owner -C /usr/bin/ -xz
 
-EXPOSE 80 443
+EXPOSE 80 8888 443
 
-WORKDIR /var/www
+COPY ./docker/caddy/Caddyfile /etc/Caddyfile
+
+# WORKDIR /var/www
 COPY ./dist /var/www
 
 ENTRYPOINT ["/usr/bin/caddy", "-conf", "/etc/Caddyfile"]
-
-# FROM alpine:3.11
-
-# ENTRYPOINT ["/docker/entrypoint.sh"]
-
-# WORKDIR /code
-# COPY . /code

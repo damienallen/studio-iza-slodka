@@ -1,0 +1,7 @@
+docker/caddy/certs/
+src/
+node_modules/
+
+.github
+docker-compose.deploy.yml
+.vscode

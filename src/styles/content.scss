@@ -65,8 +65,10 @@
 
 .cover-header {
     z-index: 50;
+    // max-width: $content-max-width;
     flex: 0 0 auto;
-    padding: 20px 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
     margin-bottom: 0;
 }
 

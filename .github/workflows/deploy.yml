@@ -15,18 +15,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
     - uses: actions/checkout@v1
-    - name: Set up node.js ${{ matrix.node-version }}
+    - name: Set up node.js
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
     - run: yarn install
     - run: yarn run build
+    - name: Build Docker image
+      run: docker build ./dist --file ../Dockerfile --tag isa:$(date +%s)
 
     env:
         CI: true

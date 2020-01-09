@@ -24,7 +24,7 @@ jobs:
     - run: yarn install
     - run: yarn run build
     - name: Build Docker image
-      run: docker build ./dist --file ../docker/Dockerfile --tag isa:$(date +%s)
+      run: docker build . --tag isa:$(date +%s)
 
     env:
         CI: true

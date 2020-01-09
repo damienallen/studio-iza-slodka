@@ -18,31 +18,25 @@
 
 /*--[ COVER ]--*/
 .cover {
-    // background: #fff000;
     text-align: center;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    @include breakpoint(lg) {
-        width: $sm-breakpoint;
-    }
-
-    @include breakpoint(sm) {
-        width: 100%;
-	}
-
     .cover-img {
         flex: 1;
-        margin-top: 48px;
+        width: 100%;
+        padding-top: 40px;
+        overflow: hidden;
 
         img {
-            // height: 400px;
-            max-height: 100%;
-            max-width: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100vw;
+            height: auto;
             position: relative;
             object-fit: cover;
             top: 50%;
@@ -71,7 +65,7 @@
 
 .cover-header {
     z-index: 50;
-    flex: 0 0 110px;
+    flex: 0 0 auto;
     padding: 20px 0;
     margin-bottom: 0;
 }

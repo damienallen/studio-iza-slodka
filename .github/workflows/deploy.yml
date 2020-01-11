@@ -9,12 +9,13 @@ on:
   pull_request:
     paths-ignore:
       - '**.md'
-
   tags:
     - v*
-  env:
-    IMAGE_NAME: isa:master
-    IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME"
+
+env:
+  IMAGE_NAME: isa:master
+  IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME"
+
 
 jobs:
   build:

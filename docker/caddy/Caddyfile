@@ -3,8 +3,25 @@
 #   redir https://isaslodka.com
 # }
 
-localhost:8888 {
-  # HTTPS options:
+isaslodka.com {
+  tls self_signed
+  header / Strict-Transport-Security "max-age=31536000;"
+
+  # Removing some headers for improved security:
+  header / -Server
+
+  # Serve static files:
+  root /var/www
+
+  # Allows to use `.gz` files when available:
+  gzip
+
+  # Logs:
+  log stdout
+  errors stdout
+}
+
+http://localhost {
   tls self_signed
   header / Strict-Transport-Security "max-age=31536000;"
 

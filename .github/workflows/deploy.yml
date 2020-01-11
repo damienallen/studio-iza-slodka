@@ -11,8 +11,7 @@ on:
       - '**.md'
 
 env:
-  IMAGE_NAME: isa:master
-  IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME"
+  IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/caddy"
 
 
 jobs:

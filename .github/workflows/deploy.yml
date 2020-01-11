@@ -9,8 +9,6 @@ on:
   pull_request:
     paths-ignore:
       - '**.md'
-  tags:
-    - v*
 
 env:
   IMAGE_NAME: isa:master

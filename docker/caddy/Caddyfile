@@ -1,27 +1,9 @@
 # "www" redirect to "non-www" version
 # www.isaslodka.com {
-#   redir https://isaslodka.com
+#   redir https://izaslodka.com
 # }
 
-isaslodka.com {
-  tls self_signed
-  header / Strict-Transport-Security "max-age=31536000;"
-
-  # Removing some headers for improved security:
-  header / -Server
-
-  # Serve static files:
-  root /var/www
-
-  # Allows to use `.gz` files when available:
-  gzip
-
-  # Logs:
-  log stdout
-  errors stdout
-}
-
-http://localhost {
+preview.izaslodka.com {
   tls self_signed
   header / Strict-Transport-Security "max-age=31536000;"
 

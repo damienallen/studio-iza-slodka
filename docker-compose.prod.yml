@@ -1,0 +1,13 @@
+---
+
+version: "3.7"
+services:
+  caddy:
+    restart: on-failure
+    build:
+      target: prod_build
+    volumes:
+      - certs:/root/.caddy
+    ports:
+      - "80:80"
+      - "443:443"

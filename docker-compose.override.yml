@@ -1,0 +1,13 @@
+---
+
+version: "3.7"
+services:
+  caddy:
+    restart: unless-stopped
+    build:
+      target: dev_build
+    volumes:
+      - ./docker/caddy/certs:/root/.caddy
+    ports:
+      - "8000:8000"
+

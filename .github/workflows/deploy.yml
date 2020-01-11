@@ -24,7 +24,7 @@ jobs:
     - run: yarn install
     - run: yarn run build
     - name: Build Docker image
-      run: docker build -t isa:latest .
+      run: docker build -f ./docker/Dockerfile -t isa:latest .
 
     env:
         CI: true

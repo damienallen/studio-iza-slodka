@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.04 as dev_build
 
 RUN apt-get update \
     && apt-get upgrade -y \
@@ -8,10 +8,10 @@ RUN curl -sSfL https://github.com/caddyserver/caddy/releases/download/v1.0.4/cad
     | tar --no-same-owner -C /usr/bin/ -xz
 
 EXPOSE 80 8888 443
-
-COPY ./docker/caddy/Caddyfile /etc/Caddyfile
-
-# WORKDIR /var/www
 COPY ./dist /var/www
 
+COPY ./docker/caddy/Caddyfile.dev /etc/Caddyfile
+
+FROM dev_build as prod_build
+COPY ./docker/caddy/Caddyfile /etc/Caddyfile
 ENTRYPOINT ["/usr/bin/caddy", "-conf", "/etc/Caddyfile"]

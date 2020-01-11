@@ -28,12 +28,12 @@ jobs:
       run: |
         yarn install
         yarn run build
+    - name: Log into registry
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Pull cached image
       run: docker pull $IMAGE_ID:$IMAGE_TAG || true
     - name: Build Docker image
       run: docker build -f ./docker/Dockerfile -t caddy:$IMAGE_TAG .
-    - name: Log into registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Push image
       run: |
         docker tag caddy:IMAGE_TAG $IMAGE_ID:$IMAGE_TAG

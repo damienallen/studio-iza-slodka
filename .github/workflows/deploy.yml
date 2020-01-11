@@ -4,12 +4,17 @@ on:
   push:
     branches:
       - master
-      - develop
     paths-ignore:
       - '**.md'
   pull_request:
     paths-ignore:
       - '**.md'
+
+  tags:
+    - v*
+  env:
+    IMAGE_NAME: isa:master
+    IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME"
 
 jobs:
   build:
@@ -24,7 +29,13 @@ jobs:
     - run: yarn install
     - run: yarn run build
     - name: Build Docker image
-      run: docker build -f ./docker/Dockerfile -t isa:latest .
+      run: docker build -f ./docker/Dockerfile -t isa:master .
+    - name: Log into registry
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+    - name: Push image
+      run: |
+          docker tag image $IMAGE_ID:master
+          docker push $IMAGE_ID:master
 
     env:
         CI: true

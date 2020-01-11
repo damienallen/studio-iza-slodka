@@ -11,8 +11,8 @@ on:
       - '**.md'
 
 env:
-  IMAGE_ID: "docker.pkg.github.com/${{ github.repository }}/caddy"
-
+  IMAGE_ID: 'docker.pkg.github.com/${{ github.repository }}/caddy'
+  IMAGE_TAG: 'master'
 
 jobs:
   build:
@@ -20,20 +20,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Set up node.js
+    - name: Set up node
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: yarn install
-    - run: yarn run build
+    - name: Build yarn distribution
+      run: |
+        yarn install
+        yarn run build
+    - name: Pull cached image
+      run: docker pull $IMAGE_ID:master || true
     - name: Build Docker image
-      run: docker build -f ./docker/Dockerfile -t isa:master .
+      run: docker build -f ./docker/Dockerfile -t caddy:$IMAGE_TAG .
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
     - name: Push image
       run: |
-          docker tag image $IMAGE_ID:master
-          docker push $IMAGE_ID:master
+        docker tag caddy:IMAGE_TAG $IMAGE_ID:IMAGE_TAG
+        docker push $IMAGE_ID:IMAGE_TAG
 
     env:
         CI: true

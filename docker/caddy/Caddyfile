@@ -4,10 +4,9 @@
 # }
 
 preview.izaslodka.com {
-  tls self_signed
   header / Strict-Transport-Security "max-age=31536000;"
 
-  # Removing some headers for improved security:
+  # Remove headers for improved security:
   header / -Server
 
   # Serve static files:
@@ -17,6 +16,6 @@ preview.izaslodka.com {
   gzip
 
   # Logs:
-  log stdout
-  errors stdout
+  log ../access.log
+  errors ../errors.log
 }

@@ -9,7 +9,6 @@ RUN curl -sSfL https://github.com/caddyserver/caddy/releases/download/v1.0.4/cad
 
 EXPOSE 80 8888 443
 COPY ./dist /var/www
-
 COPY ./docker/caddy/Caddyfile.dev /etc/Caddyfile
 
 FROM dev_build as prod_build

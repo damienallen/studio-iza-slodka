@@ -33,7 +33,7 @@ jobs:
     - name: Pull cached image
       run: docker pull $IMAGE_ID:$IMAGE_TAG || true
     - name: Build Docker image
-      run: docker build -f ./docker/Dockerfile -t caddy:$IMAGE_TAG .
+      run: docker build --cache-from $IMAGE_ID:$IMAGE_TAG -f ./docker/Dockerfile -t caddy:$IMAGE_TAG .
     - name: Push image
       run: |
         docker tag caddy:$IMAGE_TAG $IMAGE_ID:$IMAGE_TAG

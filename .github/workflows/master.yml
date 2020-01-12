@@ -30,13 +30,13 @@ jobs:
     - name: Deploy to server
       uses: Pendect/action-rsyncer@v1.1.0
       env:
-        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
       with:
         flags: '-avzr --delete'
         options: ''
         ssh_options: ''
         src: 'dist/'
-        dest: 'root@preview.izaslodka.com:/var/www/master'
+        dest: 'root@${{ secrets.DEPLOY_SERVER }}:/var/www/master'
 
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"

@@ -3,7 +3,7 @@
 #   redir https://izaslodka.com
 # }
 
-178.128.243.174 {
+preview2.izaslodka.com, 178.128.243.174 {
   tls dev@dallen.co
   header / Strict-Transport-Security "max-age=31536000;"
 

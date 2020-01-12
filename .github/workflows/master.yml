@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy master
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
       - '**.md'
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -39,7 +39,7 @@ jobs:
         options: ''
         ssh_options: ''
         src: 'dist/'
-        dest: 'root@preview.izaslodka.com:/var/www/html'
+        dest: 'root@preview.izaslodka.com:/var/www/master'
 
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"

@@ -36,25 +36,31 @@ $('.zoom-img').click((e) => {
 })
 
 // Hover zooms
+const zoomFactor = 3
 $('.hover-zoom')
-    .on('mouseover', function(){
-      console.log('mouseover', $(this).children('bg-image'))
-      $(this).children('bg-image').css({'transform': 'scale(2)'});
+    .on('click', (e) => {
+      if ($(e.currentTarget).hasClass('zoomed')) {
+        $(e.currentTarget).removeClass('zoomed')
+        $(e.currentTarget).children('.bg-image').css({'transform': 'scale(1)'});
+      } else {
+        $(e.currentTarget).addClass('zoomed')  
+        $(e.currentTarget).children('.bg-image').css({
+          'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 +'%'
+        });
+        $(e.currentTarget).children('.bg-image').css({'transform': `scale(${zoomFactor})`});
+      }})
+    .on('mousemove', (e) => {
+      if ($(e.currentTarget).hasClass('zoomed')) {
+        $(e.currentTarget).children('.bg-image').css({
+          'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 +'%'
+        });
+      }
     })
-    .on('mouseout', function(){
-      console.log('mouseout', $(this).children('bg-image'))
-      $(this).children('bg-image').css({'transform': 'scale(1)'});
-    })
-    .on('mousemove', function(e){
-      // console.log(e.pageX, e.pageY, $(this))
-      $(this).children('bg-image').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-    })
-    // tiles set up
-    .each(function(){
-      $(this)
+    .each((index, element) => {
+      $(element)
         .append('<div class="bg-image"></div>')
-        .children('.bg-image').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-})
+        .children('.bg-image').css({'background-image': 'url('+ $(element).attr('data-image') +')'});
+    })
 
 // Smooth scrolling
 const navHeight = $('#nav-container').outerHeight() + 10

@@ -71,7 +71,7 @@ body {
     margin: 0 !important;
     height: 100vh !important;
     width: 100vw !important;
-    z-index: 500;
+    z-index: 200;
     background: rgba(255,255,255,0.5);
     cursor: zoom-out;
 
@@ -95,10 +95,13 @@ body {
 
 .hover-zoom {
     position: relative;
-    // float: left;
-    // width: 33.333%;
     height: 100%;
     overflow: hidden;
+    cursor: zoom-in;
+
+    &.zoomed {
+        cursor: zoom-out !important;
+    }
 
     .bg-image {
         position: absolute;
@@ -109,6 +112,6 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        transition: transform .5s ease-out;
+        transition: transform .1s ease-out;
     }
 }

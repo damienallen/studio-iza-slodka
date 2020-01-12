@@ -60,7 +60,7 @@
 }
 
 .name {
-    font-family: 'Lusitana', serif;
+    font-family: $header-font;
     color: $highlight-color;
     display: inline-block;
     font-size: 1.4em;

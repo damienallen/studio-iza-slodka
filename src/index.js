@@ -22,9 +22,18 @@ const closeNav = () => {
   $('#nav-container').removeClass('open')
 }
 
-// Set up onclicks
+// Set up navigation onclicks
 $('#nav-open').click(openNav)
 $('#nav-close').click(closeNav)
+
+// Click zooms
+$('.zoom-img').each((index, element) => {
+  let height = $(element).height()
+  $(element.parentElement).css('height', height)
+})
+$('.zoom-img').click((e) => {
+  $(e.currentTarget).toggleClass('zoom-full')
+})
 
 // Smooth scrolling
 const navHeight = $('#nav-container').outerHeight() + 10

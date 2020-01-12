@@ -25,18 +25,13 @@ jobs:
         yarn install
         yarn run build
     - name: Push build files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add dist -f
-        git commit -am "Updated dist files"
-        git subtree push --prefix dist origin dist
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: 'dist'
-    #     directory: ./dist
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        # PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: dist
+        PUBLISH_DIR: ./dist
 
     env:
         CI: true

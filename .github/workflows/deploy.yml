@@ -24,17 +24,17 @@ jobs:
       run: |
         yarn install
         yarn run build
-    - name: Commit files
+    - name: Push build files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -am "Updated dist"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: 'dist'
-        directory: ./dist
+        git subtree push --prefix dist origin dist
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: 'dist'
+    #     directory: ./dist
 
     env:
         CI: true

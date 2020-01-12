@@ -35,6 +35,27 @@ $('.zoom-img').click((e) => {
   $(e.currentTarget).toggleClass('zoom-full')
 })
 
+// Hover zooms
+$('.hover-zoom')
+    .on('mouseover', function(){
+      console.log('mouseover', $(this).children('bg-image'))
+      $(this).children('bg-image').css({'transform': 'scale(2)'});
+    })
+    .on('mouseout', function(){
+      console.log('mouseout', $(this).children('bg-image'))
+      $(this).children('bg-image').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      // console.log(e.pageX, e.pageY, $(this))
+      $(this).children('bg-image').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        .append('<div class="bg-image"></div>')
+        .children('.bg-image').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+})
+
 // Smooth scrolling
 const navHeight = $('#nav-container').outerHeight() + 10
 $('nav>a, .to-top').click((e) => {

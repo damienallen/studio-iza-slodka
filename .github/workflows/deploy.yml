@@ -3,16 +3,12 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - deploy
     paths-ignore:
       - '**.md'
   pull_request:
     paths-ignore:
       - '**.md'
-
-env:
-  IMAGE_ID: 'docker.pkg.github.com/${{ github.repository }}/caddy'
-  IMAGE_TAG: 'master'
 
 jobs:
   build:
@@ -28,14 +24,6 @@ jobs:
       run: |
         yarn install
         yarn run build
-    - name: Log into registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-    - name: Build Docker image
-      run: docker build --cache-from $IMAGE_ID:$IMAGE_TAG -f ./docker/Dockerfile -t caddy:$IMAGE_TAG .
-    - name: Push image
-      run: |
-        docker tag caddy:$IMAGE_TAG $IMAGE_ID:$IMAGE_TAG
-        docker push $IMAGE_ID:$IMAGE_TAG
 
     env:
         CI: true

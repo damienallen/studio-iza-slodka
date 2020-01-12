@@ -1,12 +1,15 @@
 ---
 
-version: "3.7"
+version: '3.7'
 services:
   caddy:
     restart: unless-stopped
+    image:
+        "docker.pkg.github.com/damienallen/isa/caddy:master"
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      cache_from:
+        - "docker.pkg.github.com/damienallen/isa/caddy:master"
 
 volumes:
   certs:

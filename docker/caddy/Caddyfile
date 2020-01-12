@@ -3,7 +3,7 @@
 #   redir https://izaslodka.com
 # }
 
-preview.izaslodka.com {
+preview2.izaslodka.com {
   header / Strict-Transport-Security "max-age=31536000;"
 
   # Remove headers for improved security:

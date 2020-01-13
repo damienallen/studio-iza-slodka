@@ -38,29 +38,30 @@ $('.zoom-img').click((e) => {
 // Hover zooms
 const zoomFactor = 3
 $('.hover-zoom')
-    .on('click', (e) => {
-      if ($(e.currentTarget).hasClass('zoomed')) {
-        $(e.currentTarget).removeClass('zoomed')
-        $(e.currentTarget).children('.bg-image').css({'transform': 'scale(1)'});
-      } else {
-        $(e.currentTarget).addClass('zoomed')  
-        $(e.currentTarget).children('.bg-image').css({
-          'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 +'%'
-        });
-        $(e.currentTarget).children('.bg-image').css({'transform': `scale(${zoomFactor})`});
-      }})
-    .on('mousemove', (e) => {
-      if ($(e.currentTarget).hasClass('zoomed')) {
-        $(e.currentTarget).children('.bg-image').css({
-          'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 +'%'
-        });
-      }
-    })
-    .each((index, element) => {
-      $(element)
-        .append('<div class="bg-image"></div>')
-        .children('.bg-image').css({'background-image': 'url('+ $(element).attr('data-image') +')'});
-    })
+  .on('click', (e) => {
+    if ($(e.currentTarget).hasClass('zoomed')) {
+      $(e.currentTarget).removeClass('zoomed')
+      $(e.currentTarget).children('.bg-image').css({ 'transform': 'scale(1)' });
+    } else {
+      $(e.currentTarget).addClass('zoomed')
+      $(e.currentTarget).children('.bg-image').css({
+        'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 + '%'
+      });
+      $(e.currentTarget).children('.bg-image').css({ 'transform': `scale(${zoomFactor})` });
+    }
+  })
+  .on('mousemove', (e) => {
+    if ($(e.currentTarget).hasClass('zoomed')) {
+      $(e.currentTarget).children('.bg-image').css({
+        'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 + '%'
+      });
+    }
+  })
+  .each((index, element) => {
+    $(element)
+      .append('<div class="bg-image"></div>')
+      .children('.bg-image').css({ 'background-image': 'url(' + $(element).attr('data-image') + ')' });
+  })
 
 const adjustDetailMargins = (e) => {
   if (window.matchMedia('(max-width: 860px)').matches) {
@@ -95,9 +96,10 @@ let scrollItems = menuItems.map((ind, element) => {
   if (item.length) { return item }
 })
 
-$(window).scroll((e) => {
+const adjustScrollSpy = (scrollTop) => {
+
   // Get container scroll position
-  const fromTop = $(e.currentTarget).scrollTop() + navHeight + 10
+  const fromTop = scrollTop + navHeight + 10
 
   // Get id of current section
   let current = scrollItems.map((ind, element) => {
@@ -105,7 +107,6 @@ $(window).scroll((e) => {
       return element
   })
   current = current[current.length - 1]
-
   const currentId = current && current.length ? current[0].id : ''
 
   // Set active class
@@ -114,6 +115,25 @@ $(window).scroll((e) => {
     menuItems.removeClass('active')
     menuItems.filter(`[href='#${currentId}']`).addClass('active')
   }
+}
+
+
+// Section scroller
+const scrollSection = (scrollTop, windowHeight) => {
+  const scrollBottom = scrollTop + windowHeight
+  const elementTop = $('#maze-section-scroller').offset().top
+  const elementHeight = $('#maze-section-scroller').height()
+  const elementBottom = elementTop + elementHeight
+
+  if (scrollBottom > elementTop - 10 && scrollTop < elementBottom) {
+    console.log((elementBottom - scrollTop) / elementHeight * 0.5)
+  }
+}
+
+$(window).scroll((e) => {
+  const scrollTop = $(e.currentTarget).scrollTop()
+  adjustScrollSpy(scrollTop)
+  scrollSection(scrollTop, $(e.currentTarget).height())
 })
 
 // Top arrow hover effect
@@ -134,7 +154,6 @@ $('.logo-container').mouseout(() => {
   $('#logo').stop().animate({ opacity: 1 }, duration)
 })
 
-
 // Window events
-$( window ).resize((e) => adjustDetailMargins())
-$( window ).ready((e) => adjustDetailMargins())
+$(window).resize((e) => adjustDetailMargins())
+$(window).ready((e) => adjustDetailMargins())

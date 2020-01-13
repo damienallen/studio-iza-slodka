@@ -2,4 +2,4 @@ dist/
 node_modules/
 docker/caddy/certs/
 
-yarn-error.log
+yarn-*.log

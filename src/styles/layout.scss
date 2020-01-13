@@ -114,4 +114,8 @@ body {
         background-size: cover;
         transition: transform .1s ease-out;
     }
+
+    img {
+        opacity: 0;
+    }
 }

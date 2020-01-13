@@ -62,6 +62,16 @@ $('.hover-zoom')
         .children('.bg-image').css({'background-image': 'url('+ $(element).attr('data-image') +')'});
     })
 
+const adjustDetailMargins = (e) => {
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    $('.details').each((index, element) => {
+      $(element.parentElement).children('.bg-image').css('margin-top', $(element).height() + 20)
+    })
+  } else {
+    $('.bg-image').css('margin-top', 0)
+  }
+}
+
 // Smooth scrolling
 const navHeight = $('#nav-container').outerHeight() + 10
 $('nav>a, .to-top').click((e) => {
@@ -123,3 +133,8 @@ $('.logo-container').mouseout(() => {
   $('#top-arrow').stop().animate({ opacity: 0 }, duration)
   $('#logo').stop().animate({ opacity: 1 }, duration)
 })
+
+
+// Window events
+$( window ).resize((e) => adjustDetailMargins())
+$( window ).ready((e) => adjustDetailMargins())

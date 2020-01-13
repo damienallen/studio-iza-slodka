@@ -30,7 +30,7 @@
 }
 
 nav {
-    font-family: 'Lusitana', serif;
+    font-family: $header-font;
     font-size: 1.4em;
     height: $header-height;
     padding: 0 $nav-padding;
@@ -40,7 +40,6 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // box-shadow: 0 4px 4px -4px #ddd;
 
     a {
         line-height: $header-height;

@@ -119,21 +119,34 @@ const adjustScrollSpy = (scrollTop) => {
 
 
 // Section scroller
-const scrollSection = (scrollTop, windowHeight) => {
-  const scrollBottom = scrollTop + windowHeight
+const frontFactor = 1
+const middleFactor = 0.4
+const backFactor = 0.2
+const spyOffset = 200
+
+const scrollSection = (scrollTop, windowHeight, windowWidth) => {
   const elementTop = $('#maze-section-scroller').offset().top
   const elementHeight = $('#maze-section-scroller').height()
-  const elementBottom = elementTop + elementHeight
 
-  if (scrollBottom > elementTop - 10 && scrollTop < elementBottom) {
-    console.log((elementBottom - scrollTop) / elementHeight * 0.5)
+  const elementBottom = elementTop + elementHeight
+  const scrollBottom = scrollTop + windowHeight
+  const scrollDistance = windowHeight + elementHeight - spyOffset
+
+  if (scrollBottom > elementTop + spyOffset && scrollTop < elementBottom - spyOffset) {
+    const progress = (scrollBottom - elementTop) / scrollDistance
+    const elementWidth = $('#maze-section-scroller>.spacer').width()
+    const leftOffset = progress * (windowWidth - elementWidth)
+
+    $('.scroll-front').css('left', leftOffset * frontFactor)
+    $('.scroll-middle').css('left', leftOffset * middleFactor)
+    $('.scroll-back').css('left', leftOffset * backFactor)
   }
 }
 
 $(window).scroll((e) => {
   const scrollTop = $(e.currentTarget).scrollTop()
   adjustScrollSpy(scrollTop)
-  scrollSection(scrollTop, $(e.currentTarget).height())
+  scrollSection(scrollTop, $(e.currentTarget).height(), $(e.currentTarget).width())
 })
 
 // Top arrow hover effect

@@ -64,7 +64,7 @@ $('.hover-zoom')
   })
 
 // Smooth scrolling
-const navHeight = $('#nav-container').outerHeight() + 10
+const navHeight = $('#nav-container').outerHeight()
 $('nav>a, .to-top').click((e) => {
   e.preventDefault()
   closeNav()

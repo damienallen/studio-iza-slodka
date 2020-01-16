@@ -80,11 +80,15 @@
 
 .title {
     font-size: 4em;
-    padding-bottom: 10px;
+    padding: $section-margin-2 0 10px 0;
 
     @include breakpoint(sm) {
         font-size: 2.2em;
 	}
+}
+
+.cover-title {
+    padding-top: 0;
 }
 
 .subtitle {
@@ -186,5 +190,25 @@
 }
 
 .makers-square {
-    margin: 40px 0;
+    margin-bottom: 0;
+}
+
+.maze-buttons {
+    margin-top: $section-margin;
+    text-align: center;
+    font-size: 1.4em;
+
+    a {
+        background-color: #fff;
+        border: none;
+        text-transform: uppercase;
+        padding: 20px;
+        margin: 0 40px;
+        box-shadow: 6px 6px 4px -6px #ddd;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+        color: $highlight-color;
+        text-decoration: none;
+    }
 }

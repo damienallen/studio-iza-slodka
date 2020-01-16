@@ -28,6 +28,12 @@ module.exports = {
                 to: 'ico'
             }
         ]),
+        new CopyWebpackPlugin([
+            {
+                from: 'src/files',
+                to: 'file'
+            }
+        ]),
         // new ImageminPlugin({
         //     bail: false, // Ignore errors on corrupted images
         //     cache: true,

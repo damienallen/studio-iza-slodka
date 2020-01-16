@@ -106,17 +106,6 @@
 .subsection-image {
     position: relative;
 
-    .details {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        padding: 20px;
-        background: rgba(255,255,255,0.7);
-        border-radius: 0 0 4px 4px;
-        z-index: 70;
-    }
 
     @include breakpoint(sm) {
         padding: 80px 0 0 0;
@@ -126,15 +115,16 @@
             padding: 0 20px;
         }
 
-        // .bg-image {
-        //     margin-top: 120px;
-        // }
-
         img {
             height: auto;
             width: 100%;
         }
 	}
+}
+
+.details {
+    width: 60%;
+    margin: 0 auto 40px auto;
 }
 
 /*--[ MAKER'S MAZE ]--*/
@@ -144,14 +134,12 @@
 
 .maze-img-2 {
     width: 100%;
-    // opacity: 0.5;
 }
 
 #maze-section-scroller {
     width: 100vw;
     position: relative;
-    margin-bottom: 120px;
-    top: 0;
+    top: -120px;
     left: 0;
     user-select: none;
 

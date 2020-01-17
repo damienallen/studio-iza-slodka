@@ -1,5 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const ImageminPlugin = require('imagemin-webpack');
 const path = require('path');
 
@@ -11,6 +12,7 @@ module.exports = {
     },
 
     plugins: [
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             hash: true,
             filename: 'index.html',
@@ -26,6 +28,12 @@ module.exports = {
             {
                 from: 'src/icons',
                 to: 'ico'
+            }
+        ]),
+        new CopyWebpackPlugin([
+            {
+                from: 'src/files',
+                to: 'file'
             }
         ]),
         // new ImageminPlugin({
@@ -69,7 +77,7 @@ module.exports = {
             },
             {
                 test: /\.(s*)css$/,
-                use: ['style-loader', 'css-loader?url=false', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'sass-loader']
             },
             // {
             // test: /\.(jpe?g|png|gif|svg)$/i,

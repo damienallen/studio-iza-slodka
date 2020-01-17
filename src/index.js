@@ -63,18 +63,8 @@ $('.hover-zoom')
       .children('.bg-image').css({ 'background-image': 'url(' + $(element).attr('data-image') + ')' });
   })
 
-const adjustDetailMargins = (e) => {
-  if (window.matchMedia('(max-width: 860px)').matches) {
-    $('.details').each((index, element) => {
-      $(element.parentElement).children('.bg-image').css('margin-top', $(element).height() + 20)
-    })
-  } else {
-    $('.bg-image').css('margin-top', 0)
-  }
-}
-
 // Smooth scrolling
-const navHeight = $('#nav-container').outerHeight() + 10
+const navHeight = $('#nav-container').outerHeight()
 $('nav>a, .to-top').click((e) => {
   e.preventDefault()
   closeNav()
@@ -117,12 +107,11 @@ const adjustScrollSpy = (scrollTop) => {
   }
 }
 
-
 // Section scroller
 const frontFactor = 1
-const middleFactor = 0.4
+const middleFactor = 0.5
 const backFactor = 0.2
-const spyOffset = 200
+const spyOffset = 120
 
 const scrollSection = (scrollTop, windowHeight, windowWidth) => {
   const elementTop = $('#maze-section-scroller').offset().top
@@ -168,5 +157,5 @@ $('.logo-container').mouseout(() => {
 })
 
 // Window events
-$(window).resize((e) => adjustDetailMargins())
-$(window).ready((e) => adjustDetailMargins())
+// $(window).resize()
+// $(window).ready()

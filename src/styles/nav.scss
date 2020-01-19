@@ -74,6 +74,10 @@ nav {
             width: 20px;
             height: 20px;
             margin: 5px 0 0 20px;
+
+            @include breakpoint(sm) {
+                margin: 0 20px;
+            }
         }
 
         a:hover, a:active {

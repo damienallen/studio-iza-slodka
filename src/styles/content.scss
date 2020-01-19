@@ -246,18 +246,21 @@
     flex: 0 0 40%;
     
     .contact-info {
+        font-style: italic;
+        padding-left: 40px;
+
         span {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 1.2em;
         }
     }
 
     .profile-photo {
         text-align: right;
-        margin-bottom: 50px;
+        margin-bottom: 75px;
 
         img {
-            width: 180px;
+            width: 120px;
             height: auto;
         }
     }

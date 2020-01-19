@@ -39,7 +39,8 @@ body {
     min-width: $content-min-width;
     max-width: $content-max-width;
     padding: 0 $side-padding;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     @include breakpoint(sm) {
         width: 100%;

@@ -179,6 +179,11 @@
     left: 0;
     user-select: none;
 
+    @include breakpoint(sm) {
+        top: 0;
+        margin-bottom: $section-margin;
+    }
+
     img {
         width: 150vw;
         position: absolute;

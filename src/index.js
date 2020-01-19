@@ -159,12 +159,12 @@ $('.logo-container,.name').click((e) => {
   }, 0)
 })
 
-$('.logo-container,.name').mouseover(() => {
+$('.logo-container').mouseover(() => {
   $('#top-arrow').stop().animate({ opacity: 1 }, duration)
   $('#logo').stop().animate({ opacity: 0.5 }, duration)
 })
 
-$('.logo-container,.name').mouseout(() => {
+$('.logo-container').mouseout(() => {
   $('#top-arrow').stop().animate({ opacity: 0 }, duration)
   $('#logo').stop().animate({ opacity: 1 }, duration)
 })

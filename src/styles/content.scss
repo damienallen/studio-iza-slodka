@@ -14,7 +14,8 @@
     margin-block-end: 1.8em;
 
     @include breakpoint(sm) {
-        margin: 0 $side-margin-sm;
+        margin-left: $side-margin-sm;
+        margin-right: $side-margin-sm;
 	}
 }
 
@@ -72,6 +73,11 @@
     width: $content-width;
     max-width: $content-max-width;
     flex: 0 0 auto;
+
+    @include breakpoint(sm) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .cover-header {
@@ -245,6 +251,11 @@
 
 .about-details {
     margin-left: 75px;
+
+    @include breakpoint(sm) {
+        text-align: center;
+        margin: $section-margin-1 0 0 0;
+    }
     
     .contact-info {
         font-style: italic;
@@ -256,7 +267,7 @@
     }
 
     .profile-photo {
-        margin-bottom: 75px;
+        margin-bottom: $section-margin;
 
         img {
             width: 180px;
@@ -278,18 +289,30 @@
             background: #eee;
         }
 
+        @include breakpoint(sm) {
+            padding: 20px;
+        }
+
         .item-thumb {
             flex: 0 1 100px;
 
             img {
                 width: 100%;
+                max-width: 100px;
                 height: auto;
+            }
+
+            @include breakpoint(sm) {
+                margin-bottom: 20px;
             }
         }
 
         .item-text {
             flex: 1;
-            margin-left: 50px;
+
+            @include breakpoint(md) {
+                margin-left: 50px;
+            }
 
             .item-date {
                 color: #666;

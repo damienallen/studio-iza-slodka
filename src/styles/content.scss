@@ -50,6 +50,7 @@
 /*--[ SECTION ]--*/
 .section {
     margin: 0 0 $section-margin-2 0;
+    min-height: 100vh;
     z-index: 20;
 }
 
@@ -243,8 +244,7 @@
 /*--[ ABOUT ]--*/
 
 .about-details {
-    flex: 0 0 40%;
-    padding-left: 40px;
+    margin-left: 75px;
     
     .contact-info {
         font-style: italic;

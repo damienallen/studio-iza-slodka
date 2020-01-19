@@ -63,8 +63,19 @@ $('.hover-zoom')
       .children('.bg-image').css({ 'background-image': 'url(' + $(element).attr('data-image') + ')' });
   })
 
+// Calculate navigation bar height
+let navHeight = 0
+const getNavHeight = () => {
+  if ($(window).width() < 860) {
+    navHeight = $('#sidebar').outerHeight()
+  } else {
+    navHeight = $('#nav-container').outerHeight()
+  }
+}
+getNavHeight()
+$(window).resize(() => getNavHeight())
+
 // Smooth scrolling
-const navHeight = $('#nav-container').outerHeight()
 $('nav>a, .to-top').click((e) => {
   e.preventDefault()
   closeNav()
@@ -72,10 +83,12 @@ $('nav>a, .to-top').click((e) => {
   let sectionId = $(e.currentTarget).attr('href')
   let section = $(sectionId)
   let navOffset = sectionId === '#top' ? 0 : navHeight
+  let transition = 0
+  // let transition = $(window).width() < 860 ? 0 : 500
 
   $('html, body').stop().animate({
     scrollTop: section.offset().top - navOffset
-  }, 500)
+  }, transition)
 })
 
 // Scroll spy navigation

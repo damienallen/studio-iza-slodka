@@ -12,6 +12,10 @@
 
     &.open {
         display: block;
+
+        nav {
+            padding: 0;
+        }
     }
 
     @include breakpoint(md) {

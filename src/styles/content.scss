@@ -97,6 +97,16 @@
     font-size: 2em;
     padding-top: 15px;
 
+    a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+        color: #000
+    }
+
+    a:hover, a:active {
+        color: $link-color;
+    }
+
+
     @include breakpoint(sm) {
         font-size: 1.2em;
 	}

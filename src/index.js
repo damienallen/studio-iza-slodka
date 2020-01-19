@@ -124,7 +124,7 @@ const adjustScrollSpy = (scrollTop) => {
 const frontFactor = 1
 const middleFactor = 0.5
 const backFactor = 0.2
-const spyOffset = 120
+const spyOffset = 75
 
 const scrollSection = (scrollTop, windowHeight, windowWidth) => {
   const elementTop = $('#maze-section-scroller').offset().top

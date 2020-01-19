@@ -26,6 +26,11 @@ body {
 }
 
 .col-img {
+
+    @include breakpoint(sm) {
+        margin: $section-margin-2 ($side-margin-sm * 2);
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -97,10 +102,10 @@ body {
     overflow: hidden;
 
     @include breakpoint(sm) {
-        margin: 20px 0 0 0;
+        margin: $section-margin-1 ($side-margin-sm * 2);
 
         img {
-            height: 60vh;
+            height: auto;
         }
 	}
 }

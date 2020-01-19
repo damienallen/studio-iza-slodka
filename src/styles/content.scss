@@ -235,3 +235,32 @@
     margin: $section-margin 0 $section-margin-2 0;
     padding-top: 20px;
 }
+
+.collage-space {
+    flex: 0 0 40%;
+}
+
+/*--[ ABOUT ]--*/
+
+.about-details {
+    flex: 0 0 40%;
+    
+    .contact-info {
+        span {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    .profile-photo {
+        text-align: right;
+        margin-bottom: 50px;
+
+        img {
+            width: 180px;
+            height: auto;
+        }
+    }
+}
+
+/*--[ NEWS ]--*/

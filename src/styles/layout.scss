@@ -38,7 +38,7 @@ body {
 }
 
 /*--[ SLIDESHOWS ]--*/
-#slideshow {
+.slideshow {
     user-select: none;
     position: relative;
     width: 100%;
@@ -59,16 +59,16 @@ body {
         }
     }
 
-    img {
-        height: auto;
-        min-height: 100%;
-        min-width: 100%;
+    .slideshow-items {
         position: absolute;
-        object-fit: cover;
-        width: 100vw;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: auto;
+            position: absolute;
+            width: 100%;
+        }
     }
 }
 

@@ -37,13 +37,13 @@
     @include breakpoint(md) {
         height: 100vh;
     }
-    
+
     .cover-img {
 
         img {
             width: 100%;
             height: auto;
-            
+
             @include breakpoint(md) {
                 min-height: 100%;
                 min-width: 100%;
@@ -65,21 +65,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
 
     .cover-img {
-        padding-top: 40px;
-
-        img {
-            height: auto;
-            min-height: 100%;
-            min-width: 100%;
-            position: relative;
-            object-fit: cover;
-            width: 100vw;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+        margin-top: 40px;
     }
 }
 

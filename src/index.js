@@ -7,61 +7,10 @@ import './styles/nav.scss'
 import './styles/content.scss'
 
 import $ from 'jquery'
-
-// Open mobile navigation overlay
-const openNav = () => {
-  $('#nav-open').hide()
-  $('#nav-close').show()
-  $('#nav-container').addClass('open')
-}
-
-// Close navigation overlay
-const closeNav = () => {
-  $('#nav-open').show()
-  $('#nav-close').hide()
-  $('#nav-container').removeClass('open')
-}
-
-// Set up navigation onclicks
-$('#nav-open').click(openNav)
-$('#nav-close').click(closeNav)
-
-// Click zooms
-$('.zoom-img').each((index, element) => {
-  let height = $(element).height()
-  $(element.parentElement).css('height', height)
-})
-$('.zoom-img').click((e) => {
-  $(e.currentTarget).toggleClass('zoom-full')
-})
-
-// Hover zooms
-const zoomFactor = 3
-$('.hover-zoom')
-  .on('click', (e) => {
-    if ($(e.currentTarget).hasClass('zoomed')) {
-      $(e.currentTarget).removeClass('zoomed')
-      $(e.currentTarget).children('.bg-image').css({ 'transform': 'scale(1)' });
-    } else {
-      $(e.currentTarget).addClass('zoomed')
-      $(e.currentTarget).children('.bg-image').css({
-        'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 + '%'
-      });
-      $(e.currentTarget).children('.bg-image').css({ 'transform': `scale(${zoomFactor})` });
-    }
-  })
-  .on('mousemove', (e) => {
-    if ($(e.currentTarget).hasClass('zoomed')) {
-      $(e.currentTarget).children('.bg-image').css({
-        'transform-origin': ((e.pageX - $(e.currentTarget).offset().left) / $(e.currentTarget).width()) * 100 + '% ' + ((e.pageY - $(e.currentTarget).offset().top) / $(e.currentTarget).height()) * 100 + '%'
-      });
-    }
-  })
-  .each((index, element) => {
-    $(element)
-      .append('<div class="bg-image"></div>')
-      .children('.bg-image').css({ 'background-image': 'url(' + $(element).attr('data-image') + ')' });
-  })
+import './scripts/slideshow.js'
+import './scripts/navigation.js'
+import './scripts/sidebar.js'
+import './scripts/zoom.js'
 
 // Calculate navigation bar height
 let navHeight = 0
@@ -151,24 +100,15 @@ $(window).scroll((e) => {
   scrollSection(scrollTop, $(e.currentTarget).height(), $(e.currentTarget).width())
 })
 
-// Top arrow hover effect
-const duration = 200
-$('.logo-container,.name').click((e) => {
-  $('html, body').stop().animate({
-    scrollTop: 0
-  }, 0)
-})
-
-$('.logo-container').mouseover(() => {
-  $('#top-arrow').stop().animate({ opacity: 1 }, duration)
-  $('#logo').stop().animate({ opacity: 0.5 }, duration)
-})
-
-$('.logo-container').mouseout(() => {
-  $('#top-arrow').stop().animate({ opacity: 0 }, duration)
-  $('#logo').stop().animate({ opacity: 1 }, duration)
-})
 
 // Window events
-// $(window).resize()
-// $(window).ready()
+const printMessage = (message, count) => {
+  console.log(message)
+  if (count > 1) setTimeout(() => printMessage(message, count - 1), 1000)
+}
+$(window).ready(() => {
+  const now = new Date()
+  setTimeout(() => {
+    printMessage(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`, 30)
+  }, 1000)
+})

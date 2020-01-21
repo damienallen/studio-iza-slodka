@@ -1,5 +1,8 @@
 import $ from 'jquery'
 
+let slideshowTimer = {}
+let pauseTimeout = {}
+
 $('.slideshow').each((index, slideshow) => {
 
     $(slideshow).find('.slideshow-items > img:gt(0)').hide()
@@ -29,23 +32,22 @@ $('.slideshow').each((index, slideshow) => {
             .show()
     }
 
-    let slideshowTimer = setInterval(() => nextImage(), interval)
-    let pauseTimeout = null
+    slideshowTimer[index] = setInterval(() => nextImage(), interval)
 
     $(slideshow).find('.prev').on('click', () => {
-        if (pauseTimeout) clearTimeout(pauseTimeout)
+        if (pauseTimeout[index]) clearTimeout(pauseTimeout[index])
         clearInterval(slideshowTimer)
         prevImage()
-        pauseTimeout = setTimeout(() => {
-            slideshowTimer = setInterval(() => nextImage(), interval)
+        pauseTimeout[index] = setTimeout(() => {
+            slideshowTimer[index] = setInterval(() => nextImage(), interval)
         }, pauseTime)
     })
     $(slideshow).find('.next').on('click', () => {
-        if (pauseTimeout) clearTimeout(pauseTimeout)
+        if (pauseTimeout[index]) clearTimeout(pauseTimeout[index])
         clearInterval(slideshowTimer)
         nextImage()
-        pauseTimeout = setTimeout(() => {
-            slideshowTimer = setInterval(() => nextImage(), interval)
+        pauseTimeout[index] = setTimeout(() => {
+            slideshowTimer[index] = setInterval(() => nextImage(), interval)
         }, pauseTime)
     })
 

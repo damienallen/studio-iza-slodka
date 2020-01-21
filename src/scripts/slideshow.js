@@ -1,46 +1,54 @@
 import $ from 'jquery'
 
-$("#slideshow > img:gt(0)").hide()
+let slideshowTimer = {}
+let pauseTimeout = {}
 
-const interval = 5000
-const fadeTime = 800
-let pauseTime = 5000
+$('.slideshow').each((index, slideshow) => {
 
-const nextImage = () => {
-    $('#slideshow > img:first')
-        .stop()
-        .next()
-        .show()
-        .end()
-        .fadeOut(fadeTime)
-        .appendTo('#slideshow')
-}
+    $(slideshow).find('.slideshow-items > img:gt(0)').hide()
+    let items = $(slideshow).find('.slideshow-items')
 
-const prevImage = () => {
-    $('#slideshow > img:first')
-        .stop()
-        .fadeOut(fadeTime)
-        .siblings(":last")
-        .prependTo('#slideshow')
-        .show()
-}
+    const interval = 5000
+    const fadeTime = 800
+    let pauseTime = 5000
 
-let slideshowTimer = setInterval(() => nextImage(), interval)
-let pauseTimeout = null
+    const nextImage = () => {
+        $(items).find('img:first')
+            .stop()
+            .next()
+            .show()
+            .end()
+            .fadeOut(fadeTime)
+            .appendTo(items)
+    }
 
-$('.prev').on('click', () => {
-    if (pauseTimeout) clearTimeout(pauseTimeout)
-    clearInterval(slideshowTimer)
-    prevImage()
-    pauseTimeout = setTimeout(() => {
-        slideshowTimer = setInterval(() => nextImage(), interval)
-    }, pauseTime)
-})
-$('.next').on('click', () => {
-    if (pauseTimeout) clearTimeout(pauseTimeout)
-    clearInterval(slideshowTimer)
-    nextImage()
-    pauseTimeout = setTimeout(() => {
-        slideshowTimer = setInterval(() => nextImage(), interval)
-    }, pauseTime)
+    const prevImage = () => {
+
+        $(items).find('img:first')
+            .stop()
+            .fadeOut(fadeTime)
+            .siblings(':last')
+            .prependTo(items)
+            .show()
+    }
+
+    slideshowTimer[index] = setInterval(() => nextImage(), interval)
+
+    $(slideshow).find('.prev').on('click', () => {
+        if (pauseTimeout[index]) clearTimeout(pauseTimeout[index])
+        clearInterval(slideshowTimer)
+        prevImage()
+        pauseTimeout[index] = setTimeout(() => {
+            slideshowTimer[index] = setInterval(() => nextImage(), interval)
+        }, pauseTime)
+    })
+    $(slideshow).find('.next').on('click', () => {
+        if (pauseTimeout[index]) clearTimeout(pauseTimeout[index])
+        clearInterval(slideshowTimer)
+        nextImage()
+        pauseTimeout[index] = setTimeout(() => {
+            slideshowTimer[index] = setInterval(() => nextImage(), interval)
+        }, pauseTime)
+    })
+
 })

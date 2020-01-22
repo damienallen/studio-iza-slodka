@@ -5,7 +5,6 @@ const path = require('path');
 
 module.exports = {
 
-    // context: path.resolve(__dirname),
     entry: "./src/index.js",
     output: {
         filename: "bundle.js"
@@ -21,19 +20,15 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: 'src/images',
-                to: 'img'
-            }
-        ]),
-        new CopyWebpackPlugin([
+                to: 'images'
+            },
             {
                 from: 'src/icons',
-                to: 'ico'
-            }
-        ]),
-        new CopyWebpackPlugin([
+                to: 'icons'
+            },
             {
                 from: 'src/files',
-                to: 'file'
+                to: 'files'
             }
         ])
     ],
@@ -59,23 +54,13 @@ module.exports = {
                 use: {
                     loader: 'responsive-loader',
                     options: {
-                        sizes: [300, 600, 1200, 2000],
+                        sizes: [300, 900, 1200, 2000],
                         adapter: require('responsive-loader/sharp'),
-                        context: '/src/'
-                        name: './img/[name]_[width].[ext]'
+                        name: 'images/responsive/[hash]_[width].[ext]'
                     }
                 }
             }
         ]
-    },
-
-    resolve: {
-        alias: {
-            'images': path.resolve('./img/')
-        },
-        alias: {
-            'icons': path.resolve('./ico/')
-        }
     },
 
     devtool: 'source-map'

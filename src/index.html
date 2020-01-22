@@ -5,6 +5,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+        Iza Slodka is an author of Europan 15 winning proposal Makers’ Maze
+        for Vierhavensblok in Rotterdam.
+    ">
 
     <title>Iza S&#322;odka</title>
 
@@ -17,7 +21,7 @@
     <div id="sidebar">
 
         <div class="logo-container">
-            <img id="logo" src="img/logo.png" />
+            <img id="logo" src="images/logo.png" alt="" />
             <div id="top-arrow">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
@@ -36,8 +40,8 @@
     </div>
 
     <div id="nav-toggle">
-        <img id="nav-open" src="ico/menu.svg" alt="open nav" />
-        <img id="nav-close" src="ico/close.svg" alt="close nav" />
+        <img id="nav-open" src="icons/menu.svg" alt="open nav" />
+        <img id="nav-close" src="icons/close.svg" alt="close nav" />
     </div>
 
     <div id="nav-container">
@@ -50,11 +54,11 @@
             <a href="#news">News</a>
 
             <div id="links">
-                <a href="https://instagram.com/izaslodka_architecture" target="_blank">
-                    <img src="ico/instagram.svg" alt="instagram" />
+                <a href="https://instagram.com/izaslodka_architecture" rel="noreferrer" target="_blank">
+                    <img src="icons/instagram.svg" alt="instagram" />
                 </a>
-                <a href="https://linkedin.com/in/izabela-slodka-4a3a5356" target="_blank">
-                    <img src="ico/linkedin.svg" alt="linkedin" />
+                <a href="https://linkedin.com/in/izabela-slodka-4a3a5356" rel="noreferrer" target="_blank">
+                    <img src="icons/linkedin.svg" alt="linkedin" />
                 </a>
             </div>
 
@@ -64,15 +68,53 @@
 
     <div id="content">
 
-        <div id="top" class="cover">
+        <div id="top" class="front-cover">
 
             <div class="cover-img">
-                <img src="img/makers_maze/slide_1.jpg" />
+                <div class="slideshow">
+                    <div class="slideshow-items">
+                        <img src="${require('./images/cover_slideshow/1.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/1.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/2.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/2.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/3.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/3.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/4.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/4.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/5.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/5.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/6.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/6.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/7.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/7.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/8.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/8.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/9.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/9.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/10.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/10.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/11.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/11.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/12.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/12.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/13.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/13.jpg').srcSet}" alt="" />
+                    </div>
+                    <div class="slideshow-buttons">
+                        <div class="prev"></div>
+                        <div class="next"></div>
+                    </div>
+                </div>
             </div>
 
             <div id="makers-maze" class="section-header margins cover-header">
                 <div class="title cover-title">Makers' Maze</div>
-                <div class="subtitle">Europan 15 winning entry</div>
+                <div class="subtitle">
+                    <a href="https://www.europan-europe.eu/en/exchanges/e15-winning-teams-portraits" rel="noreferrer"
+                        target="_blank">
+                        Europan 15 winning entry
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -86,13 +128,13 @@
                         <p>
                             Makers’ Maze is a winning entry for
                             Europan 15 competition for Vierhavensblok
-                            in Rotterdam. The choice of
-                            this site was motivated by my ongoing
-                            fascination with postindustrial sites
-                            and informal urban spaces. The prior
-                            research and observations could be
-                            implemented in this Rotterdam
-                            harbour context.
+                            in Rotterdam. The choice of this site was motivated by my ongoing
+                            fascination with post-industrial locations
+                            and informal urban spaces. This Rotterdam harbour
+                            became an opportunity for the continuation of my prior
+                            research and another attempt to design authentic party of the city,
+                            rooted in its context and its history.
+
                         </p>
                         <p>
                             In Makers’ Maze architecture is reconnected
@@ -101,8 +143,8 @@
                             offering a flexible method rather than a
                             rigid design. The goal is to create new
                             conditions for creativity, circularity,
-                            interaction, sharing and freedom while
-                            preserving the existing.
+                            interaction and sharing while
+                            preserving the existing character.
                         </p>
                     </div>
                     <div class="col">
@@ -112,36 +154,35 @@
                             the unexpected around each corner
                             and where chance encounters breed
                             new collaborations. Inspired by these
-                            qualities I propose a series of interlocking
+                            qualities I proposed a series of interlocking
                             building clusters organized around
                             a network of passages, streets and
                             squares, creating a unified, resilient,
-                            and intriguing urban scheme. The goal
-                            is to build on the present sense of
+                            and intriguing urban scheme. The ambition
+                            was to build on the present sense of
                             community and self-initiative by leaving
                             enough room for organic growth and
                             adaptation.
                         </p>
                         <br />
                         <p>
-                            <i>Date:</i> 2019
+                            <i>Date: 2019</i>
                         </p>
-                        <p>
-                            <i>Role:</i> Project Lead
-                        </p>
+
                         <br />
                         <p>
-                            <i>Collaborators:</i><br />
-                            Erica Chladova<br />
-                            Maciej Wieczorkowski<br />
-                            Andrea Bit<br />
-                            Robert van der Pol
+                            <i>Collaborators:<br />
+                                Erica Chladová<br />
+                                Maciej Wieczorkowski<br />
+                                Andrea Bit<br />
+                                Robert van der Pol</i>
                         </p>
                     </div>
 
                     <div class="col zoom-flex">
                         <div class="zoom-img">
-                            <img class="maze-img-1" src="img/makers_maze/image_1.jpg" />
+                            <img class="maze-img-1" src="${require('./images/makers_maze/image_1.jpg').src}"
+                                srcset="${require('./images/makers_maze/image_1.jpg').srcSet}" alt="" />
                         </div>
                     </div>
 
@@ -149,11 +190,18 @@
             </div>
 
             <div id="maze-section-scroller">
-                <img id="section-text" class="scroll-front" src="img/makers_maze/section_text.png" />
-                <img id="section-front" class="scroll-front" src="img/makers_maze/section_front.png" />
-                <img id="section-middle" class="scroll-middle" src="img/makers_maze/section_middle.png" />
-                <img id="section-back" class="scroll-back" src="img/makers_maze/section_back.png" />
-                <img class="spacer" src="img/makers_maze/section_spacer.png" />
+                <img id="section-text" class="scroll-front"
+                    src="${require('./images/makers_maze/section_text.png').src}"
+                    srcset="${require('./images/makers_maze/section_text.png').srcSet}" alt="" />
+                <img id="section-front" class="scroll-front"
+                    src="${require('./images/makers_maze/section_front.png').src}"
+                    srcset="${require('./images/makers_maze/section_front.png').srcSet}" alt="" />
+                <img id="section-middle" class="scroll-middle"
+                    src="${require('./images/makers_maze/section_middle.png').src}"
+                    srcset="${require('./images/makers_maze/section_middle.png').srcSet}" alt="" />
+                <img id="section-back" class="scroll-back" src="${require('./images/makers_maze/section_back.png').src}"
+                    srcset="${require('./images/makers_maze/section_back.png').srcSet}" alt="" />
+                <img class="spacer" src="${require('./images/makers_maze/section_spacer.png').src}" alt="" />
             </div>
 
             <div class="subsection">
@@ -167,42 +215,67 @@
 
                         <div class="col">
                             <p>
-                                Quisque dignissim
-                                metus sem, non scelerisque justo venenatis sed. Integer
-                                scelerisque est sed convallis ultricies. Sed fermentum vitae
-                                ipsum id semper. Cras iaculis massa non pharetra tristique.
-                                Pellentesque interdum vitae lectus quis imperdiet.
-                                Vivamus sit amet commodo velit, vel mollis lectus. Mauris
-                                placerat blandit erat, in rhoncus tellus bibendum eu.
-                                Proin cursus pulvinar mauris at fringilla.
+                                In Vierhavensblok affordable, flexible warehouses are ready to use while outdoor
+                                spaces support the buildings’ functions by providing enough room for storage and
+                                delivery, so needed for the makers.
+                                Striking emptiness on the site is juxtaposed with few existing buildings. It takes a
+                                while to discover all the narrow passages,
+                                workyards, and alleys hidden behind or nestled in between long facades, sheds and
+                                fences. While not
+                                yet easily accessible, these features have great potential to become an intriguing piece
+                                of the city.
                             </p>
                         </div>
 
                         <div class="col">
                             <p>
-                                Etiam tincidunt semper tellus,
-                            sed molestie tortor tincidunt non. Proin scelerisque ante ut
-                            lorem semper placerat. Sed eget dui erat. Quisque dignissim
-                            metus sem, non scelerisque justo venenatis sed. Integer
-                            scelerisque est sed convallis ultricies. Sed fermentum vitae
-                            ipsum id semper. Cras iaculis massa non pharetra tristique.
-                            Pellentesque interdum vitae lectus quis imperdiet.
+                                These existing urban qualities are explored and aggregated, creating a base for new
+                                developments.
+                                By cutting through warehouses, the scale is changed from industrial to urban, allowing
+                                new connections and
+                                entrances and promoting a walkable human scale. The outdoor areas are well defined and
+                                create an interconnected network: the Makers’ Maze. Courtyards, streets and rooftops are
+                                hidden from the outside as they
+                                organize the new public interior – a space that encourages creativity, productivity and
+                                focus.
                             </p>
                         </div>
 
                         <div class="col col-img makers-idea">
-                            <img src="img/makers_maze/idea.png" />
+                            <img src="${require('./images/makers_maze/idea.png').src}"
+                                srcset="${require('./images/makers_maze/idea.png').srcSet}" alt="" />
                         </div>
 
                     </div>
 
-                    <div class="subsection-image hover-zoom" data-image="img/makers_maze/image_2.jpg">
-                        <img class="maze-img-2" src="img/makers_maze/image_2.jpg" />
+                    <div class="subsection-image hover-zoom" data-image="images/makers_maze/image_2.jpg">
+                        <img class="maze-img-2" src="${require('./images/makers_maze/image_2.jpg').src}"
+                            srcset="${require('./images/makers_maze/image_2.jpg').srcSet}" alt="" />
                     </div>
 
                     <div class="row">
                         <div class="col col-img">
-                            <img src="img/makers_maze/upper_floors.png" />
+                            <div class="slideshow">
+                                <div class="slideshow-items">
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/1.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/1.png').srcSet}"
+                                        alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/2.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/2.png').srcSet}"
+                                        alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/3.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/3.png').srcSet}"
+                                        alt="" />
+                                </div>
+                                <div class="slideshow-buttons">
+                                    <div class="prev"></div>
+                                    <div class="next"></div>
+                                </div>
+                                <div class="slideshow-spacer">
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/spacer.png').src}"
+                                        alt="" />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -220,39 +293,36 @@
 
                         <div class="col">
                             <p>
-                                Pellentesque viverra magna id tellus ornare viverra. Vivamus vel 
-                                leo at odio mollis imperdiet. Donec tristique placerat purus 
-                                in commodo. Duis pellentesque viverra eleifend. Suspendisse potenti. 
-                                Mauris lacus mauris, ornare a ante a, iaculis suscipit odio. 
-                                Aliquam nibh sem, sodales ac tristique non, tincidunt at lorem. 
-                                Fusce diam dolor, suscipit eu purus ut, tempor accumsan ante. 
-                                Cras elementum quis enim nec efficitur.
+                                The streets and squares of the masterplan are defined by the surrounding architectural
+                                volumes, both new and existing. Learning from
+                                the buildings on the site the proposed architecture doesn’t consist of
+                                autonomous buildings but interconnected clusters of diverse volumes and functions.
+                                Surrounding and defining public spaces, they
+                                consist of blocks of different shapes and heights.
                             </p>
-                            
+
                         </div>
 
                         <div class="col">
                             <p>
-                                Maecenas sit amet ante vitae nisl tristique porta. Donec rhoncus 
-                                maximus cursus. Proin venenatis erat vel sapien aliquet, et gravida 
-                                nunc porttitor. Vivamus vitae euismod urna, ut mattis risus. 
-                                Aliquam id tincidunt nunc. Praesent mollis dui a quam lacinia, 
-                                non cursus ligula malesuada. Cras mollis mauris ac neque commodo, 
-                                sed ornare tortor dignissim. Praesent nec eros eget diam vehicula 
-                                convallis. Nam sodales nec lorem ac rutrum. In gravida fringilla 
-                                ex non scelerisque.
+                                Existing workshops are no longer temporary, but rather they become an integral part of
+                                the foundation of the plan.
+                                New volumes are attached to them or are cantilevered above them. Each cluster has a
+                                color / materiality that makes it identifiable within
+                                the plan and that is based off the existing building that anchors the cluster. New
+                                structures
+                                provide access to rooftops with communal gardens and shared functions.
                             </p>
                         </div>
 
                         <div class="col">
                             <p>
-                                Morbi tristique, tellus et sollicitudin euismod, odio dui tincidunt 
-                                odio, vitae iaculis libero mauris non eros. Quisque sollicitudin 
-                                augue a sem semper hendrerit. Maecenas eget nulla sapien. Quisque ut 
-                                risus eu ligula feugiat venenatis. Curabitur rutrum lacus tortor, nec 
-                                tincidunt elit sollicitudin id. Sed sed bibendum urna, eget cursus nisi. 
-                                Sed ut est at sem pharetra efficitur quis at ante. Phasellus gravida 
-                                aliquam ipsum, nec pulvinar nunc gravida sit amet.
+                                The proposal addresses the urban and architectural scales to reimagine the neighborhood
+                                as a resilient machine
+                                that accommodates working, living, playing and resting. The programmatic mix is easy to
+                                achieve and adjust,
+                                because the clusters are developed not in tandem, but one by one, allowing for small
+                                adjustments based on market pressures.
                             </p>
                         </div>
 
@@ -261,11 +331,13 @@
                     <div class="row section-margins">
 
                         <div class="col col-img">
-                            <img src="img/makers_maze/clusters.png" />
+                            <img src="${require('./images/makers_maze/clusters.png').src}"
+                                srcset="${require('./images/makers_maze/clusters.png').srcSet}" alt="" />
                         </div>
 
                         <div class="col col-img">
-                            <img src="img/makers_maze/functions.png" />
+                            <img src="${require('./images/makers_maze/functions.png').src}"
+                                srcset="${require('./images/makers_maze/functions.png').srcSet}" alt="" />
                         </div>
 
                     </div>
@@ -274,13 +346,19 @@
 
                 <div class="cover makers-square">
                     <div class="cover-img">
-                        <img src="img/makers_maze/makers_square_collage.jpg" />
+                        <img src="${require('./images/makers_maze/makers_square_collage.jpg').src}"
+                            srcset="${require('./images/makers_maze/makers_square_collage.jpg').srcSet}" alt="" />
                     </div>
                 </div>
 
-                <div class="maze-buttons">
-                    <a target="_blank" href="file/Vierhavensblok_Makers-Maze_A4-text.pdf">Full Submission Text</a>
-                    <a target="_blank" href="file/Vierhavensblok_Makers_Maze_panels.pdf">Panels</a href="#">
+                <div class="maze-buttons margins">
+                    <a target="_blank" href="files/Vierhavensblok_Makers_Maze_panels.pdf">
+                        Panels
+                    </a>
+                    <a target="_blank" href="files/Vierhavensblok_Makers-Maze_A4-text.pdf">
+                        Full Submission Text
+                    </a>
+
                 </div>
 
             </div>
@@ -288,42 +366,61 @@
         </div>
 
         <div class="section">
-            
-            <div id="collage-continuity" class="section-header margins">
-                <div class="title">Collage & Continuity</div>
-                <div class="subtitle">YTAA 2016 nomination</div>
-            </div>
 
-            <div class="subsection margins">
+            <div class="subsection margins full-height">
+
+                <div id="collage-continuity" class="section-header">
+                    <div class="title">Collage & Continuity</div>
+                    <div class="subtitle">
+                        <a href="http://ytaa.miesbcn.com/work/103" rel="noreferrer" target="_blank">
+                            YTAA 2016 nomination
+                        </a>
+                    </div>
+                </div>
+
                 <div class="row">
 
                     <div class="col">
                         <p>
-                            Quisque dignissim
-                            metus sem, non scelerisque justo venenatis sed. Integer
-                            scelerisque est sed convallis ultricies. Sed fermentum vitae
-                            ipsum id semper. Cras iaculis massa non pharetra tristique.
-                            Pellentesque interdum vitae lectus quis imperdiet.
-                            Vivamus sit amet commodo velit, vel mollis lectus. Mauris
-                            placerat blandit erat, in rhoncus tellus bibendum eu.
-                            Proin cursus pulvinar mauris at fringilla.
+                            During my graduation project I explored
+                            Zabłocie: a post-industrial site in my home city
+                            Kraków, Poland. There I proposed a Craft
+                            and Design School that would enhance
+                            the private and intimate nature of craft,
+                            building on the specific qualities of the
+                            location. The project focuses on the relation of
+                            buildings and outdoor spaces. Exciting
+                            balance between the coherent character of
+                            the spaces (their continuity) and the
+                            individual nature of the objects
+                            creating them (collage of scales,
+                            materials and colours) is the foundation of the project.
+
+
                         </p>
                     </div>
 
                     <div class="col">
                         <p>
-                            Etiam tincidunt semper tellus,
-                        sed molestie tortor tincidunt non. Proin scelerisque ante ut
-                        lorem semper placerat. Sed eget dui erat. Quisque dignissim
-                        metus sem, non scelerisque justo venenatis sed. Integer
-                        scelerisque est sed convallis ultricies. Sed fermentum vitae
-                        ipsum id semper. Cras iaculis massa non pharetra tristique.
-                        Pellentesque interdum vitae lectus quis imperdiet.
+                            The site of the project is mostly hidden,
+                            revealing itself only in few places, providing not exposed to the public, introverted
+                            environment. This characteristics contribute to truly unique character of the location,
+                            making it almost secret and secluded world, perfect to host crafsmen and makers. They,
+                            already
+                            present on the site, shape it according to their needs. Organic growth and informal
+                            qualities
+                            become proof of the district' creative potential.
+
                         </p>
+                        <p>
+                            <i>Date: 2016, TU Delft</i>
+                        </p>
+
                     </div>
 
                     <div class="col col-img makers-idea">
-                        <img src="img/collage_continuity/axo.png" />
+                        <img src="${require('./images/collage_continuity/axo.png').src}"
+                            srcset="${require('./images/collage_continuity/axo.png').srcSet}" alt="" />
                     </div>
 
                 </div>
@@ -331,7 +428,9 @@
 
             <div class="cover collage-slider">
                 <div class="cover-img">
-                    <img src="img/collage_continuity/context1.jpg" />
+                    <img src="${require('./images/collage_continuity/storage_section_perspective.jpg').src}"
+                        srcset="${require('./images/collage_continuity/storage_section_perspective.jpg').srcSet}"
+                        alt="" />
                 </div>
             </div>
 
@@ -345,100 +444,165 @@
 
                     <div class="col">
                         <p>
-                            Quisque dignissim
-                            metus sem, non scelerisque justo venenatis sed. Integer
-                            scelerisque est sed convallis ultricies. Sed fermentum vitae
-                            ipsum id semper. Cras iaculis massa non pharetra tristique.
-                            Pellentesque interdum vitae lectus quis imperdiet.
-                            Vivamus sit amet commodo velit, vel mollis lectus. Mauris
-                            placerat blandit erat, in rhoncus tellus bibendum eu.
-                            Proin cursus pulvinar mauris at fringilla.
+                            The project fits in between existing structures and
+                            consists of various buildings
+                            and series of outdoor spaces that together
+                            create school of Craft and Design.
+                            The buildings and squares
+                            between them serve diverse
+                            functions (workshops, sports hall, classrooms etc.)
+                            and together form a platform for interaction for
+                            different groups of users. Spaces
+                            are interconnected and create a
+                            route through the campus.
                         </p>
                     </div>
 
                     <div class="col">
                         <p>
-                            Etiam tincidunt semper tellus,
-                        sed molestie tortor tincidunt non. Proin scelerisque ante ut
-                        lorem semper placerat. Sed eget dui erat. Quisque dignissim
-                        metus sem, non scelerisque justo venenatis sed. Integer
-                        scelerisque est sed convallis ultricies. Sed fermentum vitae
-                        ipsum id semper. Cras iaculis massa non pharetra tristique.
-                        Pellentesque interdum vitae lectus quis imperdiet.
+                            The result is a series of zones with different
+                            identities and purposes, surrounded by
+                            buildings and structures that belong
+                            and interact with them. Outdoor squares
+                            are collections of elements and
+                            their characters are established by
+                            defining relations between all parts.
+                            These juxtapositions create a patchwork of scales,
+                            forms, materials and colours, or a
+                            homogeneous whole.
                         </p>
                     </div>
 
                     <div class="col col-img collage-space">
-                        <img src="img/collage_continuity/space1.jpg" />
+                        <img src="${require('./images/collage_continuity/spaces_animation.png').src}"
+                            srcset="${require('./images/collage_continuity/spaces_animation.png').srcSet}" alt="" />
                     </div>
 
                 </div>
 
+                <div class="row subsection-image">
+                    <div class="col col-img">
+                        <div class="slideshow">
+                            <div class="slideshow-items">
+                                <img src="${require('./images/collage_continuity/model_slideshow/1.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/1.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/2.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/2.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/3.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/3.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/4.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/4.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/5.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/5.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/6.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/6.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/7.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/7.jpg').srcSet}"
+                                    alt="" />
+                            </div>
+                            <div class="slideshow-buttons">
+                                <div class="prev"></div>
+                                <div class="next"></div>
+                            </div>
+                            <div class="slideshow-spacer">
+                                <img src="${require('./images/collage_continuity/model_slideshow/spacer.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/spacer.jpg').srcSet}"
+                                    alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col col-img subsection-image">
-                        <img src="img/collage_continuity/model1.jpg" />
+                        <img src="${require('./images/collage_continuity/facade_workshop.jpg').src}"
+                            srcset="${require('./images/collage_continuity/facade_workshop.jpg').srcSet}" alt="" />
                     </div>
                 </div>
 
                 <div class="subsection">
                     <div class="margins">
-    
+
                         <div class="subsection-header">
-                            Mentality
+                            Materiality
                         </div>
-    
+
                         <div class="row">
-    
+
                             <div class="col">
                                 <p>
-                                    Pellentesque viverra magna id tellus ornare viverra. Vivamus vel 
-                                    leo at odio mollis imperdiet. Donec tristique placerat purus 
-                                    in commodo. Duis pellentesque viverra eleifend. Suspendisse potenti. 
-                                    Mauris lacus mauris, ornare a ante a, iaculis suscipit odio. 
-                                    Aliquam nibh sem, sodales ac tristique non, tincidunt at lorem. 
-                                    Fusce diam dolor, suscipit eu purus ut, tempor accumsan ante. 
-                                    Cras elementum quis enim nec efficitur. Aliquam erat volutpat. 
-                                    Sed sollicitudin rhoncus nunc vitae ultricies. Mauris suscipit ante mi, 
-                                    ut aliquet magna dignissim ut. Nullam est ante, commodo et nunc quis, 
-                                    dictum pellentesque nisi.
+                                    Analysing the existing structures and spaces it becomes apparent
+                                    that, often in a self-made way, architecture adjust its shape, color and scale to
+                                    the outdoor squares.
+                                    Spaces in between the buildings
+                                    are something perceived
+                                    as a whole, contrary to objects
+                                    (buildings), therefore architecture follows them, not the
+                                    other way around. In the project proposal facades of
+                                    the new buildings respond to their
+                                    surrounding changing their shape and materiality.
                                 </p>
-                                
+
                             </div>
-    
+
                             <div class="col">
                                 <p>
-                                    Maecenas sit amet ante vitae nisl tristique porta. Donec rhoncus 
-                                    maximus cursus. Proin venenatis erat vel sapien aliquet, et gravida 
-                                    nunc porttitor. Vivamus vitae euismod urna, ut mattis risus. 
-                                    Aliquam id tincidunt nunc. Praesent mollis dui a quam lacinia, 
-                                    non cursus ligula malesuada. Cras mollis mauris ac neque commodo, 
-                                    sed ornare tortor dignissim. Praesent nec eros eget diam vehicula 
-                                    convallis. Nam sodales nec lorem ac rutrum. In gravida fringilla 
-                                    ex non scelerisque. Proin sodales, tortor sed suscipit laoreet, 
-                                    velit est tempor nibh, sit amet tincidunt ipsum nibh ac mauris. 
-                                    Quisque ac turpis eros. Nulla et metus vitae lacus euismod dignissim. 
-                                    Donec a pretium mauris. Suspendisse et lacus vel nunc tincidunt sagittis. 
-                                    Vivamus iaculis libero at libero fringilla sagittis.
+                                    The interiors of the workshop buildings
+                                    resemble exterior of the project: the divison between fixed elements (outdoor
+                                    spaces, structure)
+                                    and the flexible parts (partitions, cladding) is clearly stated.
+                                    Interiors' richness of the materials contribute
+                                    to the idea of the collage, where the
+                                    individual character of the elements is displayed.
+                                    Structure cannot be changed unlike
+                                    partition walls and therefore it is
+                                    visible and emphasized.
                                 </p>
                             </div>
-    
+
                             <div class="col zoom-flex">
                                 <div class="zoom-img">
-                                    <img class="maze-img-1" src="img/collage_continuity/corner23.jpg" />
+                                    <img class="maze-img-1"
+                                        src="${require('./images/collage_continuity/model_zoom_2.jpg').src}"
+                                        srcset="${require('./images/collage_continuity/model_zoom_2.jpg').srcSet}"
+                                        alt="" />
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                     </div>
-    
+
                 </div>
-                
+
             </div>
 
-            <div class="cover collage-main">
+            <div class="fill-cover collage-main">
                 <div class="cover-img">
-                    <img src="img/collage_continuity/interior_collage.jpg" />
+                    <div class="slideshow">
+                        <div class="slideshow-items">
+                            <img src="${require('./images/collage_continuity/exit_slideshow/1.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/1.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/2.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/2.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/3.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/3.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/4.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/4.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/5.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/5.jpg').srcSet}" alt="" />
+                        </div>
+                        <div class="slideshow-buttons">
+                            <div class="prev"></div>
+                            <div class="next"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -450,19 +614,58 @@
                 <div class="title">About</div>
             </div>
 
-            <div class="subsection">
-                <div class="row margins">
-                    <div class="col">
-                        <p>
-                            Izabela Słodka is a young architect, originally from Poland,
-                            currently living and working in Rotterdam. She studied in
-                            Cracow University of Technology and TU Delft, graduating in 2016.
-                            In 2019 she won Europan 15 with her entry for Vierhavensblok site,
-                            in collaboration with: Erica Chladova, Andrea Bit, Maciej
-                            Wieczorkowski and Robert van der Pol.
-                        </p>
+            <div class="row margins">
+
+                <div class="col">
+                    <p>
+                        Izabela Slodka studied in Cracow, Poland and a Delft University of Technology, where she
+                        received her master's degree in 2016.
+                        Her graduation project “Collage and Continuity” was nominated for Young Talent Architecture
+                        Award – part of the European Union Prize
+                        for Contemporary Architecture – Mies van der Rohe Award, organised by the Fundació Mies van der
+                        Rohe.
+                        After winning Europan 15 competition in 2019 with her proposal Makers’ Maze, she founded her own
+                        studio.
+                    </p>
+                    <p>
+                        Both “Collage and Continuity” and “Makers’ Maze” illustrate Iza’s fascination with
+                        post-industrial sites.
+                        They are part of ongoing research focusing on unique spatial and material qualities of these,
+                        often forgotten, parts of the cities.
+                        She is looking for existing conditions that attract makers, designers, creating vibrant and
+                        creative atmosphere.
+                    </p>
+                </div>
+
+                <div class="col">
+                    <p>
+                        Informal and organic character of these sites encourage freedom and unexpected to happen,
+                        enhancing the idea of
+                        untamed and exciting urban environment. This city ecology is built over time and consist of
+                        different elements and layers,
+                        allowing various participants and functions to coexist.
+                    </p>
+                    <p>
+                        Recurring interest is a collage of elements and their relation to each other:
+                        in terms of building and outdoor space, structure and cladding, materiality and color.
+                        Architecture is treated as an envelope of a public
+                        space rather than an independent structures, unless emphasized otherwise. Urban space, landscape
+                        and buildings are always designed together
+                        as an integral parts of the same concept.
+                    </p>
+                </div>
+
+                <div class="col about-details">
+                    <div class="profile-photo">
+                        <img src="images/profile_photo.jpg" alt="Profile photo" />
+                    </div>
+                    <div class="contact-info">
+                        <span>email: contact@izaslodka.com</span>
+                        <span>KVK: 76763994</span>
+                        <span>BTW: NL003113471B97</span>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -472,49 +675,26 @@
                 <div class="title">News</div>
             </div>
 
-            <div class="subsection">
-                <div class="row margins">
-                    <div class="col">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Integer molestie dignissim risus non tincidunt. Duis interdum
-                            auctor lectus at vulputate. Etiam tincidunt semper tellus,
-                            sed molestie tortor tincidunt non. Proin scelerisque ante ut
-                            lorem semper placerat. Sed eget dui erat. Quisque dignissim
-                            metus sem, non scelerisque justo venenatis sed. Integer
-                            scelerisque est sed convallis ultricies. Sed fermentum vitae
-                            ipsum id semper. Cras iaculis massa non pharetra tristique.
-                            Pellentesque interdum vitae lectus quis imperdiet.
-                            Vivamus sit amet commodo velit, vel mollis lectus. Mauris
-                            placerat blandit erat, in rhoncus tellus bibendum eu.
-                            Proin cursus pulvinar mauris at fringilla. Donec sit amet
-                            ullamcorper quam, nec sodales odio.
-                        </p>
-                        <p>
-                            Nunc sodales lacus augue, eu volutpat massa tincidunt ut.
-                            Pellentesque habitant morbi tristique senectus et netus et
-                            malesuada fames ac turpis egestas. Fusce consequat ac turpis
-                            nec rutrum. Pellentesque vitae velit porttitor, cursus nisl
-                            vel, molestie eros. Nulla velit nisl, laoreet lobortis tempor eu,
-                            rhoncus a justo. Phasellus in eleifend est, vitae finibus leo.
-                            Donec eget ligula fermentum, semper diam nec, faucibus leo.
-                            Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                        </p>
-                        <p>
-                            Etiam tincidunt semper tellus,
-                            sed molestie tortor tincidunt non. Proin scelerisque ante ut
-                            lorem semper placerat. Sed eget dui erat. Quisque dignissim
-                            metus sem, non scelerisque justo venenatis sed. Integer
-                            scelerisque est sed convallis ultricies. Sed fermentum vitae
-                            ipsum id semper. Cras iaculis massa non pharetra tristique.
-                            Pellentesque interdum vitae lectus quis imperdiet.
-                            Vivamus sit amet commodo velit, vel mollis lectus. Mauris
-                            placerat blandit erat, in rhoncus tellus bibendum eu.
-                            Proin cursus pulvinar mauris at fringilla. Donec sit amet
-                            ullamcorper quam, nec sodales odio.
-                        </p>
+            <div class="news-list margins">
+
+                <a href="https://www.europan-europe.eu/en/exchanges/e15-winning-teams-portraits" class="row news-item"
+                    rel="noreferrer" target="_blank">
+
+                    <div class="col item-thumb">
+                        <img src="images/news_thumbs/europan_logo.jpg" alt="News item thumbnail" />
                     </div>
-                </div>
+
+                    <div class="col item-text">
+                        <div class="item-date">1 JAN 2020</div>
+                        <div class="item-title">Europan 15 winners annouced!</div>
+                        <div class="item-summary">
+                            Fusce diam dolor, suscipit eu purus ut, tempor accumsan ante.
+                            Cras elementum quis enim nec efficitur. Aliquam erat volutpat.
+                        </div>
+                    </div>
+
+                </a>
+
             </div>
 
         </div>

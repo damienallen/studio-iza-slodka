@@ -12,6 +12,10 @@
 
     &.open {
         display: block;
+
+        nav {
+            padding: 0;
+        }
     }
 
     @include breakpoint(md) {
@@ -70,6 +74,10 @@ nav {
             width: 20px;
             height: 20px;
             margin: 5px 0 0 20px;
+
+            @include breakpoint(sm) {
+                margin: 0 20px;
+            }
         }
 
         a:hover, a:active {

@@ -22,7 +22,7 @@
     <div id="sidebar">
 
         <div class="logo-container">
-            <img id="logo" src="img/logo.png" alt="" />
+            <img id="logo" src="images/logo.png" alt="" />
             <div id="top-arrow">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
@@ -41,8 +41,8 @@
     </div>
 
     <div id="nav-toggle">
-        <img id="nav-open" src="ico/menu.svg" alt="open nav" />
-        <img id="nav-close" src="ico/close.svg" alt="close nav" />
+        <img id="nav-open" src="icons/menu.svg" alt="open nav" />
+        <img id="nav-close" src="icons/close.svg" alt="close nav" />
     </div>
 
     <div id="nav-container">
@@ -56,10 +56,10 @@
 
             <div id="links">
                 <a href="https://instagram.com/izaslodka_architecture" rel="noreferrer" target="_blank">
-                    <img src="ico/instagram.svg" alt="instagram" />
+                    <img src="icons/instagram.svg" alt="instagram" />
                 </a>
                 <a href="https://linkedin.com/in/izabela-slodka-4a3a5356" rel="noreferrer" target="_blank">
-                    <img src="ico/linkedin.svg" alt="linkedin" />
+                    <img src="icons/linkedin.svg" alt="linkedin" />
                 </a>
             </div>
 
@@ -74,19 +74,32 @@
             <div class="cover-img">
                 <div class="slideshow">
                     <div class="slideshow-items">
-                        <img src="img/cover_slideshow/1.jpg" alt="" />
-                        <img src="img/cover_slideshow/2.jpg" alt="" />
-                        <img src="img/cover_slideshow/3.jpg" alt="" />
-                        <img src="img/cover_slideshow/4.jpg" alt="" />
-                        <img src="img/cover_slideshow/5.jpg" alt="" />
-                        <img src="img/cover_slideshow/6.jpg" alt="" />
-                        <img src="img/cover_slideshow/7.jpg" alt="" />
-                        <img src="img/cover_slideshow/8.jpg" alt="" />
-                        <img src="img/cover_slideshow/9.jpg" alt="" />
-                        <img src="img/cover_slideshow/10.jpg" alt="" />
-                        <img src="img/cover_slideshow/11.jpg" alt="" />
-                        <img src="img/cover_slideshow/12.jpg" alt="" />
-                        <img src="img/cover_slideshow/13.jpg" alt="" />
+                        <img src="${require('./images/cover_slideshow/1.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/1.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/2.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/2.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/3.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/3.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/4.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/4.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/5.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/5.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/6.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/6.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/7.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/7.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/8.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/8.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/9.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/9.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/10.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/10.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/11.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/11.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/12.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/12.jpg').srcSet}" alt="" />
+                        <img src="${require('./images/cover_slideshow/13.jpg').src}"
+                            srcset="${require('./images/cover_slideshow/13.jpg').srcSet}" alt="" />
                     </div>
                     <div class="slideshow-buttons">
                         <div class="prev"></div>
@@ -169,7 +182,8 @@
 
                     <div class="col zoom-flex">
                         <div class="zoom-img">
-                            <img class="maze-img-1" src="img/makers_maze/image_1.jpg" alt="" />
+                            <img class="maze-img-1" src="${require('./images/makers_maze/image_1.jpg').src}"
+                                srcset="${require('./images/makers_maze/image_1.jpg').srcSet}" alt="" />
                         </div>
                     </div>
 
@@ -177,11 +191,18 @@
             </div>
 
             <div id="maze-section-scroller">
-                <img id="section-text" class="scroll-front" src="img/makers_maze/section_text.png" alt="" />
-                <img id="section-front" class="scroll-front" src="img/makers_maze/section_front.png" alt="" />
-                <img id="section-middle" class="scroll-middle" src="img/makers_maze/section_middle.png" alt="" />
-                <img id="section-back" class="scroll-back" src="img/makers_maze/section_back.png" alt="" />
-                <img class="spacer" src="img/makers_maze/section_spacer.png" alt="" />
+                <img id="section-text" class="scroll-front"
+                    src="${require('./images/makers_maze/section_text.png').src}"
+                    srcset="${require('./images/makers_maze/section_text.png').srcSet}" alt="" />
+                <img id="section-front" class="scroll-front"
+                    src="${require('./images/makers_maze/section_front.png').src}"
+                    srcset="${require('./images/makers_maze/section_front.png').srcSet}" alt="" />
+                <img id="section-middle" class="scroll-middle"
+                    src="${require('./images/makers_maze/section_middle.png').src}"
+                    srcset="${require('./images/makers_maze/section_middle.png').srcSet}" alt="" />
+                <img id="section-back" class="scroll-back" src="${require('./images/makers_maze/section_back.png').src}"
+                    srcset="${require('./images/makers_maze/section_back.png').srcSet}" alt="" />
+                <img class="spacer" src="${require('./images/makers_maze/section_spacer.png').src}" alt="" />
             </div>
 
             <div class="subsection">
@@ -214,29 +235,38 @@
                         </div>
 
                         <div class="col col-img makers-idea">
-                            <img src="img/makers_maze/idea.png" alt="" />
+                            <img src="${require('./images/makers_maze/idea.png').src}"
+                                srcset="${require('./images/makers_maze/idea.png').srcSet}" alt="" />
                         </div>
 
                     </div>
 
-                    <div class="subsection-image hover-zoom" data-image="img/makers_maze/image_2.jpg">
-                        <img class="maze-img-2" src="img/makers_maze/image_2.jpg" alt="" />
+                    <div class="subsection-image hover-zoom" data-image="images/makers_maze/image_2.jpg">
+                        <img class="maze-img-2" src="${require('./images/makers_maze/image_2.jpg').src}"
+                            srcset="${require('./images/makers_maze/image_2.jpg').srcSet}" alt="" />
                     </div>
 
                     <div class="row">
                         <div class="col col-img">
                             <div class="slideshow">
                                 <div class="slideshow-items">
-                                    <img src="img/makers_maze/upper_floors_slideshow/1.png" alt="" />
-                                    <img src="img/makers_maze/upper_floors_slideshow/2.png" alt="" />
-                                    <img src="img/makers_maze/upper_floors_slideshow/3.png" alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/1.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/1.png').srcSet}"
+                                        alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/2.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/2.png').srcSet}"
+                                        alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/3.png').src}"
+                                        srcset="${require('./images/makers_maze/upper_floors_slideshow/3.png').srcSet}"
+                                        alt="" />
                                 </div>
                                 <div class="slideshow-buttons">
                                     <div class="prev"></div>
                                     <div class="next"></div>
                                 </div>
                                 <div class="slideshow-spacer">
-                                    <img src="img/makers_maze/upper_floors_slideshow/spacer.png" alt="" />
+                                    <img src="${require('./images/makers_maze/upper_floors_slideshow/spacer.png').src}"
+                                        alt="" />
                                 </div>
                             </div>
                         </div>
@@ -286,11 +316,13 @@
                     <div class="row section-margins">
 
                         <div class="col col-img">
-                            <img src="img/makers_maze/clusters.png" alt="" />
+                            <img src="${require('./images/makers_maze/clusters.png').src}"
+                                srcset="${require('./images/makers_maze/clusters.png').srcSet}" alt="" />
                         </div>
 
                         <div class="col col-img">
-                            <img src="img/makers_maze/functions.png" alt="" />
+                            <img src="${require('./images/makers_maze/functions.png').src}"
+                                srcset="${require('./images/makers_maze/functions.png').srcSet}" alt="" />
                         </div>
 
                     </div>
@@ -299,15 +331,16 @@
 
                 <div class="cover makers-square">
                     <div class="cover-img">
-                        <img src="img/makers_maze/makers_square_collage.jpg" alt="" />
+                        <img src="${require('./images/makers_maze/makers_square_collage.jpg').src}"
+                            srcset="${require('./images/makers_maze/makers_square_collage.jpg').srcSet}" alt="" />
                     </div>
                 </div>
 
                 <div class="maze-buttons margins">
-                    <a target="_blank" href="file/Vierhavensblok_Makers_Maze_panels.pdf">
+                    <a target="_blank" href="files/Vierhavensblok_Makers_Maze_panels.pdf">
                         Panels
                     </a>
-                    <a target="_blank" href="file/Vierhavensblok_Makers-Maze_A4-text.pdf">
+                    <a target="_blank" href="files/Vierhavensblok_Makers-Maze_A4-text.pdf">
                         Full Submission Text
                     </a>
 
@@ -369,7 +402,8 @@
                     </div>
 
                     <div class="col col-img makers-idea">
-                        <img src="img/collage_continuity/axo.png" alt="" />
+                        <img src="${require('./images/collage_continuity/axo.png').src}"
+                            srcset="${require('./images/collage_continuity/axo.png').srcSet}" alt="" />
                     </div>
 
                 </div>
@@ -377,7 +411,9 @@
 
             <div class="cover collage-slider">
                 <div class="cover-img">
-                    <img src="img/collage_continuity/storage_section_perspective.jpg" alt="" />
+                    <img src="${require('./images/collage_continuity/storage_section_perspective.jpg').src}"
+                        srcset="${require('./images/collage_continuity/storage_section_perspective.jpg').srcSet}"
+                        alt="" />
                 </div>
             </div>
 
@@ -421,7 +457,8 @@
                     </div>
 
                     <div class="col col-img collage-space">
-                        <img src="img/collage_continuity/spaces_animation.png" alt="" />
+                        <img src="${require('./images/collage_continuity/spaces_animation.png').src}"
+                            srcset="${require('./images/collage_continuity/spaces_animation.png').srcSet}" alt="" />
                     </div>
 
                 </div>
@@ -430,20 +467,36 @@
                     <div class="col col-img">
                         <div class="slideshow">
                             <div class="slideshow-items">
-                                <img src="img/collage_continuity/model_slideshow/1.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/2.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/3.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/4.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/5.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/6.jpg" alt="" />
-                                <img src="img/collage_continuity/model_slideshow/7.jpg" alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/1.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/1.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/2.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/2.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/3.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/3.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/4.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/4.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/5.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/5.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/6.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/6.jpg').srcSet}"
+                                    alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/7.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/7.jpg').srcSet}"
+                                    alt="" />
                             </div>
                             <div class="slideshow-buttons">
                                 <div class="prev"></div>
                                 <div class="next"></div>
                             </div>
                             <div class="slideshow-spacer">
-                                <img src="img/collage_continuity/model_slideshow/spacer.jpg" alt="" />
+                                <img src="${require('./images/collage_continuity/model_slideshow/spacer.jpg').src}"
+                                    srcset="${require('./images/collage_continuity/model_slideshow/spacer.jpg').srcSet}"
+                                    alt="" />
                             </div>
                         </div>
                     </div>
@@ -451,7 +504,8 @@
 
                 <div class="row">
                     <div class="col col-img subsection-image">
-                        <img src="img/collage_continuity/facade_workshop.jpg" alt="" />
+                        <img src="${require('./images/collage_continuity/facade_workshop.jpg').src}"
+                            srcset="${require('./images/collage_continuity/facade_workshop.jpg').srcSet}" alt="" />
                     </div>
                 </div>
 
@@ -495,7 +549,10 @@
 
                             <div class="col zoom-flex">
                                 <div class="zoom-img">
-                                    <img class="maze-img-1" src="img/collage_continuity/model_zoom_2.jpg" alt="" />
+                                    <img class="maze-img-1"
+                                        src="${require('./images/collage_continuity/model_zoom_2.jpg').src}"
+                                        srcset="${require('./images/collage_continuity/model_zoom_2.jpg').srcSet}"
+                                        alt="" />
                                 </div>
                             </div>
 
@@ -511,11 +568,16 @@
                 <div class="cover-img">
                     <div class="slideshow">
                         <div class="slideshow-items">
-                            <img src="img/collage_continuity/exit_slideshow/1.jpg" alt="" />
-                            <img src="img/collage_continuity/exit_slideshow/2.jpg" alt="" />
-                            <img src="img/collage_continuity/exit_slideshow/3.jpg" alt="" />
-                            <img src="img/collage_continuity/exit_slideshow/4.jpg" alt="" />
-                            <img src="img/collage_continuity/exit_slideshow/5.jpg" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/1.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/1.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/2.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/2.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/3.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/3.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/4.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/4.jpg').srcSet}" alt="" />
+                            <img src="${require('./images/collage_continuity/exit_slideshow/5.jpg').src}"
+                                srcset="${require('./images/collage_continuity/exit_slideshow/5.jpg').srcSet}" alt="" />
                         </div>
                         <div class="slideshow-buttons">
                             <div class="prev"></div>
@@ -576,7 +638,7 @@
 
                 <div class="col about-details">
                     <div class="profile-photo">
-                        <img src="img/profile_photo.jpg" alt="Profile photo" />
+                        <img src="images/profile_photo.jpg" alt="Profile photo" />
                     </div>
                     <div class="contact-info">
                         <span>email: contact@izaslodka.com</span>
@@ -600,7 +662,7 @@
                     rel="noreferrer" target="_blank">
 
                     <div class="col item-thumb">
-                        <img src="img/news_thumbs/europan_logo.jpg" alt="News item thumbnail" />
+                        <img src="images/news_thumbs/europan_logo.jpg" alt="News item thumbnail" />
                     </div>
 
                     <div class="col item-text">

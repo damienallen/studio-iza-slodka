@@ -1,7 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const ImageminPlugin = require('imagemin-webpack');
 const path = require('path');
 
 module.exports = {
@@ -21,46 +20,17 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: 'src/images',
-                to: 'img'
-            }
-        ]),
-        new CopyWebpackPlugin([
+                to: 'images'
+            },
             {
                 from: 'src/icons',
-                to: 'ico'
-            }
-        ]),
-        new CopyWebpackPlugin([
+                to: 'icons'
+            },
             {
                 from: 'src/files',
-                to: 'file'
+                to: 'files'
             }
-        ]),
-        // new ImageminPlugin({
-        //     bail: false, // Ignore errors on corrupted images
-        //     cache: true,
-        //     imageminOptions: {
-        //       // Before using imagemin plugins make sure you have added them in `package.json` (`devDependencies`) and installed them
-       
-        //       // Lossless optimization with custom option
-        //       // Feel free to experiment with options for better result for you
-        //       plugins: [
-        //         ["gifsicle", { interlaced: true }],
-        //         ["jpegtran", { progressive: true }],
-        //         ["optipng", { optimizationLevel: 5 }],
-        //         [
-        //           "svgo",
-        //           {
-        //             plugins: [
-        //               {
-        //                 removeViewBox: false
-        //               }
-        //             ]
-        //           }
-        //         ]
-        //       ]
-        //     }
-        // })
+        ])
     ],
 
     module: {
@@ -79,24 +49,18 @@ module.exports = {
                 test: /\.(s*)css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'sass-loader']
             },
-            // {
-            // test: /\.(jpe?g|png|gif|svg)$/i,
-            // use: [
-            //     {
-            //     loader: 'file-loader' // Or `url-loader` or your other loader
-            //     }
-            // ]
-            // }
+            {
+                test: /\.(jpe?g|png)$/i,
+                use: {
+                    loader: 'responsive-loader',
+                    options: {
+                        sizes: [300, 900, 1200, 2000],
+                        adapter: require('responsive-loader/sharp'),
+                        name: 'images/responsive/[hash]_[width].[ext]'
+                    }
+                }
+            }
         ]
-    },
-
-    resolve: {
-        alias: {
-            'images': path.resolve('./img/')
-        },
-        alias: {
-            'icons': path.resolve('./ico/')
-        }
     },
 
     devtool: 'source-map'

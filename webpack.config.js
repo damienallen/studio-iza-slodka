@@ -54,7 +54,7 @@ module.exports = {
                 use: {
                     loader: 'responsive-loader',
                     options: {
-                        sizes: [300, 900, 1200, 2000],
+                        sizes: [420, 860, 1200, 2400],
                         adapter: require('responsive-loader/sharp'),
                         name: 'images/responsive/[hash]_[width].[ext]'
                     }

@@ -14,13 +14,7 @@ import './scripts/zoom.js'
 
 
 // Window events
-const printMessage = (message, count) => {
-  console.log(message)
-  if (count > 1) setTimeout(() => printMessage(message, count - 1), 1000)
-}
 $(window).ready(() => {
   const now = new Date()
-  setTimeout(() => {
-    printMessage(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`, 30)
-  }, 1000)
+  console.log(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)
 })

@@ -1,14 +1,14 @@
 {
-  "name": "isa",
-  "version": "1.0.0",
+  "name": "iza-slodka",
+  "version": "1.1",
   "description": "Studio Iza Slodka",
   "main": ".src/index.js",
   "repository": "git@github.com:damienallen/isa.git",
   "author": "Damien Allen <contact@dallen.co>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "webpack --mode=production --watch",
-    "build": "webpack --mode=production"
+    "start": "webpack --config webpack.config.dev.js --progress --colors --watch",
+    "build": "webpack --config webpack.config.js --progress --colors --mode=production"
   },
   "dependencies": {
     "jquery": "^3.4.1",

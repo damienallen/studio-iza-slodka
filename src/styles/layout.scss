@@ -87,6 +87,7 @@ body {
     .show-toggle, .hide-toggle {
         color: $link-color;
         display: none;
+        user-select: none;
         cursor: pointer;
 
         @include breakpoint(sm) {

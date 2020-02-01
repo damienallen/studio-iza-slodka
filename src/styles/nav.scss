@@ -44,6 +44,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    user-select: none;
 
     a {
         line-height: $header-height;

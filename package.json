@@ -7,8 +7,8 @@
   "author": "Damien Allen <contact@dallen.co>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "env WEBPACK_ENV=development webpack --progress --colors --watch",
-    "build": "env WEBPACK_ENV=production webpack --progress --colors --mode=production"
+    "start": "env WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "build": "env WEBPACK_ENV=prod webpack --progress --colors --mode=production"
   },
   "dependencies": {
     "jquery": "^3.4.1",

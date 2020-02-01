@@ -2,7 +2,27 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-console.log('>>>', process.env.WEBPACK_ENV)
+
+const responsiveLoader = {
+    test: /\.(jpe?g|png)$/i,
+    use: [
+        {
+            loader: 'responsive-loader',
+            options: {
+                sizes: [420, 860, 1200, 2400],
+                adapter: require('responsive-loader/sharp'),
+                name: 'images/responsive/[hash]_[width].[ext]'
+            }
+        }
+    ]
+}
+
+// Cache responsive images in dev mode
+if (process.env.WEBPACK_ENV === 'dev') {
+    console.log('Development mode: using responsive image cache.')
+    responsiveLoader.use.unshift('cache-loader')
+}
+
 module.exports = {
 
     entry: "./src/index.js",
@@ -53,20 +73,7 @@ module.exports = {
                 test: /\.(s*)css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'sass-loader']
             },
-            {
-                test: /\.(jpe?g|png)$/i,
-                use: [
-                    'cache-loader',
-                    {
-                        loader: 'responsive-loader',
-                        options: {
-                            sizes: [420, 860, 1200, 2400],
-                            adapter: require('responsive-loader/sharp'),
-                            name: 'images/responsive/[hash]_[width].[ext]'
-                        }
-                    }
-            ]
-            }
+            responsiveLoader
         ],
     },
 

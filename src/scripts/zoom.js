@@ -13,11 +13,9 @@ $('.zoom-img').click((e) => {
 
 // Hover zooms
 // TODO: remove zoomImg hardcoding
-console.log(imageSet.images)
-let zoomImg = imageSet.images[imageSet.images.length-1].path
-console.log(zoomImg)
-
+const zoomImg = imageSet.images[imageSet.images.length-1].path
 const zoomFactor = 3
+
 $('.hover-zoom')
     .on('click', (e) => {
         if ($(e.currentTarget).hasClass('zoomed')) {

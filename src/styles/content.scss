@@ -168,7 +168,7 @@
 
 .subsection-image {
     position: relative;
-    margin: $section-margin 0;
+    margin: $section-margin-top 0;
 
     @include breakpoint(sm) {
 
@@ -295,7 +295,7 @@
 }
 
 .collage-slider {
-    margin: $section-margin 0;
+    margin: $section-margin-top 0;
 }
 
 .collage-main {
@@ -309,6 +309,19 @@
 
 .collage-space {
     flex: 0 0 40%;
+}
+
+.model-slideshow {
+    position: relative;
+    margin: $section-margin 0;
+
+    @include breakpoint(sm) {
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+	}
 }
 
 /*--[ ABOUT ]--*/

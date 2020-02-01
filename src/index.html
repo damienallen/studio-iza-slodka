@@ -35,7 +35,8 @@
     <div id="sidebar">
 
         <div class="logo-container">
-            <img id="logo" src="images/logo.png" alt="" />
+            <img id="logo" src="${require('./images/logo.png').src}"
+                srcset="${require('./images/logo.png').srcSet}" alt="" />
             <div id="top-arrow">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
@@ -256,12 +257,12 @@
                         </div>
 
                         <div class="col col-img makers-idea">
-                            <img src="images/makers_maze/idea.png" alt="" />
+                            <img src="images/animations/makers_maze_idea.png" alt="" />
                         </div>
 
                     </div>
 
-                    <div class="subsection-image hover-zoom" data-image="images/makers_maze/image_2.jpg">
+                    <div class="subsection-image hover-zoom">
                         <img class="maze-img-2" src="${require('./images/makers_maze/image_2.jpg').src}"
                             srcset="${require('./images/makers_maze/image_2.jpg').srcSet}" alt="" />
                     </div>
@@ -344,11 +345,11 @@
                     <div class="row section-margins">
 
                         <div class="col col-img">
-                            <img src="images/makers_maze/clusters.png" alt="" />
+                            <img src="images/animations/makers_maze_clusters.png" alt="" />
                         </div>
 
                         <div class="col col-img">
-                            <img src="images/makers_maze/functions.png" alt="" />
+                            <img src="images/animations/makers_maze_functions.png" alt="" />
                         </div>
 
                     </div>
@@ -485,7 +486,7 @@
                     </div>
 
                     <div class="col col-img collage-space">
-                        <img src="images/collage_continuity/spaces_animation.png" alt="" />
+                        <img src="images/animations/collage_continuity_spaces.png" alt="" />
                     </div>
 
                 </div>
@@ -667,7 +668,9 @@
 
                 <div class="col about-details">
                     <div class="profile-photo">
-                        <img src="images/profile_photo.jpg" alt="Profile photo" />
+                        <img alt="Profile photo"
+                            src="${require('./images/profile_photo.jpg').src}"
+                            srcset="${require('./images/profile_photo.jpg').srcSet}" />
                     </div>
                     <div class="contact-info">
                         <span>email: contact@izaslodka.com</span>

@@ -7,8 +7,8 @@
   "author": "Damien Allen <contact@dallen.co>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "webpack --config webpack.config.dev.js --progress --colors --watch",
-    "build": "webpack --config webpack.config.js --progress --colors --mode=production"
+    "start": "webpack --progress --colors --watch",
+    "build": "webpack --progress --colors --mode=production"
   },
   "dependencies": {
     "jquery": "^3.4.1",

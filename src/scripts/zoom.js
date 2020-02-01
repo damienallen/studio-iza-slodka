@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import * as imageSet from '../images/makers_maze/image_2.jpg'
 
 // Click zooms
 $('.zoom-img').each((index, element) => {
@@ -9,7 +10,13 @@ $('.zoom-img').click((e) => {
     $(e.currentTarget).toggleClass('zoom-full')
 })
 
+
 // Hover zooms
+// TODO: remove zoomImg hardcoding
+console.log(imageSet.images)
+let zoomImg = imageSet.images[imageSet.images.length-1].path
+console.log(zoomImg)
+
 const zoomFactor = 3
 $('.hover-zoom')
     .on('click', (e) => {
@@ -34,5 +41,5 @@ $('.hover-zoom')
     .each((index, element) => {
         $(element)
             .append('<div class="bg-image"></div>')
-            .children('.bg-image').css({ 'background-image': 'url(' + $(element).attr('data-image') + ')' })
+            .children('.bg-image').css({ 'background-image': `url(${zoomImg})` })
     })

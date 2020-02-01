@@ -5,7 +5,7 @@ import './styles/layout.scss'
 import './styles/sidebar.scss'
 import './styles/nav.scss'
 import './styles/content.scss'
-import './images/makers_maze/idea.png'
+
 import $ from 'jquery'
 import './scripts/slideshow.js'
 import './scripts/navigation.js'

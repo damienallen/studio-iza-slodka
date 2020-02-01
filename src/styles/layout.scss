@@ -76,6 +76,25 @@ body {
     }
 }
 
+/*--[ MOBILE HIDE ]--*/
+.toggle-text {
+    .hide-sm {
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+
+    .show-toggle, .hide-toggle {
+        color: $link-color;
+        display: none;
+        cursor: pointer;
+
+        @include breakpoint(sm) {
+            display: inline;
+        }
+    }
+}
+
 /*--[ MISC ]--*/
 
 .margins {

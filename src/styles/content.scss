@@ -322,6 +322,10 @@
 
     @include breakpoint(sm) {
 
+        .col-img {
+            margin: 0 !important;
+        }
+
         img {
             height: auto;
             width: 100%;

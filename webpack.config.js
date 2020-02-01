@@ -2,7 +2,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// console.log('>>>', node.)
+console.log('>>>', process.env.WEBPACK_ENV)
 module.exports = {
 
     entry: "./src/index.js",

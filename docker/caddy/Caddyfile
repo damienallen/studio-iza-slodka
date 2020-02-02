@@ -1,0 +1,13 @@
+www.izaslodka.com {
+  redir https://izaslodka.com{uri}
+}
+
+izaslodka.com, master.izaslodka.com {
+  root * /var/www/master
+  file_server
+}
+
+develop.izaslodka.com {
+  root * /var/www/develop
+  file_server
+}

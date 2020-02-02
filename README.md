@@ -1,4 +1,4 @@
-![logo](https://github.com/damienallen/isa/raw/master/src/images/logo.png)
+![logo](https://github.com/damienallen/studio-iza-slodka/raw/master/src/images/logo.png)
 
 # Studio Iza Słodka
 

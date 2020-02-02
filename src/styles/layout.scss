@@ -40,6 +40,7 @@ body {
 /*--[ SLIDESHOWS ]--*/
 .slideshow {
     user-select: none;
+    -webkit-tap-highlight-color:transparent;
     position: relative;
     width: 100%;
     height: 100%;

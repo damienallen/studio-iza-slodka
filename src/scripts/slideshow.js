@@ -57,6 +57,6 @@ $(window).on('load', () => {
     if (window.innerWidth < 860) {
         let imgHeight = $('.collage-main').find('img').first().outerHeight()
         console.log(imgHeight)
-        // $('.collage-main')
+        $('.collage-main').css('height', imgHeight)
     }
 })

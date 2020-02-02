@@ -169,8 +169,11 @@ body {
 	}
 }
 
+
+
 .hover-zoom {
     position: relative;
+    margin: $section-margin-top 0;
     height: 100%;
     overflow: hidden;
     cursor: zoom-in;
@@ -178,6 +181,15 @@ body {
     &.zoomed {
         cursor: zoom-out !important;
     }
+
+    @include breakpoint(sm) {
+        margin: 25px 0;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+	}
 
     .bg-image {
         position: absolute;

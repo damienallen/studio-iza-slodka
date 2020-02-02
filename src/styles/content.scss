@@ -80,15 +80,22 @@
     }
 }
 
+.fill-cover {
+    @include breakpoint(sm) {
+        // display: block;
+
+        img {
+            object-fit: fill;
+            min-height: auto;
+        }
+    }
+}
+
 /*--[ SECTION ]--*/
 .section {
     margin: 0 0 $section-margin-2 0;
     min-height: 100vh;
     z-index: 20;
-}
-
-.section-margins {
-    margin: $section-margin 0;
 }
 
 .subsection {
@@ -109,6 +116,7 @@
     @include breakpoint(sm) {
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: $section-margin-sm;
     }
 }
 
@@ -163,6 +171,7 @@
 
     @include breakpoint(sm) {
         font-size: 1.4em;
+        margin-bottom: $section-margin-sm;
 	}
 }
 
@@ -171,6 +180,7 @@
     margin: $section-margin-top 0;
 
     @include breakpoint(sm) {
+        margin: 25px 0 $section-margin-top-sm 0;
 
         .details {
             padding: 0 20px;
@@ -191,6 +201,10 @@
 /*--[ MAKER'S MAZE ]--*/
 .maze-section {
     margin-top: $section-margin-2;
+
+    @include breakpoint(sm) {
+        margin-top: 0;
+    }
 }
 
 .maze-img-1 {
@@ -205,13 +219,13 @@
     width: 100vw;
     position: relative;
     top: -40px;
-    margin-bottom: (-80px + $section-margin);
+    margin-bottom: ($section-margin - 25);
     left: 0;
     user-select: none;
 
     @include breakpoint(sm) {
         top: 0;
-        margin-bottom: $section-margin;
+        margin-bottom: $section-margin-top-sm;
     }
 
     img {
@@ -250,8 +264,24 @@
     flex: 0 0 40%;
 }
 
+.markers-animations {
+    margin: $section-margin 0;
+
+    @include breakpoint(sm) {
+        margin: 0;
+
+        .col-img {
+            margin: 0 ($side-margin-sm * 2);
+        }
+    }
+}
+
 .makers-square {
     margin-bottom: 0;
+
+    @include breakpoint(sm) {
+        margin-top: 50px;
+    }
 }
 
 .maze-buttons {
@@ -278,7 +308,7 @@
         box-shadow: 6px 6px 4px -6px #ddd;
 
         @include breakpoint(sm) {
-            margin: 20px auto;
+            margin: 10px auto;
         }
     }
 
@@ -301,6 +331,10 @@
 
 .collage-slider {
     margin: $section-margin-top 0;
+
+    @include breakpoint(sm) {
+        margin: 20px 0 $section-margin-top-sm 0;
+    }
 }
 
 .collage-main {
@@ -321,6 +355,7 @@
     margin: $section-margin 0;
 
     @include breakpoint(sm) {
+        margin: 25px 0 $section-margin-sm 0;
 
         .col-img {
             margin: 0 !important;

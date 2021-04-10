@@ -7,11 +7,10 @@ import './styles/nav.scss'
 import './styles/content.scss'
 
 import $ from 'jquery'
-import './scripts/slideshow.js'
 import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
 import './scripts/sidebar.js'
-import './scripts/zoom.js'
+// import './scripts/zoom.js'
 
 
 // Window events

@@ -100,8 +100,8 @@ const scrollSection = (scrollTop, windowHeight, windowWidth) => {
     }
 }
 
-$(window).scroll((e) => {
-    const scrollTop = $(e.currentTarget).scrollTop()
-    adjustScrollSpy(scrollTop)
-    scrollSection(scrollTop, $(e.currentTarget).height(), $(e.currentTarget).width())
-})
+// $(window).scroll((e) => {
+//     const scrollTop = $(e.currentTarget).scrollTop()
+//     adjustScrollSpy(scrollTop)
+//     scrollSection(scrollTop, $(e.currentTarget).height(), $(e.currentTarget).width())
+// })

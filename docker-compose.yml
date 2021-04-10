@@ -1,0 +1,23 @@
+---
+version: "3.6"
+services:
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 8080:80
+    env_file: ./docker/.env
+    volumes:
+      - wordpress:/var/www/html
+      - ./src:/var/www/html/wp-content/themes/iza-slodka
+
+  db:
+    image: mysql:5.7
+    restart: always
+    env_file: ./docker/.env
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:

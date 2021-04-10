@@ -9,7 +9,7 @@ services:
     env_file: ./docker/.env
     volumes:
       - wordpress:/var/www/html
-      - ./src:/var/www/html/wp-content/themes/iza-slodka
+      - ./theme:/var/www/html/wp-content/themes/iza-slodka
 
   db:
     image: mysql:5.7

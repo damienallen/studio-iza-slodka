@@ -1,19 +1,8 @@
 <?php get_header(); ?>
 
-<div class="page">
+<div id="content">
 
     <div class="section">
-
-        <div class="subsection margins">
-
-            <div class="section-header">
-                <div class="title"><?php the_title(); ?></div>
-                <div class="subtitle">
-                    <?php get_secondary_title(); ?>
-                </div>
-            </div>
-
-        </div>
 
         <div class="subsection margins">
             <?php

@@ -23,29 +23,17 @@
 
 <div id="nav-toggle">
     <img id="nav-open" src="<?php echo get_stylesheet_directory_uri(); ?>/icons/menu.svg" alt="open nav" />
-<img id="nav-close" src="<?php echo get_stylesheet_directory_uri(); ?>/icons/close.svg" alt="close nav" />
-    </div>
+    <img id="nav-close" src="<?php echo get_stylesheet_directory_uri(); ?>/icons/close.svg" alt="close nav" />
+</div>
 
 <div id="nav-container">
+
     <div class="left-nav-spacer"></div>
+
     <nav>
-
         <?php wp_nav_menu( array( 'theme_location' => 'primary-menu' ) ); ?>
-
-        <!-- <a href="#makers-maze">Makers' Maze</a>
-        <a href="#collage-continuity">Collage & Continuity</a>
-        <a href="#about">About</a>
-        <a href="#news">News</a> -->
-
-        <div id="links">
-            <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/instagram.svg" alt="instagram" />
-            </a>
-            <a href="https://www.linkedin.com/company/37555218" rel="noreferrer" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/linkedin.svg" alt="linkedin" />
-            </a>
-        </div>
-
     </nav>
+
     <div class="right-nav-spacer"></div>
+
 </div>

@@ -1,0 +1,35 @@
+@import "constants";
+
+#links {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+
+  a img {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0 0 20px;
+
+    @include breakpoint(sm) {
+      margin: 0 20px;
+    }
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint(sm) {
+  flex-direction: column;
+  text-align: center;
+  min-width: 100%;
+  font-size: 1.8em;
+
+  a {
+    line-height: 3em;
+  }
+}

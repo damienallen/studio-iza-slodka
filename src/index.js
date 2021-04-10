@@ -1,6 +1,6 @@
 import 'normalize.css'
 import './styles/constants.scss'
-import './styles/theme.scss'
+import './styles/footer.scss'
 import './styles/layout.scss'
 import './styles/sidebar.scss'
 import './styles/nav.scss'
@@ -10,7 +10,6 @@ import $ from 'jquery'
 import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
 import './scripts/sidebar.js'
-// import './scripts/zoom.js'
 
 
 // Window events

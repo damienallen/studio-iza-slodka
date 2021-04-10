@@ -48,7 +48,7 @@ nav {
 
   a {
     line-height: $header-height;
-    color: #000;
+    color: $highlight-color;
 
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
@@ -83,37 +83,6 @@ nav {
       display: block;
       flex: 0 1 auto;
       list-style-type: none;
-    }
-  }
-
-  #links {
-    padding: 5px 0;
-    margin-left: 40px;
-
-    a img {
-      width: 20px;
-      height: 20px;
-      margin: 5px 0 0 20px;
-
-      @include breakpoint(sm) {
-        margin: 0 20px;
-      }
-    }
-
-    a:hover,
-    a:active {
-      text-decoration: none;
-    }
-  }
-
-  @include breakpoint(sm) {
-    flex-direction: column;
-    text-align: center;
-    min-width: 100%;
-    font-size: 1.8em;
-
-    a {
-      line-height: 3em;
     }
   }
 }

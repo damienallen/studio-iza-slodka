@@ -46,7 +46,7 @@ $('#top-arrow').click((e) => {
 const frontFactor = 1
 const middleFactor = 0.5
 const backFactor = 0.2
-const spyOffset = 0
+const spyOffset = 100
 
 const scrollSection = (scrollTop) => {
     const elementTop = $('#maze-section').offset().top

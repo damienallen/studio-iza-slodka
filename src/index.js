@@ -12,9 +12,25 @@ import './scripts/navigation.js'
 import './scripts/sidebar.js'
 
 
-$(window).ready(() => {
+const adjustMargins = () => {
+  const scrollerWidth = 1.5 * window.innerWidth
+  const scrollerHeight = 1862/4000 * scrollerWidth
+
+  const minMargin = 100 
+  const marginTop = window.innerHeight - scrollerHeight > minMargin ? 0 : minMargin
+
+  $('.front-cover').css({ height: window.innerHeight, marginTop: marginTop });
+  $('#maze-section').css({ top: marginTop });
+}
+
+$(window).ready( () => {
   $('.front-cover').css({ height: window.innerHeight });
 
   const now = new Date()
   console.log(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)
+})
+
+
+$(window).resize(() => {
+  $('.front-cover').css({ height: window.innerHeight });
 })

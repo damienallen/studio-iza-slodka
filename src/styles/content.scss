@@ -142,19 +142,19 @@ h6 {
     }
   }
 
-  #section-text {
+  .scroll-text {
     z-index: 60;
   }
 
-  #section-front {
+  .scroll-front {
     z-index: 50;
   }
 
-  #section-middle {
+  .scroll-middle {
     z-index: 40;
   }
 
-  #section-back {
+  .scroll-back {
     z-index: 30;
   }
 }

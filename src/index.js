@@ -12,10 +12,7 @@ import './scripts/navigation.js'
 import './scripts/sidebar.js'
 
 
-// Window events
 $(window).ready(() => {
-
-  // Fixed cover height on mobile
   $('.front-cover').css({ height: window.innerHeight });
 
   const now = new Date()

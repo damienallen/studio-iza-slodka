@@ -5,14 +5,10 @@
         <div id="top" class="front-cover">
 
             <div id="maze-section-scroller">
-                <img id="section-text" class="scroll-front"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_text.png" alt="" />
-                <img id="section-front" class="scroll-front"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_front.png" alt="" />
-                <img id="section-middle" class="scroll-middle"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_middle.png" alt="" />
-                <img id="section-back" class="scroll-back"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_back.png" alt="" />
+                <img class="scroll-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_text.png" alt="" />
+                <img class="scroll-front" src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_front.png" alt="" />
+                <img class="scroll-middle" src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_middle.png" alt="" />
+                <img class="scroll-back" src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_back.png" alt="" />
                 <img class="spacer" src="<?php echo get_stylesheet_directory_uri(); ?>/images/makers_maze/section_spacer.png" alt="" />
             </div>
 

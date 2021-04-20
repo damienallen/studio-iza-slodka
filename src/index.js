@@ -31,6 +31,6 @@ $(window).ready( () => {
 })
 
 
-$(window).resize(() => {
-  $('.front-cover').css({ height: window.innerHeight });
-})
+// $(window).resize(() => {
+//   $('.front-cover').css({ height: window.innerHeight });
+// })

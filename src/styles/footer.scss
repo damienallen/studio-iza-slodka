@@ -1,9 +1,30 @@
 @import "constants";
 
+.footer {
+  font-family: $header-font;
+  font-size: 1.1em;
+  margin-top: 80px;
+  padding: 20px 30px;
+  border-top: 1px solid #000;
+  display: flex;
+  color: $highlight-color;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.col {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
 #links {
   width: 100%;
-  text-align: center;
-  margin-bottom: 60px;
+  margin: 10px 0;
 
   a img {
     width: 20px;

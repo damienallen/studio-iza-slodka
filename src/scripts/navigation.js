@@ -46,20 +46,20 @@ $('#top-arrow').click((e) => {
 const frontFactor = 1
 const middleFactor = 0.5
 const backFactor = 0.2
-const spyOffset = 75
+const spyOffset = 0
 
-const scrollSection = (scrollTop, windowHeight, windowWidth) => {
-    const elementTop = $('#maze-section-scroller').offset().top
-    const elementHeight = $('#maze-section-scroller').height()
+const scrollSection = (scrollTop) => {
+    const elementTop = $('#maze-section').offset().top
+    const elementHeight = $('#maze-section').height()
 
     const elementBottom = elementTop + elementHeight
-    const scrollBottom = scrollTop + windowHeight
-    const scrollDistance = windowHeight + elementHeight - spyOffset
+    const scrollBottom = scrollTop + window.innerHeight
+    const scrollDistance = window.innerHeight + elementHeight - spyOffset
 
     if (scrollBottom > elementTop + spyOffset && scrollTop < elementBottom - spyOffset) {
         const progress = (scrollBottom - elementTop) / scrollDistance
-        const elementWidth = $('#maze-section-scroller>.spacer').width()
-        const leftOffset = progress * (windowWidth - elementWidth)
+        const elementWidth = $('#maze-section>.spacer').width()
+        const leftOffset = progress * (window.innerWidth - elementWidth)
 
         $('.scroll-text').css('left', leftOffset * frontFactor)
         $('.scroll-front').css('left', leftOffset * frontFactor)
@@ -68,7 +68,8 @@ const scrollSection = (scrollTop, windowHeight, windowWidth) => {
     }
 }
 
+scrollSection(0)
 $(window).scroll((e) => {
     const scrollTop = $(e.currentTarget).scrollTop()
-    scrollSection(scrollTop, $(e.currentTarget).height(), $(e.currentTarget).width())
+    scrollSection(scrollTop)
 })

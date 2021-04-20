@@ -115,10 +115,15 @@ h6 {
 
 /*--[ MAKER'S MAZE ]--*/
 
-#maze-section-scroller {
-  width: 100%;
-  position: absolute;
-  left: 0;
+// .front-cover {
+//   width: 100%;
+// }
+
+#maze-section {
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  top: 0;
   bottom: 0;
   user-select: none;
   overflow-x: hidden;
@@ -130,7 +135,7 @@ h6 {
   img {
     width: 150vw;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
 
     @include breakpoint(sm) {

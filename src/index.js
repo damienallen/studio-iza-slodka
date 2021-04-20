@@ -16,9 +16,7 @@ import './scripts/sidebar.js'
 $(window).ready(() => {
 
   // Fixed cover height on mobile
-  if (window.innerWidth < 860) {
-    $('.front-cover').css({ height: window.innerHeight });
-  }
+  $('.front-cover').css({ height: window.innerHeight });
 
   const now = new Date()
   console.log(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)

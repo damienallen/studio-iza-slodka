@@ -116,11 +116,12 @@ h6 {
 /*--[ MAKER'S MAZE ]--*/
 
 #maze-section-scroller {
-  width: 100vw;
-  position: relative;
+  width: 100%;
+  position: absolute;
   left: 0;
-  top: $header-height;
+  bottom: 0;
   user-select: none;
+  overflow-x: hidden;
 
   @include breakpoint(sm) {
     top: 0;

@@ -31,19 +31,12 @@ body {
 }
 
 @media (max-width: 764px) {
-  .wp-block-columns.has-3-columns {
-    flex-flow: row wrap;
-  }
-
-  .has-3-columns .wp-block-column:first-child {
+  .wp-block-column:first-child {
     flex-basis: 100%;
   }
 }
 
 @media (max-width: 478px) {
-  .wp-block-columns.has-3-columns {
-    display: block;
-  }
 
   .wp-block-column {
     margin: 20px 0;
@@ -51,13 +44,13 @@ body {
 }
 
 /*--[ IMAGES ]--*/
-.wp-block-image {
+.wp-block-image, .wp-block-column {
   figure {
     margin: 0;
-    img {
-      height: auto;
-      max-width: 100%;
-    }
+  }
+  img {
+    height: auto;
+    max-width: 100%;
   }
 }
 

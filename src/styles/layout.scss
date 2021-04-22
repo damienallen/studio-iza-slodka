@@ -18,7 +18,7 @@ body {
 
 .wp-block-columns {
   display: flex;
-  margin: $section-margin 0;
+  margin: $section-margin -20px;
 
   @include breakpoint(sm) {
     margin: $section-margin-sm 0;
@@ -48,6 +48,21 @@ body {
   .wp-block-column {
     margin: 20px 0;
   }
+}
+
+/*--[ IMAGES ]--*/
+.wp-block-image {
+  figure {
+    margin: 0;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+figcaption {
+  color: #666;
 }
 
 /*--[ MOBILE HIDE ]--*/

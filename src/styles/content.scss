@@ -113,6 +113,41 @@ h6 {
   }
 }
 
+.has-small-font-size { 
+  font-size: 0.8em; 
+} 
+ 
+.has-regular-font-size { 
+  font-size: 1em; 
+} 
+ 
+.has-medium-font-size { 
+  font-size: 1.1em; 
+  line-height: 1.45; 
+} 
+ 
+.has-large-font-size { 
+  font-size: 1.25em; 
+  line-height: 1.4; 
+} 
+ 
+.has-larger-font-size { 
+  font-size: 1.5em; 
+  line-height: 1.3; 
+}
+
+.more {
+  font-size: 1.2em;
+  
+  a {
+    color: #000;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+}
+
 /*--[ MAKER'S MAZE ]--*/
 
 #maze-section {

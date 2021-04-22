@@ -4,6 +4,7 @@ import './styles/footer.scss'
 import './styles/layout.scss'
 import './styles/sidebar.scss'
 import './styles/nav.scss'
+import './styles/news.scss'
 import './styles/content.scss'
 
 import $ from 'jquery'

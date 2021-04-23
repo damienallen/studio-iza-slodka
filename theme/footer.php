@@ -5,11 +5,11 @@
             <p>BTW: NL003113471B97</p>
             <p>Architectenregister: 1.200724.001</p>
         </div>
-        <div class="col text-center">
+        <div class="col" style="text-align: center;">
             <p>Contact:</p>
             <p>contact@izaslodka.com</p>
         </div>
-        <div class="col text-center">
+        <div class="col" style="text-align: right;">
             <p>Follow Studio Iza Slodka:</p>
             <div id="links">
                 <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">

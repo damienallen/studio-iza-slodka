@@ -9,9 +9,21 @@
 }
 
 #content p {
-  line-height: 20px;
+  line-height: 24px;
   margin-block-start: 0;
   margin-block-end: 1.8em;
+
+  a {
+    color: $link-color;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 
   @include breakpoint(sm) {
     margin-left: $side-margin-sm;
@@ -90,6 +102,11 @@ h2 {
   }
 }
 
+h5 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
 .subtitle,
 h6 {
   font-size: 2em;
@@ -114,30 +131,30 @@ h6 {
 }
 
 .has-small-font-size { 
-  font-size: 0.8em; 
+  font-size: $font-small; 
 } 
  
 .has-regular-font-size { 
-  font-size: 1em; 
+  font-size: $font-normal; 
 } 
  
 .has-medium-font-size { 
-  font-size: 1.1em; 
+  font-size: $font-medium; 
   line-height: 1.45; 
 } 
  
 .has-large-font-size { 
-  font-size: 1.25em; 
+  font-size: $font-large; 
   line-height: 1.4; 
 } 
  
 .has-larger-font-size { 
-  font-size: 1.5em; 
+  font-size: $font-larger; 
   line-height: 1.3; 
 }
 
 .more {
-  font-size: 1.2em;
+  font-size: $font-medium;
   
   a {
     color: #000;

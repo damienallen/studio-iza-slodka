@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+.aligncenter {
+  text-align: center;
+}
+
 /*--[ GRID ]--*/
 
 .wp-block-columns {
@@ -54,8 +58,11 @@ body {
   }
 }
 
-figcaption {
+figcaption, .caption {
   color: #666;
+  text-align: center;
+  margin-top: 10px;
+  font-size: $font-small;
 }
 
 /*--[ MOBILE HIDE ]--*/

@@ -1,3 +1,5 @@
+@import "constants";
+
 .wp-block-latest-posts {
     list-style-type: none;
     display: flex;
@@ -10,34 +12,26 @@
         flex-direction: column;
         margin: 0 20px;
 
-        a {
-            flex: 0 0 40px;
-            order: 1;
+        & > a {
+            flex: 0 0;
             padding-bottom: 24px;
-            font-size: 1.1em;
+            font-size: $font-medium;
             font-weight: bold;
             color: #000;
         }
 
-        a:link {
+        & > a:link {
             text-decoration: none;
         }
 
         time {
             flex: 0;
-            order: 2;
             padding-bottom: 20px;
-        }
-        
-        .wp-block-latest-posts__featured-image {
-            flex: 0;
-            order: 3;
-            padding-bottom: 30px;
+            color: #666;
         }
 
         .wp-block-latest-posts__post-excerpt {
             flex: 1;
-            order: 4;
         }
     }
 }

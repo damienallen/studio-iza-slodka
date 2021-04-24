@@ -3,18 +3,19 @@
 .wp-block-latest-posts {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
     margin: 40px -20px 20px -20px;
 
     li {
         display: flex;
-        flex: 1;
+        flex: 1 0 25%;
         flex-direction: column;
-        margin: 0 20px;
+        margin: 0 20px 60px 20px;
 
         & > a {
             flex: 0 0 60px;
-            // padding-bottom: 24px;
             font-size: $font-medium;
             font-weight: bold;
             color: #000;
@@ -28,6 +29,7 @@
             flex: 0;
             padding-bottom: 20px;
             color: #666;
+            font-size: $font-small;
         }
 
         .wp-block-latest-posts__post-excerpt {

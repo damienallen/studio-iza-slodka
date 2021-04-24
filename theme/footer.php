@@ -11,7 +11,7 @@
                 <p>contact@izaslodka.com</p>
             </div>
             <div class="col" style="text-align: right;">
-                <p>Follow Studio Iza Slodka:</p>
+                <p>Follow Studio Iza S&#322;odka:</p>
                 <div id="links">
                     <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/instagram.svg" alt="instagram" />
@@ -26,6 +26,8 @@
     
 </body>
 
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/bundle.js"></script>
 
 </html>

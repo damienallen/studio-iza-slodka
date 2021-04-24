@@ -48,23 +48,28 @@ const middleFactor = 0.5
 const backFactor = 0.2
 const spyOffset = 100
 
+
 const scrollSection = (scrollTop) => {
-    const elementTop = $('#maze-section').offset().top
-    const elementHeight = $('#maze-section').height()
+    const mazeSection = $('#maze-section')
+    const sectionOffset = mazeSection.offset()
+    if (sectionOffset) {
+        const elementTop = sectionOffset.top
+        const elementHeight = mazeSection.height()
 
-    const elementBottom = elementTop + elementHeight
-    const scrollBottom = scrollTop + window.innerHeight
-    const scrollDistance = window.innerHeight + elementHeight - spyOffset
+        const elementBottom = elementTop + elementHeight
+        const scrollBottom = scrollTop + window.innerHeight
+        const scrollDistance = window.innerHeight + elementHeight - spyOffset
 
-    if (scrollBottom > elementTop + spyOffset && scrollTop < elementBottom - spyOffset) {
-        const progress = (scrollBottom - elementTop) / scrollDistance
-        const elementWidth = $('#maze-section>.spacer').width()
-        const leftOffset = progress * (window.innerWidth - elementWidth)
+        if (scrollBottom > elementTop + spyOffset && scrollTop < elementBottom - spyOffset) {
+            const progress = (scrollBottom - elementTop) / scrollDistance
+            const elementWidth = $('#maze-section>.spacer').width()
+            const leftOffset = progress * (window.innerWidth - elementWidth)
 
-        $('.scroll-text').css('left', leftOffset * frontFactor)
-        $('.scroll-front').css('left', leftOffset * frontFactor)
-        $('.scroll-middle').css('left', leftOffset * middleFactor)
-        $('.scroll-back').css('left', leftOffset * backFactor)
+            $('.scroll-text').css('left', leftOffset * frontFactor)
+            $('.scroll-front').css('left', leftOffset * frontFactor)
+            $('.scroll-middle').css('left', leftOffset * middleFactor)
+            $('.scroll-back').css('left', leftOffset * backFactor)
+        }
     }
 }
 

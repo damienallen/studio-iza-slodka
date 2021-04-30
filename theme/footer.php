@@ -1,16 +1,16 @@
 
     <div class="footer">
         <div class="footer-content">
-            <div class="col">
+            <div class="col info">
                 <p>KVK: 76763994</p>
                 <p>BTW: NL003113471B97</p>
                 <p>Architectenregister: 1.200724.001</p>
             </div>
-            <div class="col" style="text-align: center;">
+            <div class="col contact">
                 <p>Contact:</p>
                 <p>contact@izaslodka.com</p>
             </div>
-            <div class="col" style="text-align: right;">
+            <div class="col follow">
                 <p>Follow Studio Iza S&#322;odka:</p>
                 <div id="links">
                     <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">

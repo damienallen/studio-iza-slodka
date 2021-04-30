@@ -26,24 +26,22 @@ body {
 
   @include breakpoint(sm) {
     margin: $section-margin-sm 0;
+    flex-direction: column;
   }
 }
 
 .wp-block-column {
   flex: 1;
   margin: 0 20px;
+
+  @include breakpoint(sm) {
+    margin: 0;
+  }
 }
 
 @media (max-width: 764px) {
   .wp-block-column:first-child {
     flex-basis: 100%;
-  }
-}
-
-@media (max-width: 478px) {
-
-  .wp-block-column {
-    margin: 20px 0;
   }
 }
 

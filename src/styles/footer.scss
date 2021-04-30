@@ -1,7 +1,7 @@
 @import "constants";
 
 .footer {
-  width: 100%;
+  width: 100vw;
   margin-top: 80px;
   border-top: 1px solid #000;
 }
@@ -11,9 +11,7 @@
   font-size: 1.1em;
 
   width: $content-width;
-  min-width: $content-min-width;
   max-width: $content-max-width;
-  padding: 0 $side-padding;
 
   margin: 0 auto;
   padding: 20px 30px;
@@ -23,10 +21,42 @@
   p {
     margin: 10px 0;
   }
-}
 
-.col {
-  flex: 1;
+  @include breakpoint(sm) {
+    width: 100vw;
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1;
+
+    @include breakpoint(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .info {
+    @include breakpoint(sm) {
+      order: 3;
+    }
+  }
+
+  .follow {
+    text-align: right;
+    @include breakpoint(sm) {
+      text-align: left;
+      order: 1;
+    }
+  }
+
+  .contact {
+    text-align: center;
+
+    @include breakpoint(sm) {
+      text-align: left;
+      order: 2;
+    }
+  }
 }
 
 .text-center {

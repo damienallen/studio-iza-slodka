@@ -25,6 +25,7 @@
   @include breakpoint(sm) {
     flex-direction: column;
     margin: 0;
+    min-width: 0;
   }
 
   .col {

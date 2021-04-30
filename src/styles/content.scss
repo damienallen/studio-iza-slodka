@@ -3,7 +3,6 @@
 /*--[ CONTENT CONTAINER ]--*/
 #content {
   margin-top: $header-height;
-  margin-bottom: 40px;
   max-width: 100vw;
   overflow-x: hidden;
 
@@ -65,7 +64,7 @@ h6 {
   margin: 0;
 
   @include breakpoint(sm) {
-    margin: 0 24px;
+    margin: 0 $margin-md;
   }
 }
 
@@ -73,7 +72,7 @@ h6 {
 h1 {
   font-size: 4em;
   padding-top: $margin-lg;
-  padding-bottom: 5px;
+  padding-bottom: $margin-xs;
   border-bottom: 1px solid #000;
   margin: 0;
 
@@ -98,7 +97,7 @@ h5 {
 .subtitle,
 h6 {
   font-size: 2em;
-  padding-top: 15px;
+  padding-top: $margin-sm;
 
   a:link,
   a:visited,

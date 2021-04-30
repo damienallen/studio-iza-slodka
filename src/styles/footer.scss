@@ -1,7 +1,6 @@
 @import "constants";
 
 .footer {
-  width: 100vw;
   margin-top: 80px;
   border-top: 1px solid #000;
 }
@@ -12,6 +11,7 @@
 
   width: $content-width;
   max-width: $content-max-width;
+  min-width: $content-min-width;
 
   margin: 0 auto;
   padding: 20px 30px;
@@ -23,8 +23,8 @@
   }
 
   @include breakpoint(sm) {
-    width: 100vw;
     flex-direction: column;
+    margin: 0;
   }
 
   .col {
@@ -73,7 +73,7 @@
     margin: 5px 0 0 20px;
 
     @include breakpoint(sm) {
-      margin: 0 20px;
+      margin: 0 20px 0 0;
     }
   }
 

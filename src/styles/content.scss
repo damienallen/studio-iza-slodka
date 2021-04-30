@@ -6,28 +6,28 @@
   margin-bottom: 40px;
   max-width: 100vw;
   overflow-x: hidden;
-}
 
-#content p {
-  line-height: 24px;
-  margin-block-start: 0;
-  margin-block-end: 1.8em;
+  p {
+    line-height: 24px;
+    margin-block-start: 0;
+    margin-block-end: 1.8em;
 
-  a {
-    color: $link-color;
-  }
+    a {
+      color: $link-color;
+    }
 
-  a:link {
-    text-decoration: none;
-  }
+    a:link {
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  @include breakpoint(sm) {
-    margin-left: $side-margin-sm;
-    margin-right: $side-margin-sm;
+    @include breakpoint(sm) {
+      margin-left: $side-margin-sm;
+      margin-right: $side-margin-sm;
+    }
   }
 }
 
@@ -52,22 +52,6 @@
 }
 
 /*--[ HEADERS ]--*/
-.section-header {
-  font-family: $header-font;
-  text-align: center;
-  width: 100%;
-  padding-top: $section-margin-1;
-  margin-bottom: $section-margin;
-  width: $content-width;
-  max-width: $content-max-width;
-  flex: 0 0 auto;
-
-  @include breakpoint(sm) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: $section-margin-sm;
-  }
-}
 
 h1,
 h2,
@@ -88,7 +72,7 @@ h6 {
 .title,
 h1 {
   font-size: 4em;
-  padding-top: $section-margin-1;
+  padding-top: $margin-lg;
   padding-bottom: 5px;
   border-bottom: 1px solid #000;
   margin: 0;
@@ -175,7 +159,6 @@ h6 {
   height: 100%;
   width: 100vw;
   position: relative;
-  // top: 200px;
   user-select: none;
   overflow-x: hidden;
 
@@ -216,15 +199,15 @@ h6 {
 }
 
 .maze-buttons {
-  margin-top: $section-margin;
-  margin-bottom: $section-margin;
+  margin-top: $margin-xl;
+  margin-bottom: $margin-xl;
   text-align: center;
   font-size: 1.4em;
   display: flex;
 
   @include breakpoint(sm) {
-    margin-top: $section-margin-1;
-    margin-bottom: $section-margin-1;
+    margin-top: $margin-lg;
+    margin-bottom: $margin-lg;
     flex-direction: column;
     font-size: 1em;
   }
@@ -255,89 +238,4 @@ h6 {
 .zoom {
   height: auto;
   max-width: 100%;
-}
-
-/*--[ ABOUT ]--*/
-
-.about-details {
-  margin-left: 75px;
-
-  @include breakpoint(sm) {
-    text-align: center;
-    margin: $section-margin-1 0 0 0;
-  }
-
-  .contact-info {
-    font-style: italic;
-
-    span {
-      display: block;
-      margin-bottom: 1.2em;
-    }
-  }
-
-  .profile-photo {
-    margin-bottom: $section-margin;
-
-    img {
-      width: 180px;
-      height: auto;
-    }
-  }
-}
-
-/*--[ NEWS ]--*/
-.news-list {
-  .news-item {
-    display: flex;
-    color: #000;
-    padding: 10px;
-    text-decoration: none;
-    margin-bottom: 40px;
-
-    &:hover,
-    &:active {
-      background: #eee;
-    }
-
-    @include breakpoint(sm) {
-      padding: 20px;
-    }
-
-    .item-thumb {
-      flex: 0 1 100px;
-
-      img {
-        width: 100%;
-        max-width: 100px;
-        height: auto;
-      }
-
-      @include breakpoint(sm) {
-        margin-bottom: 20px;
-      }
-    }
-
-    .item-text {
-      flex: 1;
-
-      @include breakpoint(md) {
-        margin-left: 50px;
-      }
-
-      .item-date {
-        color: #666;
-        margin-bottom: 5px;
-      }
-
-      .item-title {
-        font-size: 1.8em;
-        margin-bottom: 20px;
-      }
-
-      .item-summary {
-        font-size: 1.1em;
-      }
-    }
-  }
 }

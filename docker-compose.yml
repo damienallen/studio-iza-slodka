@@ -7,9 +7,9 @@ services:
     restart: always
     env_file: ./docker/.env
     volumes:
-      - ./docker/Caddyfile:/etc/caddy/Caddyfile
-      - caddy-config:/config # configuation autosaves
-      - caddy-data:/data # saving certificates
+      - /home/deploy/wordpress/docker/Caddyfile:/etc/caddy/Caddyfile
+      - caddy-config:/config
+      - caddy-data:/data
     volumes_from:
       - wordpress
     ports:
@@ -21,13 +21,14 @@ services:
       - proxynet
 
   wordpress:
-    image: wordpress
+    image: wordpress:5.7-fpm
     restart: always
-    ports:
-      - 80:80
+    expose:
+      - 9000
     env_file: ./docker/.env
     networks:
       - proxynet
+      - webnet
     volumes:
       - wordpress:/var/www/html
       - ./theme:/var/www/html/wp-content/themes/iza-slodka
@@ -37,9 +38,17 @@ services:
     image: mysql:5.7
     restart: always
     env_file: ./docker/.env
+    networks:
+      - webnet
     volumes:
       - db:/var/lib/mysql
 
+networks:
+  proxynet:
+  webnet:
+
 volumes:
-  wordpress:
+  caddy-config:
+  caddy-data:
   db:
+  wordpress:

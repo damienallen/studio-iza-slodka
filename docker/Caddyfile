@@ -2,9 +2,10 @@
     email   dev@dallen.co
 }
 
-wp.dallen.dev {
-  root * /var/www/html/public
-    php_fastcgi unix//run/php/php7.4-fpm.sock
+wp.izaslodka.com {
+  root * /var/www/html
+
+    php_fastcgi wordpress:9000
     file_server
     encode gzip
 

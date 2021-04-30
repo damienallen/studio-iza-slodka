@@ -8,11 +8,23 @@
     padding: 0;
     margin: 40px -20px 20px -20px;
 
+    @include breakpoint(sm) {
+        flex-direction: column;
+    }
+
     li {
         display: flex;
         flex: 0 0 25%;
         flex-direction: column;
         margin: 0 20px 60px 20px;
+
+        @include breakpoint(sm) {
+            margin: 0 44px 48px 44px;
+
+            p {
+                margin: 0 !important;
+            }
+        }
 
         & > a {
             flex: 0 0 60px;

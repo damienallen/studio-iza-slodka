@@ -79,6 +79,10 @@ h6 {
   font-weight: normal;
   text-align: center;
   margin: 0;
+
+  @include breakpoint(sm) {
+    margin: 0 24px;
+  }
 }
 
 .title,

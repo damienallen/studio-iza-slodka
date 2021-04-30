@@ -21,7 +21,8 @@
     <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/icons/site.webmanifest">
 
     <link href="https://fonts.googleapis.com/css?family=Lato|Lusitana&display=swap" rel="stylesheet">
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/main.css" rel="stylesheet">
+
+    <?php wp_head(); ?>
 
 </head>
 

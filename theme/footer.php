@@ -23,11 +23,9 @@
             </div>
         </div>
     </div>
+
+    <?php wp_footer(); ?>
     
 </body>
-
-<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/bundle.js"></script>
 
 </html>

@@ -35,7 +35,6 @@
 
     @include breakpoint(lg) {
         width: 120px;
-        margin-bottom: 10px;
         margin-left: 0;
     }
 
@@ -47,15 +46,16 @@
 #top-arrow {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     color: $highlight-color;
     opacity: 0;
 
     svg {
-        height: 40px;
-        width: 40px;
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -66,6 +66,7 @@
     font-size: 1.4em;
     user-select: none;
     cursor: pointer;
+    margin-top: 10px;
 
     .studio {
         font-size: 0.6em;

@@ -1,0 +1,51 @@
+@import "constants";
+
+.wp-block-latest-posts {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 40px -20px 20px -20px;
+
+    @include breakpoint(sm) {
+        flex-direction: column;
+    }
+
+    li {
+        display: flex;
+        flex: 0 0 25%;
+        flex-direction: column;
+        margin: 0 20px 60px 20px;
+
+        @include breakpoint(sm) {
+            margin: 0 44px 48px 44px;
+
+            p {
+                margin: 0 !important;
+            }
+        }
+
+        & > a {
+            flex: 0 0 60px;
+            font-size: $font-medium;
+            font-weight: bold;
+            color: #000;
+        }
+
+        & > a:link {
+            text-decoration: none;
+        }
+
+        time {
+            flex: 0;
+            padding-bottom: 20px;
+            color: #666;
+            font-size: $font-small;
+        }
+
+        .wp-block-latest-posts__post-excerpt {
+            flex: 1;
+        }
+    }
+}

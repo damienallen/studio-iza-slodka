@@ -2,6 +2,13 @@
 $body-font: 'Lato', sans-serif;
 $header-font: 'Lusitana', serif;
 
+$font-small: 0.8571em;
+$font-normal: 1em;
+$font-medium: 1.1429em;
+$font-large: 1.2857em;
+$font-huge: 1.4286em;
+
+
 /*--[ BREAKPOINTS ]--*/
 $lg-breakpoint: 1400px;
 $md-breakpoint: 992px;
@@ -21,22 +28,22 @@ $sm-breakpoint: 860px;
  }
 
  /*--[ VARIABLES ]--*/
-$header-height: 40px;
-$top-margin: 24px;
-$section-margin: 75px;
-$section-margin-sm: 50px;
-$section-margin-top: $section-margin*1.5;
-$section-margin-top-sm: $section-margin-sm*1.5;
-$section-margin-1: 50px;
-$section-margin-2: ($section-margin - $section-margin-1) ;
 
+$margin-xs: 8px;
+$margin-sm: 16px;
+$margin-md: 24px;
+$margin-lg: 50px;
+$margin-xl: 75px;
+
+$header-height: 40px;
 $nav-padding: 60px;
+
+$side-padding: 60px;
+$side-margin-sm: 24px;
 
 $content-width: 55vw;
 $content-min-width: ($sm-breakpoint - $nav-padding*2);
 $content-max-width: $md-breakpoint;
-$side-padding: 60px;
-$side-margin-sm: 24px;
 
 $highlight-color: #202d62;
 $link-color: #bf322f;

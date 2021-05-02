@@ -1,5 +1,6 @@
 dist/
 node_modules/
 docker/caddy/certs/
+.env
 
 yarn-*.log

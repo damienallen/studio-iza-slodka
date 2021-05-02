@@ -1,4 +1,4 @@
-![logo](view-source:https://izaslodka.com/wp-content/themes/iza-slodka/images/logo.png)
+![logo](https://izaslodka.com/wp-content/themes/iza-slodka/images/logo.png)
 
 # Studio Iza Słodka
 

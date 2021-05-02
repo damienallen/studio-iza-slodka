@@ -1,0 +1,98 @@
+@import "constants";
+
+.footer {
+  margin-top: 80px;
+  border-top: 1px solid #000;
+}
+
+.footer-content {
+  font-family: $header-font;
+  font-size: 1.1em;
+
+  width: $content-width;
+  max-width: $content-max-width;
+  min-width: $content-min-width;
+
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  color: $highlight-color;
+
+  p {
+    margin: 10px 0;
+  }
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .col {
+    flex: 1;
+
+    @include breakpoint(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .info {
+    @include breakpoint(sm) {
+      order: 3;
+    }
+  }
+
+  .follow {
+    text-align: right;
+    @include breakpoint(sm) {
+      text-align: left;
+      order: 1;
+    }
+  }
+
+  .contact {
+    text-align: center;
+
+    @include breakpoint(sm) {
+      text-align: left;
+      order: 2;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+#links {
+  width: 100%;
+  margin: 10px 0;
+
+  a img {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0 0 20px;
+
+    @include breakpoint(sm) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint(sm) {
+  flex-direction: column;
+  text-align: center;
+  min-width: 100%;
+  font-size: 1.8em;
+
+  a {
+    line-height: 3em;
+  }
+}

@@ -2,7 +2,11 @@
     email   dev@dallen.co
 }
 
-wp.izaslodka.com {
+www.izaslodka.com {
+  redir https://izaslodka.com{uri}
+}
+
+izaslodka.com, wp.izaslodka.com {
   root * /var/www/html
 
     php_fastcgi wordpress:9000

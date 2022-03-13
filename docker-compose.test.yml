@@ -1,0 +1,6 @@
+---
+version: "3.6"
+services:
+  caddy:
+    volumes:
+      - /home/deploy/wordpress/docker/Caddyfile.test:/etc/caddy/Caddyfile

@@ -13,7 +13,7 @@ import './scripts/navigation.js'
 import './scripts/sidebar.js'
 import './scripts/jScrollability.js'
 
-$(window).ready(() => {
+$(() => {
     $('.front-cover').css({ height: window.innerHeight })
 
     const now = new Date()

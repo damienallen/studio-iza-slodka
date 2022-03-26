@@ -11,11 +11,11 @@ import $ from 'jquery'
 import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
 import './scripts/sidebar.js'
-
+import './scripts/jScrollability.js'
 
 $(window).ready(() => {
-  $('.front-cover').css({ height: window.innerHeight });
+    $('.front-cover').css({ height: window.innerHeight })
 
-  const now = new Date()
-  console.log(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)
+    const now = new Date()
+    console.log(`Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)
 })

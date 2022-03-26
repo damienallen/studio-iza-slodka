@@ -1,38 +1,43 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "theme"),
+  },
 
-    entry: "./src/index.js",
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, 'theme'),
-    },
+  plugins: [new MiniCssExtractPlugin()],
 
-    plugins: [
-        new MiniCssExtractPlugin(),
-    ],
-
-    module: {
-        rules: [
-            {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.(s*)css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
             },
-            {
-                test: /\.(s*)css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'sass-loader']
-            }
+          },
+          "sass-loader",
         ],
-    },
+      },
+    ],
+  },
 
-    devtool: 'source-map'
-
-}
+  devtool: "source-map",
+  mode: "production",
+};

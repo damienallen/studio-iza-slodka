@@ -7,7 +7,7 @@
   "author": "Damien Allen <contact@dallen.co>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "SET WEBPACK_ENV=dev & webpack --progress --watch",
+    "start": "webpack --progress --watch",
     "build": "webpack --progress --mode=production"
   },
   "dependencies": {

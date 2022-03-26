@@ -4,3 +4,5 @@ docker/caddy/certs/
 .env
 
 yarn-*.log
+.DS_Store
+bundle.js.LICENSE.txt

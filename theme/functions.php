@@ -1,6 +1,5 @@
 <?php
 
-
     function register_menus() {
         register_nav_menus(
             array(
@@ -10,9 +9,7 @@
     }
 
     function add_scripts() {
-        wp_scripts()->add_data( 'jquery', 'group', 1 );
-        wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-        wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+        wp_enqueue_script('jquery');
 
         wp_enqueue_script(
             'theme-scripts',
@@ -28,7 +25,6 @@
             false
         );
     }
-
     
     add_action( 'init', 'register_menus' );
     add_action( 'wp_enqueue_scripts', 'add_styles' );

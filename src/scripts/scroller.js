@@ -6,12 +6,12 @@ const throttle = 50 // ms
 // const scrollConfig = {
 //     text: {
 //         start: 0,
-//         end: 1.1,
+//         end: 1,
 //         direction: -1
 //     },
 //     front: {
 //         start: 0,
-//         end: 1.1,
+//         end: 1,
 //         direction: -1
 //     },
 //     middle: {
@@ -29,12 +29,12 @@ const throttle = 50 // ms
 const scrollConfig = {
     text: {
         start: 0,
-        end: 1.1,
+        end: 1,
         direction: -1,
     },
     front: {
         start: 0,
-        end: 1.1,
+        end: 1,
         direction: -1,
     },
     middle: {
@@ -79,11 +79,10 @@ const scrollConfig = {
     scrollSection(0)
 
     let time = Date.now()
-    $(window).scroll((e) => {
+    $(window).on('scroll', (e) => {
         if (time + throttle - Date.now() < 0) {
             const scrollTop = $(e.currentTarget).scrollTop()
             scrollSection(scrollTop)
-
             time = Date.now()
         }
     })

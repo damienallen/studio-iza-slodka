@@ -3,26 +3,49 @@ const spyOffset = 100 // px
 const duration = 50 // ms
 const throttle = 50 // ms
 
-const scrollSettings = {
+// const scrollConfig = {
+//     text: {
+//         start: 0,
+//         end: 1.1,
+//         direction: -1
+//     },
+//     front: {
+//         start: 0,
+//         end: 1.1,
+//         direction: -1
+//     },
+//     middle: {
+//         start: 0,
+//         end: 1,
+//         direction: 1
+//     },
+//     back: {
+//         start: 0.1,
+//         end: 2,
+//         direction: -1
+//     },
+// }
+
+const scrollConfig = {
     text: {
         start: 0,
         end: 1.1,
-        direction: -1
+        direction: -1,
     },
     front: {
         start: 0,
         end: 1.1,
-        direction: -1
+        direction: -1,
     },
     middle: {
         start: 0,
-        end: 1,
-        direction: 1
+        end: 2,
+        direction: -1,
     },
     back: {
-        start: 0.1,
-        end: 2,
-        direction: -1
+        start: 0,
+        end: 3,
+        direction: -1,
     },
 }
 
@@ -43,7 +66,7 @@ const scrollSection = (scrollTop) => {
             const elementWidth = $('#maze-section>.spacer').width()
             console.log(elementWidth, '>>', progress)
 
-            for (const [subclass, { start, end, direction }] of Object.entries(scrollSettings)) {
+            for (const [subclass, { start, end, direction }] of Object.entries(scrollConfig)) {
                 const distance = end - start
                 const leftOffset = ((start + distance * progress) * direction * elementWidth) / 3
 

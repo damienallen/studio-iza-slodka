@@ -65,12 +65,13 @@ const scrollConfig = {
                 const progress =
                     1 - (elementHeight - Math.min(scrollTop, elementHeight)) / elementHeight
                 const elementWidth = $('#maze-section>.spacer').width()
-                console.log(elementWidth, '>>', progress)
 
                 for (const [subclass, { start, end, direction }] of Object.entries(scrollConfig)) {
-                    const distance = end - start
-                    const leftOffset =
-                        ((start + distance * progress) * direction * elementWidth) / 3
+                    const diff = end - start
+                    const scrollDistance = elementWidth / 3
+                    const leftOffset = (start + diff * progress) * direction * scrollDistance
+
+                    console.log(progress, '>>', leftOffset)
 
                     $(`.scroll-${subclass}`).animate({ left: leftOffset }, duration)
                 }

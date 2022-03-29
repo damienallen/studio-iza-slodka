@@ -8,8 +8,8 @@ import './styles/news.scss'
 import './styles/content.scss'
 import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
+import './scripts/scroller.js'
 import './scripts/sidebar.js'
-import './scripts/jScrollability.js'
 
 import $ from 'jquery'
 

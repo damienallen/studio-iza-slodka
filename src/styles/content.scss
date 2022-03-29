@@ -170,14 +170,6 @@ h6 {
     position: absolute;
     bottom: 0;
     left: 0;
-
-    @include breakpoint(sm) {
-      width: 220vw;
-    }
-
-    // &.spacer {
-    //   position: static;
-    // }
   }
 
   .scroll-text {

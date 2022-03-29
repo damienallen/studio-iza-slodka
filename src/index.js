@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 import 'normalize.css'
 import './styles/constants.scss'
 import './styles/footer.scss'
@@ -10,8 +12,6 @@ import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
 import './scripts/scroller.js'
 import './scripts/sidebar.js'
-
-import $ from 'jquery'
 
 $(() => {
     $('.front-cover').css({ height: window.innerHeight })

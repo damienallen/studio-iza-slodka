@@ -71,8 +71,6 @@ const scrollConfig = {
                     const scrollDistance = elementWidth / 3
                     const leftOffset = (start + diff * progress) * direction * scrollDistance
 
-                    console.log(progress, '>>', leftOffset)
-
                     $(`.scroll-${subclass}`).animate({ left: leftOffset }, duration)
                 }
             }

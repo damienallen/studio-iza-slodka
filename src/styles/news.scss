@@ -26,26 +26,33 @@
             }
         }
 
-        & > a {
-            flex: 0 0 60px;
+        &>a {
+            flex: 0 0 45px;
             font-size: $font-medium;
             font-weight: bold;
             color: #000;
+            order: 2;
         }
 
-        & > a:link {
+        &>a:link {
             text-decoration: none;
         }
 
         time {
             flex: 0;
-            padding-bottom: 20px;
+            padding-bottom: 5px;
             color: #666;
             font-size: $font-small;
+            order: 1;
         }
 
         .wp-block-latest-posts__post-excerpt {
             flex: 1;
+            order: 3;
+        }
+
+        .wp-block-latest-posts__post-full-content {
+            order: 3;
         }
     }
 }

@@ -1,11 +1,11 @@
 <div id="sidebar">
 
-    <div class="logo-container">
-        <img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="" />
-        <div id="top-arrow"></div>
-    </div>
+        <a href="<?php echo get_bloginfo( 'wpurl' );?>">
 
-    <a href="<?php echo get_bloginfo( 'wpurl' );?>">
+        <div class="logo-container">
+            <img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="" />
+        </div>
+
         <div class="name">
                 <span class="studio">studio</span>
                 <span>Iza</span>

@@ -2,8 +2,8 @@
     email   dev@dallen.co
 }
 
-wp.dallen.dev {
-  root * /var/www/html
+localhost {
+    root * /var/www/html
 
     php_fastcgi wordpress:9000
     file_server
@@ -16,4 +16,5 @@ wp.dallen.dev {
     }
 
     rewrite @disallowed '/index.php'
+    tls internal
 }

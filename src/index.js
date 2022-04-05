@@ -11,7 +11,6 @@ import './styles/content.scss'
 import './scripts/mobile_toggles.js'
 import './scripts/navigation.js'
 import './scripts/scroller.js'
-import './scripts/sidebar.js'
 
 $(() => {
     $('.front-cover').css({ height: window.innerHeight })

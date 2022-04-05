@@ -3,38 +3,15 @@ const spyOffset = 100 // px
 const duration = 50 // ms
 const throttle = 50 // ms
 
-// const scrollConfig = {
-//     text: {
-//         start: 0,
-//         end: 1,
-//         direction: -1
-//     },
-//     front: {
-//         start: 0,
-//         end: 1,
-//         direction: -1
-//     },
-//     middle: {
-//         start: 0,
-//         end: 1,
-//         direction: 1
-//     },
-//     back: {
-//         start: 0.1,
-//         end: 2,
-//         direction: -1
-//     },
-// }
-
 const scrollConfig = {
     text: {
         start: 0,
-        end: 1,
+        end: 0.6,
         direction: -1,
     },
     front: {
         start: 0,
-        end: 1,
+        end: 0.6,
         direction: -1,
     },
     middle: {

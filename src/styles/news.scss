@@ -26,14 +26,15 @@
             }
         }
 
-        & > a {
+        &>a {
             flex: 0 0 60px;
             font-size: $font-medium;
             font-weight: bold;
             color: #000;
+            order: 2;
         }
 
-        & > a:link {
+        &>a:link {
             text-decoration: none;
         }
 
@@ -42,10 +43,16 @@
             padding-bottom: 20px;
             color: #666;
             font-size: $font-small;
+            order: 1;
         }
 
         .wp-block-latest-posts__post-excerpt {
             flex: 1;
+            order: 3;
+        }
+
+        .wp-block-latest-posts__post-full-content {
+            order: 3;
         }
     }
 }

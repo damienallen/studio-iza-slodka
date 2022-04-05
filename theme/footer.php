@@ -8,7 +8,7 @@
             </div>
             <div class="col contact">
                 <p>Contact:</p>
-                <p>contact@izaslodka.com</p>
+                <p><a href="mailto:contact@izaslodka.com">contact@izaslodka.com</a></p>
             </div>
             <div class="col follow">
                 <p>Follow Studio Iza S&#322;odka:</p>

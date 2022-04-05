@@ -44,6 +44,7 @@
 
   .follow {
     text-align: right;
+
     @include breakpoint(sm) {
       text-align: left;
       order: 1;
@@ -52,6 +53,15 @@
 
   .contact {
     text-align: center;
+
+    a {
+      color: $highlight-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $link-color;
+    }
 
     @include breakpoint(sm) {
       text-align: left;

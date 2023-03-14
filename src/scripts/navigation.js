@@ -29,14 +29,3 @@ const getNavHeight = () => {
 }
 getNavHeight()
 $(window).resize(() => getNavHeight())
-
-// Smooth scrolling
-$('#top-arrow').click((e) => {
-    e.preventDefault()
-    closeNav()
-
-    const transition = $(window).width() < 860 ? 0 : 500
-    $('html, body').stop().animate({
-        scrollTop: 0
-    }, transition)
-})

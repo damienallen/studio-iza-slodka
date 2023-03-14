@@ -154,16 +154,19 @@ h6 {
 
 /*--[ MAKER'S MAZE ]--*/
 
+
+@include breakpoint(sm) {
+  .front-cover {
+    display: none;
+  }
+}
+
 #maze-section {
   height: 100%;
   width: 100vw;
   position: relative;
   user-select: none;
   overflow-x: hidden;
-
-  @include breakpoint(sm) {
-    top: 0;
-  }
 
   img {
     width: 150vw;

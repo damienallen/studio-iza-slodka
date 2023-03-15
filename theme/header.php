@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/icons/favicon-16x16.png">
     <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/icons/site.webmanifest">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Lusitana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lusitana&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 

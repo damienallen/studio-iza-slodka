@@ -1,6 +1,7 @@
 @import "constants";
 
 .wp-block-latest-posts {
+    font-family: $sans-font;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;

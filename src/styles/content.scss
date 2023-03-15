@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font;
+  font-family: $sans-font;
   font-weight: normal;
   text-align: center;
   margin: 0;
@@ -70,6 +70,7 @@ h6 {
 
 .title,
 h1 {
+  font-family: $serif-font;
   font-size: 4em;
   padding-top: $margin-lg;
   padding-bottom: $margin-xs;
@@ -141,6 +142,7 @@ h6 {
 }
 
 .more {
+  font-family: $sans-font;
   font-size: $font-medium;
   
   a {

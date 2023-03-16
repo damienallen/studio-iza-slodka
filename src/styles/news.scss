@@ -5,9 +5,23 @@
     padding: 0 !important;
     max-width: none !important;
 }
+
+
   
 .post-heading {
-    text-align: left;
+    h3 {
+        text-align: left !important;
+    }
+
+    .post-date{
+        font-family: $sans-font;
+        font-weight: bold;
+        color: #666;
+        margin-bottom: $margin-xs
+    }
+} 
+
+.post-section {
 }
 
 .wp-block-latest-posts {

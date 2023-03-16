@@ -2,8 +2,9 @@
 
 <div id="content">
 
-    <div class="section">
-        <div clas="post-heading">
+    <div class="section post-section">
+        <div class="post-heading">
+            <div class="post-date"><?php echo get_the_date(); ?></div>
             <h3><?php echo get_the_title( $post_id ); ?></h3>
         </div>
 

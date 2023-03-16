@@ -35,9 +35,9 @@
   min-height: 100vh;
   z-index: 20;
 
-  // width: $content-width;
-  // min-width: $content-min-width;
-  // max-width: $content-max-width;
+  width: $content-width;
+  min-width: $content-min-width;
+  max-width: $content-max-width;
   padding: 0 $side-padding;
   margin-left: auto;
   margin-right: auto;
@@ -72,10 +72,11 @@ h6 {
 h1 {
   font-family: $serif-font;
   font-size: 4em;
+  max-width: $content-width;
   padding-top: $margin-lg;
   padding-bottom: $margin-sm;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 0;
+  margin: 0 auto;
 
   @include breakpoint(sm) {
     font-size: 2.2em;
@@ -89,6 +90,15 @@ h2 {
     font-size: 1.4em;
   }
 }
+
+h2 {
+  font-size: 2em;
+
+  @include breakpoint(sm) {
+    font-size: 1.2em;
+  }
+}
+
 
 h5 {
   font-size: 2em;

@@ -22,7 +22,7 @@ body {
 
 .wp-block-columns {
   display: flex;
-  margin: $margin-xl -20px;
+  margin: $margin-xl 0;
 
   @include breakpoint(sm) {
     margin: $margin-lg 0;

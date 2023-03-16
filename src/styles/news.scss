@@ -1,9 +1,18 @@
 @import "constants";
 
+.news-section {
+    width: 100% !important;
+    padding: 0 !important;
+    max-width: none !important;
+}
+  
+.post-heading {
+    text-align: left;
+}
+
 .wp-block-latest-posts {
-    font-family: $sans-font;
     padding: 0;
-    margin: 24px auto;
+    margin: 0 auto;
     
     li {
         display: flex;
@@ -36,11 +45,16 @@
         }
 
         time {
+            font-size: $font-small;
+            font-family: $sans-font;
+            color: #666;
             flex: 0;
             padding-bottom: 5px;
-            color: #666;
-            font-size: $font-small;
             order: 1;
+        }
+
+        .wp-block-latest-posts__post-title {
+            font-family: $sans-font;
         }
 
         .wp-block-latest-posts__post-excerpt {

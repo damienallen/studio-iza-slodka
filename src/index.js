@@ -22,7 +22,9 @@ $(() => {
         gutter: 48,
     })
 
-    grid.masonry()
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'))
+    }, 250)
 
     const now = new Date()
     console.log(`> Loaded at ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}`)

@@ -3,7 +3,10 @@
 /*--[ NAVIGATION ]--*/
 #nav-container {
   width: 100%;
-  background: #fff;
+  background: #fefefe;
+  background-color: $nav-bg;
+  border-bottom: 1px solid #dedede;
+  padding: 4px 0;
   position: fixed;
   top: 0;
   z-index: 80;
@@ -31,9 +34,6 @@
     }
   }
 
-  @include breakpoint(md) {
-    padding-top: 10px;
-  }
 
   @include breakpoint(sm) {
     width: 100vw;
@@ -124,4 +124,28 @@ nav {
 
 .left-nav-spacer {
   flex: 1 0 60px;
+}
+
+/*--[ MOBILE LOGO ]--*/
+#mobile-logo {
+  background-color: $nav-bg;
+  font-family: $sans-font;
+  font-size: 1.4em;
+  padding: 8px 16px;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  display: flex;
+
+  a:link, a:visited, a:hover, a:active {
+      text-decoration: none;
+      color: $highlight-color;
+  }
+
+  @include breakpoint(md) {
+      display: none;
+  }
 }

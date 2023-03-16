@@ -2,22 +2,14 @@
 
 .wp-block-latest-posts {
     font-family: $sans-font;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0;
-    margin: 40px -20px 20px -20px;
-
-    @include breakpoint(sm) {
-        flex-direction: column;
-    }
-
+    margin: 24px auto;
+    
     li {
         display: flex;
-        flex: 0 0 25%;
         flex-direction: column;
-        margin: 0 20px 60px 20px;
+        width: 320px;
+        margin: 32px 0;
 
         @include breakpoint(sm) {
             margin: 0 44px 48px 44px;
@@ -37,6 +29,10 @@
 
         &>a:link {
             text-decoration: none;
+        }
+
+        figcaption {
+            display: none;
         }
 
         time {

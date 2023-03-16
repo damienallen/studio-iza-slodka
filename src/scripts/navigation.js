@@ -19,6 +19,7 @@ $('#nav-open').click(openNav)
 $('#nav-close').click(closeNav)
 
 // Calculate navigation bar height
+let navHeight = 0
 const getNavHeight = () => {
     if ($(window).width() < 860) {
         navHeight = $('#mobile-logo').outerHeight()

@@ -21,10 +21,8 @@
     }
 } 
 
-.post-section {
-}
 
-.wp-block-latest-posts {
+.latest-posts-masonry {
     padding: 0;
     margin: 0 auto;
     
@@ -34,50 +32,60 @@
         width: 320px;
         margin: 32px 0;
 
-        @include breakpoint(sm) {
-            margin: 0 44px 48px 44px;
-
-            p {
-                margin: 0 !important;
-            }
-        }
-
-        &>a {
-            flex: 0 0 45px;
-            font-size: $font-medium;
-            font-weight: bold;
+        a:link, a:visited {
             color: #000;
-            order: 2;
-        }
-
-        &>a:link {
             text-decoration: none;
         }
 
-        figcaption {
-            display: none;
+        a:hover, a:active {
+            color: $link-color;
+            text-decoration: none;
         }
 
-        time {
-            font-size: $font-small;
-            font-family: $sans-font;
-            color: #666;
-            flex: 0;
-            padding-bottom: 5px;
+
+        .image {
             order: 1;
         }
 
-        .wp-block-latest-posts__post-title {
+        .category-display {
+            font-weight: 700;
+            margin: 12px 0;
+            order: 2;
+        }
+
+        .title {
+            order: 3;
             font-family: $sans-font;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-bottom: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
 
-        .wp-block-latest-posts__post-excerpt {
+        .date {
+            font-weight: 700;
+            margin: 12px 0;
+            flex: 0; 
+            order: 4;
+        }
+
+        .excerpt {
             flex: 1;
-            order: 3;
+            order: 5;
         }
 
-        .wp-block-latest-posts__post-full-content {
-            order: 3;
+        .excerpt-more {
+            display: block;
         }
+       
+        .excerpt-more:link,
+        .excerpt-more:visited,
+        .excerpt-more:hover,
+        .excerpt-more:active {
+            text-decoration: underline !important;
+            color: $link-color !important;
+        }
+
     }
 }

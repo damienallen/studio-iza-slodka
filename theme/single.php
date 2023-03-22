@@ -2,10 +2,14 @@
 
 <div id="content">
 
-    <div class="section post-section">
+    <div class="section">
         <div class="post-heading">
             <div class="post-date"><?php echo get_the_date(); ?></div>
             <h3><?php echo get_the_title( $post_id ); ?></h3>
+            <div><?php echo get_the_category_list(', ') ?></div>
+            <div>
+                <img src="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>" />
+            </div>
         </div>
 
         <?php

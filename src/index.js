@@ -14,8 +14,8 @@ import './scripts/scroller.js'
 $(() => {
     $('.front-cover').css({ height: window.innerHeight })
 
-    const grid = new Masonry('ul.wp-block-latest-posts', {
-        itemSelector: 'ul.wp-block-latest-posts > li',
+    const grid = new Masonry('ul.latest-posts-masonry', {
+        itemSelector: 'ul.latest-posts-masonry > li',
         columnWidth: 320,
         fitWidth: true,
         gutter: 48,

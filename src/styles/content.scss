@@ -128,32 +128,9 @@ h6 {
   }
 }
 
-.has-small-font-size { 
-  font-size: $font-small; 
-} 
- 
-.has-regular-font-size { 
-  font-size: $font-normal; 
-} 
- 
-.has-medium-font-size { 
-  font-size: $font-medium; 
-  line-height: 1.45; 
-} 
- 
-.has-large-font-size { 
-  font-size: $font-large; 
-  line-height: 1.4; 
-} 
- 
-.has-huge-font-size { 
-  font-size: $font-huge; 
-  line-height: 1.3; 
-}
-
 .more {
   font-family: $sans-font;
-  font-size: $font-medium;
+  font-size: 1.1em;
   
   a {
     color: #000;

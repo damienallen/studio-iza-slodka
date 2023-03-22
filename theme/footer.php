@@ -7,11 +7,11 @@
                 <p>Architectenregister: 1.200724.001</p>
             </div>
             <div class="col contact">
-                <p>Contact:</p>
+                <br />
                 <p><a href="mailto:contact@izaslodka.com">contact@izaslodka.com</a></p>
             </div>
             <div class="col follow">
-                <p>Follow Studio Iza S&#322;odka:</p>
+                <p>Follow Studio Iza S&#322;odka</p>
                 <div id="links">
                     <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/instagram.svg" alt="instagram" />

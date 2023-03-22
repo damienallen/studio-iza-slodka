@@ -21,6 +21,8 @@
     .category {
         font-weight: 700;
         margin: 16px 0;
+        pointer-events: none;
+        cursor: default;
     }
 
     .post-title {
@@ -76,6 +78,8 @@
             font-weight: 700;
             margin: 12px 0;
             order: 2;
+            pointer-events: none;
+            cursor: default;
         }
 
         .title {

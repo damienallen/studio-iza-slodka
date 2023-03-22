@@ -94,8 +94,9 @@ nav {
     justify-content: space-between;
     li {
       display: block;
-      flex: 0 1 auto;
+      flex: 1;
       list-style-type: none;
+      text-align: center;
     }
   }
 }
@@ -119,11 +120,11 @@ nav {
 }
 
 .right-nav-spacer {
-  flex: 1 1 60px;
+  flex: 1;
 }
 
 .left-nav-spacer {
-  flex: 1 0 60px;
+  flex: 1;
 }
 
 /*--[ MOBILE LOGO ]--*/

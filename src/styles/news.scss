@@ -13,12 +13,37 @@
         text-align: left !important;
     }
 
-    .post-date{
-        font-family: $sans-font;
-        font-weight: bold;
-        color: #666;
-        margin-bottom: $margin-xs
+    .featured-image {
+        max-width: 400px;
+        max-height: 400px;
     }
+
+    .category {
+        font-weight: 700;
+        margin: 16px 0;
+    }
+
+    .post-title {
+        font-family: $sans-font;
+        font-weight: 700;
+        font-size: 1.6em;
+    }
+
+    .date{
+        font-weight: 700;
+        margin: 16px 0;
+    }
+
+    a:link, a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a:hover, a:active {
+        color: $link-color;
+        text-decoration: none;
+    }
+
 } 
 
 

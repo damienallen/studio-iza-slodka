@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-import 'normalize.css'
 import Masonry from 'masonry-layout'
 import './styles/constants.scss'
 import './styles/footer.scss'

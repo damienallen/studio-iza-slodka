@@ -29,6 +29,6 @@
     add_action( 'init', 'register_menus' );
     add_action( 'wp_enqueue_scripts', 'add_styles' );
     add_action( 'wp_enqueue_scripts', 'add_scripts' );
-    // add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
 
 ?>

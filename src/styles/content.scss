@@ -7,7 +7,6 @@
   overflow-x: hidden;
 
   p {
-    line-height: 24px;
     margin-block-start: 0;
     margin-block-end: 1.8em;
 
@@ -58,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font;
+  font-family: $sans-font;
   font-weight: normal;
   text-align: center;
   margin: 0;
@@ -70,11 +69,13 @@ h6 {
 
 .title,
 h1 {
+  font-family: $serif-font;
   font-size: 4em;
+  max-width: $content-width;
   padding-top: $margin-lg;
-  padding-bottom: $margin-xs;
-  border-bottom: 1px solid #000;
-  margin: 0;
+  padding-bottom: $margin-sm;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 
   @include breakpoint(sm) {
     font-size: 2.2em;
@@ -82,12 +83,22 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.4em;
 
   @include breakpoint(sm) {
     font-size: 1.4em;
   }
 }
+
+h3 {
+  font-size: 1.6em;
+  margin-bottom: $margin-md;
+
+  @include breakpoint(sm) {
+    font-size: 1.2em;
+  }
+}
+
 
 h5 {
   font-size: 2em;
@@ -117,31 +128,9 @@ h6 {
   }
 }
 
-.has-small-font-size { 
-  font-size: $font-small; 
-} 
- 
-.has-regular-font-size { 
-  font-size: $font-normal; 
-} 
- 
-.has-medium-font-size { 
-  font-size: $font-medium; 
-  line-height: 1.45; 
-} 
- 
-.has-large-font-size { 
-  font-size: $font-large; 
-  line-height: 1.4; 
-} 
- 
-.has-huge-font-size { 
-  font-size: $font-huge; 
-  line-height: 1.3; 
-}
-
 .more {
-  font-size: $font-medium;
+  font-family: $sans-font;
+  font-size: 1.1em;
   
   a {
     color: #000;
@@ -154,16 +143,19 @@ h6 {
 
 /*--[ MAKER'S MAZE ]--*/
 
+
+@include breakpoint(sm) {
+  .front-cover {
+    display: none;
+  }
+}
+
 #maze-section {
   height: 100%;
   width: 100vw;
   position: relative;
   user-select: none;
   overflow-x: hidden;
-
-  @include breakpoint(sm) {
-    top: 0;
-  }
 
   img {
     width: 150vw;

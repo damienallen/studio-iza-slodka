@@ -1,18 +1,7 @@
-<div id="sidebar">
-
-        <a href="<?php echo get_bloginfo( 'wpurl' );?>">
-
-        <div class="logo-container">
-            <img id="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="" />
-        </div>
-
-        <div class="name">
-                <span class="studio">studio</span>
-                <span>Iza</span>
-                <span>S&#322;odka</span>
-        </div>
+<div id="mobile-logo">
+    <a href="<?php echo get_bloginfo( 'wpurl' );?>">
+        Studio Iza S&#322;odka
     </a>
-
 </div>
 
 <div id="nav-toggle">

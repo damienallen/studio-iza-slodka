@@ -21,7 +21,7 @@ services:
       - proxynet
 
   wordpress:
-    image: wordpress:5.7-fpm
+    image: wordpress:fpm
     restart: always
     expose:
       - 9000

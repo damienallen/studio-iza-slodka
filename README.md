@@ -5,10 +5,18 @@
 
 ### Requirements
 
+- docker (compose)
 - node & npm
-- yarn (optional)
+- yarn
+- make
 
-### Dev environment
+### Running Wordpress
+
+#### Docker
+
+Start Wordpress via `make dev-up` to start in watch mode or `make up` in production.
+
+#### Webpack
 
 After cloning the repository, install depenencies using `yarn install`.
 

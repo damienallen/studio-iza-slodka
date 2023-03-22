@@ -1,13 +1,6 @@
 /*--[ FONTS ]--*/
-$body-font: 'Lato', sans-serif;
-$header-font: 'Lusitana', serif;
-
-$font-small: 0.8571em;
-$font-normal: 1em;
-$font-medium: 1.1429em;
-$font-large: 1.2857em;
-$font-huge: 1.4286em;
-
+$serif-font: 'Lusitana', serif;
+$sans-font: 'Roboto', sans-serif;
 
 /*--[ BREAKPOINTS ]--*/
 $lg-breakpoint: 1400px;
@@ -47,3 +40,4 @@ $content-max-width: $md-breakpoint;
 
 $highlight-color: #202d62;
 $link-color: #bf322f;
+$nav-bg: rgba(255, 255, 255, 0.95);

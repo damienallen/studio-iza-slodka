@@ -22,21 +22,10 @@ $('#nav-close').click(closeNav)
 let navHeight = 0
 const getNavHeight = () => {
     if ($(window).width() < 860) {
-        navHeight = $('#sidebar').outerHeight()
+        navHeight = $('#mobile-logo').outerHeight()
     } else {
         navHeight = $('#nav-container').outerHeight()
     }
 }
 getNavHeight()
 $(window).resize(() => getNavHeight())
-
-// Smooth scrolling
-$('#top-arrow').click((e) => {
-    e.preventDefault()
-    closeNav()
-
-    const transition = $(window).width() < 860 ? 0 : 500
-    $('html, body').stop().animate({
-        scrollTop: 0
-    }, transition)
-})

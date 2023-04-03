@@ -52,6 +52,19 @@
 .latest-posts-masonry {
     padding: 0;
     margin: 0 auto;
+
+    @media (max-width: 690px) {
+        margin-top: 32px;
+        width: 100% !important;
+        li {
+            width: 100% !important;
+            padding: 32px 0 !important;
+        }
+
+        li > * {
+            padding: 0 32px !important;
+        }
+    }
     
     li {
         display: flex;
@@ -90,6 +103,12 @@
             border-bottom: none !important;
             padding: 0 !important;
             margin: 0 !important;
+        }
+
+        @media (max-width: 690px) {
+            .title {
+                padding: 0 32px !important;
+            }
         }
 
         .date {

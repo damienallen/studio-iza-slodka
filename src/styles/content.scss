@@ -107,20 +107,24 @@ h5 {
 
 .subtitle,
 h6 {
-  font-size: 2em;
   padding-top: $margin-sm;
+  font-size: 2.4em;
+
+  @include breakpoint(sm) {
+    font-size: 1.4em;
+  }
 
   a:link,
   a:visited,
   a:hover,
   a:active {
     text-decoration: none;
-    color: #000;
+    color: $link-color;
   }
 
   a:hover,
   a:active {
-    color: $link-color;
+    text-decoration: underline;
   }
 
   @include breakpoint(sm) {

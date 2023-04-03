@@ -15,8 +15,8 @@ const closeNav = () => {
 }
 
 // Set up navigation onclicks
-$('#nav-open').click(openNav)
-$('#nav-close').click(closeNav)
+$('#nav-open').on('click', openNav)
+$('#nav-close').on('click', closeNav)
 
 // Calculate navigation bar height
 let navHeight = 0
@@ -26,6 +26,9 @@ const getNavHeight = () => {
     } else {
         navHeight = $('#nav-container').outerHeight()
     }
+
+    console.log(navHeight)
 }
+
 getNavHeight()
-$(window).resize(() => getNavHeight())
+$(window).on('resize', () => getNavHeight())

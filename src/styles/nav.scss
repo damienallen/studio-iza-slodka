@@ -13,28 +13,6 @@
   display: flex;
   flex-direction: row;
 
-  &.open {
-    display: block;
-
-    ul {
-      flex-direction: column;
-      margin-left: $margin-sm;
-    }
-
-    li {
-      margin: $margin-sm 0;
-    }
-
-    nav {
-      padding: 0;
-
-      a:link, a:visited {
-        color: $link-color !important;
-      }
-    }
-  }
-
-
   @include breakpoint(sm) {
     width: 100vw;
     height: 100%;
@@ -43,6 +21,25 @@
     top: 0;
     left: 0;
     padding-top: 80px;
+
+    
+    &.open {
+      display: block;
+
+      ul {
+        flex-direction: column;
+        margin-left: $margin-sm;
+      }
+
+      li {
+        margin: $margin-sm 0;
+      }
+
+      nav {
+        padding: 0;
+      }
+    }
+
   }
 }
 
@@ -66,20 +63,18 @@ nav {
     -webkit-transition: 0.2s all;
     -moz-transition: 0.2s all;
     transition: 0.2s all;
-
-    &.active {
-      text-decoration: underline !important;
-    }
   }
 
   a:link,
-  a:visited {
+  a:visited,
+  a:hover,
+  a:active {
     text-decoration: none;
   }
 
   a:hover,
   a:active {
-    text-decoration: underline;
+    color: $link-color;
   }
   
   .menu-nav-menu-container {

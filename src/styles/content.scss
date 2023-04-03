@@ -25,6 +25,7 @@
     @include breakpoint(sm) {
       margin-left: $side-margin-sm;
       margin-right: $side-margin-sm;
+      margin-block-end: 0;
     }
   }
 }
@@ -71,6 +72,7 @@ h6 {
 h1 {
   font-family: $serif-font;
   font-size: 4em;
+  max-width: $content-width;
   padding-top: $margin-lg;
   padding-bottom: $margin-sm;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

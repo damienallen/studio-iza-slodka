@@ -2,7 +2,7 @@
 
 <div id="content">
 
-    <div class="section">
+    <div class="section single-post">
         <div class="post-heading">
             <img class="featured-image" src="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>" />
             <div class="category"><?php echo get_the_category_list(', ') ?></div>

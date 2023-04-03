@@ -6,7 +6,7 @@
 }
 
 .footer-content {
-  font-family: $sans-font;
+  font-family: $serif-font;
   font-size: 1.1em;
 
   width: $content-width;
@@ -45,15 +45,6 @@
   .follow {
     text-align: right;
 
-    @include breakpoint(sm) {
-      text-align: left;
-      order: 1;
-    }
-  }
-
-  .contact {
-    text-align: center;
-
     a {
       color: $highlight-color;
       text-decoration: none;
@@ -67,7 +58,13 @@
       text-align: left;
       order: 2;
     }
+
+    @include breakpoint(sm) {
+      text-align: left;
+      order: 1;
+    }
   }
+
 }
 
 .text-center {

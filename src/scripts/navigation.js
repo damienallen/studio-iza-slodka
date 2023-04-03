@@ -4,6 +4,7 @@ import $ from 'jquery'
 const openNav = () => {
     $('#nav-open').hide()
     $('#nav-close').show()
+    $('#mobile-logo').hide()
     $('#nav-container').addClass('open')
 }
 
@@ -11,6 +12,7 @@ const openNav = () => {
 const closeNav = () => {
     $('#nav-open').show()
     $('#nav-close').hide()
+    $('#mobile-logo').show()
     $('#nav-container').removeClass('open')
 }
 

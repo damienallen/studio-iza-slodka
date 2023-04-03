@@ -6,16 +6,11 @@
                 <p>BTW: NL003113471B97</p>
                 <p>Architectenregister: 1.200724.001</p>
             </div>
-            <div class="col contact">
-                <br />
-                <p><a href="mailto:contact@izaslodka.com">contact@izaslodka.com</a></p>
+            <div class="col">
             </div>
             <div class="col follow">
-                <p>Follow Studio Iza S&#322;odka</p>
+                <p><a href="mailto:contact@izaslodka.com">contact@izaslodka.com</a></p>
                 <div id="links">
-                    <a href="https://instagram.com/studio.izaslodka" rel="noreferrer" target="_blank">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/instagram.svg" alt="instagram" />
-                    </a>
                     <a href="https://www.linkedin.com/company/37555218" rel="noreferrer" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/linkedin.svg" alt="linkedin" />
                     </a>

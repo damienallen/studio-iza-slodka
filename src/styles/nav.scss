@@ -20,18 +20,24 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 80px;
 
     
     &.open {
       display: block;
 
+      .menu-nav-menu-container {
+        display: flex;
+        justify-content: center;
+      }
+
       ul {
         flex-direction: column;
-        margin-left: $margin-sm;
+        padding-top: 25vh;
+        padding-bottom: 25vh;
       }
 
       li {
+        flex: 0;
         margin: $margin-sm 0;
       }
 
@@ -44,7 +50,7 @@
 }
 
 nav {
-  font-family: $sans-font;
+  font-family: $serif-font;
   font-size: 1.4em;
   height: $header-height;
   padding: 0 $nav-padding;
@@ -55,6 +61,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   user-select: none;
+
+  @include breakpoint(sm) {
+    min-width: 0;
+    font-size: 2em;
+    height: 100%;
+  }
 
   a {
     line-height: $header-height;
@@ -125,7 +137,7 @@ nav {
 /*--[ MOBILE LOGO ]--*/
 #mobile-logo {
   background-color: $nav-bg;
-  font-family: $sans-font;
+  font-family: $serif-font;
   font-size: 1.4em;
   padding: 8px 16px;
 

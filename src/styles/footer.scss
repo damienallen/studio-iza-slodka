@@ -22,7 +22,7 @@
     margin: 10px 0;
   }
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     flex-direction: column;
     margin: 0;
     min-width: 0;
@@ -31,13 +31,13 @@
   .col {
     flex: 1;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       margin-bottom: 24px;
     }
   }
 
   .info {
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       order: 3;
     }
   }
@@ -54,12 +54,12 @@
       color: $link-color;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       text-align: left;
       order: 2;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       text-align: left;
       order: 1;
     }
@@ -80,7 +80,7 @@
     height: 20px;
     margin: 5px 0 0 20px;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       margin: 0 20px 0 0;
     }
   }
@@ -93,7 +93,7 @@
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   flex-direction: column;
   text-align: center;
   min-width: 100%;

@@ -16,6 +16,7 @@
     .wp-block-columns {
         margin: 16px 0 !important;
     }
+
 }
 
   
@@ -59,11 +60,12 @@
 
 }
 
-@media (max-width: 690px) {
+@include breakpoint(md) {
     .post-heading {
         margin-top: 16px;
         padding-left: $side-margin-sm;
         padding-right: $side-margin-sm;
+        max-width: 500px !important;
     }
 
     .featured-image {
@@ -78,7 +80,7 @@
     padding: 0 32px;
     margin: 0 auto;
 
-    @media (max-width: 690px) {
+    @include breakpoint(sm) {
         margin-top: 32px;
         width: 100% !important;
         padding: 0;
@@ -104,6 +106,7 @@
         }
 
         a:hover, a:active {
+            color: $link-color !important;
             text-decoration: underline;
         }
 
@@ -119,24 +122,24 @@
             cursor: default;
         }
 
-        a.title {
-            color: $link-color !important;
-        }
-
         .title {
             order: 3;
             font-family: $sans-font;
             font-size: 1.3em;
-            font-weight: bold;
+            font-weight: 900;
             border-bottom: none !important;
             padding: 0 !important;
             margin: 0 !important;
         }
 
-        @media (max-width: 690px) {
+        @include breakpoint(sm) {
             .title {
                 max-width: 80vw;
                 padding: 0 32px !important;
+            }
+
+            a.title {
+                color: $link-color !important;
             }
         }
 
@@ -167,7 +170,7 @@
     }
 
     .wp-post-image {
-        @media (max-width: 690px) {
+        @include breakpoint(sm) {
             max-width: 80vw;
             width: 320px;
             height: auto;

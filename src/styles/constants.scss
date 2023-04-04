@@ -3,16 +3,16 @@ $serif-font: 'Lusitana', serif;
 $sans-font: 'Lato', sans-serif;
 
 /*--[ BREAKPOINTS ]--*/
-$lg-breakpoint: 1400px;
-$md-breakpoint: 992px;
-$sm-breakpoint: 860px;
+$lg-breakpoint: 992px;
+$md-breakpoint: 860px;
+$sm-breakpoint: 690px;
 
 @mixin breakpoint($point) {
    @if $point == lg {
-      @media (min-width: $lg-breakpoint) { @content ; }
+      @media (min-width: $md-breakpoint) { @content ; }
    }
    @else if $point == md {
-      @media (min-width: $sm-breakpoint) { @content ; }
+      @media (max-width: $md-breakpoint) { @content ; }
    }
    @else if $point == sm {
       @media (max-width: $sm-breakpoint)  { @content ; }
@@ -35,8 +35,8 @@ $side-padding: 60px;
 $side-margin-sm: 32px;
 
 $content-width: 55vw;
-$content-min-width: ($sm-breakpoint - $nav-padding*2);
-$content-max-width: $md-breakpoint;
+$content-min-width: ($md-breakpoint - $nav-padding*2);
+$content-max-width: $lg-breakpoint;
 
 $highlight-color: #202d62;
 $link-color: #bf322f;

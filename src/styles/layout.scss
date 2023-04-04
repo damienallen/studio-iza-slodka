@@ -24,7 +24,7 @@ body {
   display: flex;
   margin: $margin-xl 0;
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     margin: $margin-lg 0;
     flex-direction: column;
   }
@@ -34,7 +34,7 @@ body {
   flex: 1;
   margin: 0 20px;
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     margin: 0;
   }
 }
@@ -66,7 +66,7 @@ figcaption, .caption {
 /*--[ MOBILE HIDE ]--*/
 .toggle-text {
   .hide-sm {
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       display: none;
     }
   }
@@ -78,7 +78,7 @@ figcaption, .caption {
     user-select: none;
     cursor: pointer;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       display: inline;
     }
   }

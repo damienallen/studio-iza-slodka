@@ -134,6 +134,18 @@ nav {
   flex: 1;
 }
 
+/*--[ PROJECT NAV ]--*/
+.project-menu {
+  a:link, a:visited {
+    color: $highlight-color !important;
+  }
+
+  a:hover, a:active {
+    text-decoration: none !important;
+    color: $link-color !important;
+  }
+}
+
 /*--[ MOBILE LOGO ]--*/
 #mobile-logo {
   background-color: $nav-bg;

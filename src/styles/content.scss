@@ -83,7 +83,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 2em;
 
   @include breakpoint(md) {
     font-size: 1.4em;
@@ -108,7 +108,7 @@ h5 {
 .subtitle,
 h6 {
   padding-top: $margin-sm;
-  font-size: 2.4em;
+  font-size: 2em;
 
   @include breakpoint(md) {
     font-size: 1.4em;

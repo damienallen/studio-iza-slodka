@@ -27,6 +27,7 @@ body {
   @include breakpoint(md) {
     margin: $margin-lg 0;
     flex-direction: column;
+    gap: 0 !important;
   }
 }
 

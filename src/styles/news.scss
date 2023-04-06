@@ -75,11 +75,16 @@
     }
 }
 
+.masonry-container {
+    padding: 0 64px;
 
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+}
 
 .latest-posts-masonry {
-    padding: 0 32px;
-    margin: 0 auto;
+    padding: 0;
 
     @include breakpoint(sm) {
         margin-top: 32px;

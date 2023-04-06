@@ -171,8 +171,10 @@ nav {
   }
 }
 
-.u_next_story {
-  .prev, .next {
-    display: none !important;
+@include breakpoint(sm) {
+  .u_next_story {
+    .prev, .next {
+      display: none !important;
+    }
   }
 }

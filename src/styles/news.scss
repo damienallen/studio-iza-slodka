@@ -76,7 +76,9 @@
 }
 
 .masonry-container {
-    padding: 0 64px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
 
     @include breakpoint(sm) {
         padding: 0;

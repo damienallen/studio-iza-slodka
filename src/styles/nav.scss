@@ -171,7 +171,7 @@ nav {
   }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .u_next_story {
     .prev, .next {
       display: none !important;

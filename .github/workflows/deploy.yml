@@ -1,0 +1,43 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+      - actions
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js v18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+
+      - name: Run install
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: install
+
+      - name: Generate bundles
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: build
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary
+
+      - name: Add Known Hosts
+        run: ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Sync Static Files
+        run: |
+          rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" \
+          ./theme ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/studio-iza-slodka/theme

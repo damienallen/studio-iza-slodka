@@ -40,4 +40,4 @@ jobs:
       - name: Sync Static Files
         run: |
           rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" \
-          ./theme ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/studio-iza-slodka/theme
+          ./theme ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/studio-iza-slodka

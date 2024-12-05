@@ -7,11 +7,11 @@
 
 - node & npm
 - yarn
-- make
+- make (optional)
 
 ### Wordpress
 
-This repository is used to build and deploy wordpress theme for izaslodka.com
+This repository is used to build and deploy wordpress theme for the [izaslodka.com](izaslodka.com) website.
 
 ### Webpack
 

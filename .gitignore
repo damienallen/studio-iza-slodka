@@ -1,4 +1,6 @@
-dist/
+theme/bundle.js
+theme/bundle.js.map
+
 node_modules/
 docker/caddy/certs/
 .env

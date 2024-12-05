@@ -5,19 +5,20 @@
 
 ### Requirements
 
-- docker (compose)
 - node & npm
 - yarn
 - make
 
-### Running Wordpress
+### Wordpress
 
-#### Docker
+This repository is used to build and deploy wordpress theme for izaslodka.com
 
-Start Wordpress via `make dev-up` to start in watch mode or `make up` in production.
-
-#### Webpack
+### Webpack
 
 After cloning the repository, install depenencies using `yarn install`.
 
 Webpack is used to optimize and package static resources. It should be used either in watch mode (`yarn start`) or a manual build using `yarn run build`.
+
+### Deployment
+
+Deployment is performed using Github actions via SSH/rsync.
